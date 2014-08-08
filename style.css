@@ -3,17 +3,41 @@ body {
 	font-family: 'Lora', serif;
 	margin: 0;
 	color:black;
+	text-rendering:geometricPrecision;
 }
 main {
 	padding: 80px 180px;
 }
 p {
+	width:100%;
+	max-width: 980px;
+	display: table;
 	font-weight: 400;
 	font-size: 45px;
-	display: block;
-	margin: 0 0 40px 0;
+	line-height: 62px;
+	margin: 0 auto 40px auto;
 }
 a {
 	color: blue;
 	text-decoration: none;
+	display: inline-table;
+}
+.s::after {
+	content: " ";
+}
+span {
+	display: inline-table;
+}
+#ps {
+	font-size: 20px;
+	line-height: 25px;
+}
+.wrap:hover {
+	cursor: pointer;
+}
+.r {
+	transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-webkit-perspective: 1;
 }
