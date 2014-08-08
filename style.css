@@ -4,9 +4,14 @@ body {
 	margin: 0;
 	color:black;
 	text-rendering:geometricPrecision;
+	display: table;
+	height: 100%;
+	width: 100%;
 }
 main {
 	padding: 80px 180px;
+	display: table-cell;
+	vertical-align: middle;
 }
 p {
 	width:100%;
