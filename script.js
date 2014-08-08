@@ -1,6 +1,5 @@
 window.onload = function() {
     wrap();
-    linkFix();
 }
 
 function wrap() {
@@ -37,18 +36,20 @@ function wiggle() {
         var height = window.innerHeight;
         var texts = $('.r').length;
         for(var i = 0; i < texts+1; i++) {
-            var randX = Math.sin(1/Math.floor((Math.random() * 5) + 1)*i);
-            var randY = Math.sin(1/Math.floor((Math.random() * 5) + 1)*i);
-            var x = randX;
-            var y = randY;
-            var xy = randX/randY;
-            $('.r').eq(i).transition({rotateX:x, rotateY:y, x:x, y:y}, 100);
+            var x = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
+            var y = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
+            var z = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
+            console.log(x,y,z);
+            if($('.r').eq(i).ismouseover() && $('.r').eq(i).attr('href')) {
+                $('.r').eq(i).transition({x:x*2, y:y*2, rotate:z*2}, 50);
+            }
+            else {
+                $('.r').eq(i).transition({x:x, y:y, rotate:z}, 100);
+            }
         }
     },100);   
 }
-function linkFix() {
-    $('a').click(function() {
-        var url = $(this).attr('href');
-        window.open(url,'_blank');
-    });
-}
+
+// ismousover() plugin by Subin Siby
+$.mlp ={x:0,y:0};function documentHandler(){var $current =this=== document ? $(this): $(this).contents(); $current.mousemove(function(e){jQuery.mlp ={x:e.pageX,y:e.pageY}}); $current.find("iframe").load(documentHandler);}$(documentHandler); $.fn.ismouseover =function(overThis){var result =false;this.eq(0).each(function(){var $current = $(this).is("iframe")? $(this).contents().find("body"): $(this);var offset = $current.offset(); result
+result = offset.left<=$.mlp.x && offset.left + $current.outerWidth()> $.mlp.x && offset.top<=$.mlp.y && offset.top + $current.outerHeight()> $.mlp.y;});return result;};
