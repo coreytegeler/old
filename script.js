@@ -41,7 +41,7 @@ function wiggle() {
             var z = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
             console.log(x,y,z);
             if($('.r').eq(i).ismouseover() && $('.r').eq(i).attr('href')) {
-                $('.r').eq(i).transition({x:x*2, y:y*2, rotate:z*2}, 50);
+                $('.r').eq(i).transition({x:x/5, y:y/5, rotate:z/5}, 100);
             }
             else {
                 $('.r').eq(i).transition({x:x, y:y, rotate:z}, 100);
