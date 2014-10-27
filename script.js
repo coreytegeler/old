@@ -18,7 +18,7 @@ function wrap() {
                     result[i] =  text[i] + " ";
                 }
             }
-            else if (text[i] == '  ') {
+            else if (text[i] == '  ' ) {
                 
             }
             else {
@@ -50,6 +50,7 @@ function wiggle() {
     },100);   
 }
 
-// ismousover() plugin by Subin Siby
+// ismouseover() by Subin Siby
+// http://subinsb.com/how-to-check-if-the-mouse-is-over-an-element-in-jquery
 $.mlp ={x:0,y:0};function documentHandler(){var $current =this=== document ? $(this): $(this).contents(); $current.mousemove(function(e){jQuery.mlp ={x:e.pageX,y:e.pageY}}); $current.find("iframe").load(documentHandler);}$(documentHandler); $.fn.ismouseover =function(overThis){var result =false;this.eq(0).each(function(){var $current = $(this).is("iframe")? $(this).contents().find("body"): $(this);var offset = $current.offset(); result
 result = offset.left<=$.mlp.x && offset.left + $current.outerWidth()> $.mlp.x && offset.top<=$.mlp.y && offset.top + $current.outerHeight()> $.mlp.y;});return result;};
