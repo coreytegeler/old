@@ -60,33 +60,12 @@ span {
 .hypertext a, .hypertext a:visited {
 	color: blue;
 }
-.victoria {
-	background: HotPink;
-	color: white;
-}
-.victoria a, .victoria a:visited {
-	color: purple;
-}
-.thxbb {
-	background: Gold;
-	color: FireBrick;
-}
-.thxbb a, .thxbb a:visited {
-	color: OrangeRed;
-}
 .jesus {
 	background: LimeGreen;
 	color: white;
 }
 .jesus a, .jesus a:visited {
 	color: Crimson;
-}
-.jack {
-	background: orange;
-	color: black;
-}
-.jack a, .jack a:visited {
-	color: black;
 }
 .rgb {
 	background: white;
