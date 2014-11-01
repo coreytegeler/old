@@ -12,6 +12,8 @@ main {
 	padding: 30px;
 	display: table-cell;
 	vertical-align: middle;
+	text-align: justify;
+    text-justify: inter-word;
 }
 p {
 	width:100%;
