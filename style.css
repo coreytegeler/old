@@ -3,7 +3,7 @@ body {
 	font-family: 'Lora', serif;
 	margin: 0;
 	color:black;
-	text-rendering:geometricPrecision;
+	text-rendering:optimizeLegibility;
 	display: table;
 	height: 100%;
 	width: 100%;
@@ -25,9 +25,9 @@ p {
 	margin: 0 auto 0 auto;
 }
 a {
-	color: blue;
-	text-decoration: none;
+	color: inherit;
 	display: inline-table;
+	text-decoration: underline;
 }
 /*using `i` to wrap items to jiggle*/
 i {
@@ -71,7 +71,6 @@ em {
 }
 .hypertext a, .hypertext a:visited {
 	color: blue;
-	text-decoration: underline;
 }
 .nighty {
 	background: black;
@@ -79,7 +78,6 @@ em {
 }
 .nighty a, .nighty a:visited {
 	color: white;
-	text-decoration: underline;
 }
 .hidden {
 	background:	white;
@@ -89,9 +87,38 @@ em {
 	color: transparent;
 	border-bottom: 3px solid black;
 	line-height: 47px;
+	text-decoration: none;
 }
 .hidden a:hover {
 	color:black; 
+}
+.yellow {
+	background: yellow;
+	color: black;
+}
+.yellow a, .yellow a:visited {
+	color: red;
+}
+.spring {
+	background: SpringGreen;
+	color: black;
+}
+.spring a, .spring a:visited {
+	color: black;
+}
+.fadedflag {
+	background: RoyalBlue;
+	color: white;
+}
+.fadedflag a, .fadedflag a:visited {
+	color: Tomato;
+}
+.ronald {
+	background: red;
+	color: white;
+}
+.ronald a, .ronald a:visited {
+	color: Gold;
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
 	p {
