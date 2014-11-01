@@ -18,7 +18,6 @@ function style() {
         'ronald'
         ];
     $index = Math.round(Math.random() * ($colors.length - 1) - 0);
-    $index = $colors.length-1;
     var style = $colors[$index];
     $('body').attr('class',style);
     wiggle();
