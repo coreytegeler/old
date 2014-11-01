@@ -40,6 +40,15 @@ em {
 	font-style: normal;
 	display: inline-table;
 }
+.smile {
+	text-decoration: none !important;
+	border-bottom: none !important;
+	transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+}
+
 .woodenairplanelamp {
 	background: yellow;
 	color: blue;
@@ -89,7 +98,7 @@ em {
 	background:	white;
 	color:black;
 }
-.hidden a {
+.hidden a:not(.smile) {
 	color: transparent;
 	transition: color 80ms;
 	-o-transition: color 80ms;
