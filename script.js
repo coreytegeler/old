@@ -27,7 +27,51 @@ function wrap() {
         }
         $(this).html(result.join(''));
     });
-    wiggle();
+
+    $('.refresh').click(function() {
+        console.log(Math.round(Math.random()));
+        if(Math.random() == 1) {
+            doSomething();
+        }
+        else {
+            paint();
+        }
+    });
+}
+
+function paint() {
+    var colors = [
+        "woodenairplanelamp",
+        "hypertext",
+        "victoria",
+        "thxbb",
+        "jesus",
+        "jack",
+        'rgb',
+        'freedom',
+        'capecode',
+        'hidden'
+        ];
+    var rand = Math.round(Math.random() * (colors.length - 1) - 0);
+    var style = colors[rand];
+    $('body').attr('class',style);
+}
+
+function doSomething() {
+    var things = [
+        'wiggle',
+        'blur'
+        ];
+    var rand = Math.round(Math.random() * (things.length - 1) - 0);
+    var style = things[rand];
+    $('body').addClass(style);
+
+    if(style == 'wiggle') {
+        wiggle();
+    }
+    if(style == 'blur') {
+        blur();
+    }
 }
 
 function wiggle() {
@@ -39,7 +83,6 @@ function wiggle() {
             var x = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
             var y = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
             var z = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
-            console.log(x,y,z);
             if($('.r').eq(i).ismouseover() && $('.r').eq(i).attr('href')) {
                 $('.r').eq(i).transition({x:x/5, y:y/5, rotate:z/5}, 100);
             }

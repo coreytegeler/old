@@ -2,9 +2,10 @@
 body {
 	font-family: 'Lora', serif;
 	margin: 0;
-	color:red;
-	background: yellow;
-	text-rendering:geometricPrecision;
+	font-weight: 400;
+	font-size: 45px;
+	line-height: 62px;
+	text-rendering:optimizeLegibility;
 	display: table;
 	height: 100%;
 	width: 100%;
@@ -18,13 +19,10 @@ p {
 	width:100%;
 	max-width: 980px;
 	display: table;
-	font-weight: 400;
-	font-size: 45px;
-	line-height: 62px;
 	margin: 0 auto 40px auto;
 }
-a {
-	color: blue;
+a, a:visited {
+	color: inherit;
 	text-decoration: none;
 	display: inline-table;
 }
@@ -48,6 +46,107 @@ span {
 	-webkit-perspective: 1;
 }
 
+.woodenairplanelamp {
+	background: yellow;
+	color: blue;
+}
+.woodenairplanelamp a, .woodenairplanelamp a:visited {
+	color: red;
+}
+.hypertext {
+	background: white;
+	color: black;
+}
+.hypertext a, .hypertext a:visited {
+	color: blue;
+}
+.victoria {
+	background: HotPink;
+	color: white;
+}
+.victoria a, .victoria a:visited {
+	color: purple;
+}
+.thxbb {
+	background: Gold;
+	color: FireBrick;
+}
+.thxbb a, .thxbb a:visited {
+	color: OrangeRed;
+}
+.jesus {
+	background: LimeGreen;
+	color: white;
+}
+.jesus a, .jesus a:visited {
+	color: Crimson;
+}
+.jack {
+	background: orange;
+	color: black;
+}
+.jack a, .jack a:visited {
+	color: black;
+}
+.rgb {
+	background: white;
+}
+.rgb *:nth-child(3n+1) {
+	color: red;
+}
+.rgb *:nth-child(3n+2) {
+	color: green;
+}
+.rgb *:nth-child(3n+3) {
+	color: blue;
+}
+.freedom {
+	background: white;
+	color:blue;
+}
+.freedom a {
+	color: red;
+}
+.capecod {
+	background:	CadetBlue;
+	color:white;
+}
+.capecod a {
+	color: PaleGoldenRod; 
+}
+.hidden {
+	background:	white;
+	color:black;
+}
+.hidden a {
+	color: transparent;
+	transition: color 80ms;
+	-o-transition: color 80ms;
+	-moz-transition: color 80ms;
+	-webkit-transition: color 80ms;
+	border-bottom: 2px solid black;
+	line-height: 47px;
+}
+.hidden a:hover {
+	color:black; 
+	transition: color 60ms;
+	-o-transition: color 60ms;
+	-moz-transition: color 60ms;
+	-webkit-transition: color 60ms;
+}
+.blur {
+
+}
+.blur * {
+	-webkit-filter: blur(2.5px);
+  	-moz-filter: blur(2.5px);
+ 	-o-filter: blur(2.5px);
+  	-ms-filter: blur(2.5px);
+ 	filter: blur(2.5px);
+}
+.blur *:hover {
+
+}
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
 	p {
 		font-size:85px;
