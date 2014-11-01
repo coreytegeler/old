@@ -7,10 +7,10 @@ window.onload = function() {
 
 function style() {
     $colors = [
+        'hidden',
         'woodenairplanelamp',
         'hypertext',
         'nighty',
-        'hidden',
         'blue'
         ];
     $index = Math.round(Math.random() * ($colors.length - 1) - 0);
