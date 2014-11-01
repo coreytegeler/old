@@ -53,19 +53,19 @@ span {
 .woodenairplanelamp a, .woodenairplanelamp a:visited {
 	color: red;
 }
+.blue {
+	background: blue;
+	color: white;
+}
+.blue a, .blue a:visited {
+	color: yellow;
+}
 .hypertext {
 	background: white;
 	color: black;
 }
 .hypertext a, .hypertext a:visited {
 	color: blue;
-}
-.jesus {
-	background: LimeGreen;
-	color: white;
-}
-.jesus a, .jesus a:visited {
-	color: Crimson;
 }
 .rgb {
 	background: white;
@@ -79,19 +79,8 @@ span {
 .rgb *:nth-child(3n+3) {
 	color: blue;
 }
-.freedom {
-	background: white;
-	color:blue;
-}
-.freedom a {
-	color: red;
-}
-.capecod {
-	background:	CadetBlue;
-	color:white;
-}
-.capecod a {
-	color: PaleGoldenRod; 
+.rgb a {
+	text-decoration: underline;
 }
 .hidden {
 	background:	white;
@@ -103,7 +92,7 @@ span {
 	-o-transition: color 80ms;
 	-moz-transition: color 80ms;
 	-webkit-transition: color 80ms;
-	border-bottom: 2px solid black;
+	border-bottom: 3px solid black;
 	line-height: 47px;
 }
 .hidden a:hover {

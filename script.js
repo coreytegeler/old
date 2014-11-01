@@ -1,5 +1,6 @@
 window.onload = function() {
     wrap();
+    style();
 }
 
 function wrap() {
@@ -12,7 +13,7 @@ function wrap() {
         for( var i = 0; i < len; i++ ) {
             if(text[i].indexOf('>') != -1 || text[i].indexOf('<') != -1 || text[i].indexOf('"') != -1 || text[i].indexOf('"') != -1) {
                 if(text[i].indexOf('>') != -1) {
-                    result[i] = text[i] + "&nbsp;";
+                    result[i] = text[i] + " ";
                 }
                 else {
                     result[i] =  text[i] + " ";
@@ -27,50 +28,24 @@ function wrap() {
         }
         $(this).html(result.join(''));
     });
-
     $('.refresh').click(function() {
-        console.log(Math.round(Math.random()));
-        if(Math.random() == 1) {
-            doSomething();
-        }
-        else {
-            paint();
-        }
+        style();
     });
 }
 
-function paint() {
+function style() {
     var colors = [
         "woodenairplanelamp",
         "hypertext",
-        "victoria",
-        "thxbb",
-        "jesus",
-        "jack",
         'rgb',
-        'freedom',
-        'capecode',
-        'hidden'
+        'hidden',
+        'blue'
         ];
     var rand = Math.round(Math.random() * (colors.length - 1) - 0);
     var style = colors[rand];
     $('body').attr('class',style);
-}
-
-function doSomething() {
-    var things = [
-        'wiggle',
-        'blur'
-        ];
-    var rand = Math.round(Math.random() * (things.length - 1) - 0);
-    var style = things[rand];
-    $('body').addClass(style);
-
-    if(style == 'wiggle') {
+    if($('body').is('.woodenairplanelamp, .hypertext, .rgb, .hidden, .blue')) {
         wiggle();
-    }
-    if(style == 'blur') {
-        blur();
     }
 }
 
