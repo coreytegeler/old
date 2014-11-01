@@ -79,40 +79,17 @@ em {
 	color: white;
 	text-decoration: underline;
 }
-.rgb {
-	background: white;
-}
-.rgb *:nth-child(3n+1) {
-	color: red;
-}
-.rgb *:nth-child(3n+2) {
-	color: green;
-}
-.rgb *:nth-child(3n+3) {
-	color: blue;
-}
-.rgb a {
-	text-decoration: underline;
-}
 .hidden {
 	background:	white;
 	color:black;
 }
 .hidden a:not(.smile) {
 	color: transparent;
-	transition: color 80ms;
-	-o-transition: color 80ms;
-	-moz-transition: color 80ms;
-	-webkit-transition: color 80ms;
 	border-bottom: 3px solid black;
 	line-height: 47px;
 }
 .hidden a:hover {
 	color:black; 
-	transition: color 60ms;
-	-o-transition: color 60ms;
-	-moz-transition: color 60ms;
-	-webkit-transition: color 60ms;
 }
 .blur {
 

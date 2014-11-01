@@ -1,19 +1,33 @@
 window.onload = function() {
-    // wrap();
     style();
+    $('.smile').click(function() {
+        update();
+    });
 }
 
 function style() {
-    var colors = [
+    $colors = [
         'woodenairplanelamp',
         'hypertext',
         'nighty',
-        'rgb',
         'hidden',
         'blue'
         ];
-    var rand = Math.round(Math.random() * (colors.length - 1) - 0);
-    var style = colors[rand];
+    $index = Math.round(Math.random() * ($colors.length - 1) - 0);
+    var style = $colors[$index];
+    $('body').attr('class',style);
+    wiggle();
+}
+
+function update() {
+    if($index <= $colors.length - 2) {
+        $index += 1;
+    } else {
+        $index = 0;
+    }
+    
+    console.log($index);
+    var style = $colors[$index];
     $('body').attr('class',style);
     wiggle();
 }
@@ -28,7 +42,7 @@ function wiggle() {
             var y = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
             var z = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
             if($('i').eq(i).ismouseover() && $('i').has('a')) {
-                $('i').eq(i).transition({x:x/9, y:y/9, rotate:z/9}, 90);
+                $('i').eq(i).transition({x:x/9, y:y/9, rotate:z/9}, 10);
             }
             else {
                 $('i').eq(i).transition({x:x, y:y, rotate:z}, 90);
