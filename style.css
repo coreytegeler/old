@@ -20,33 +20,77 @@ p {
 	font-weight: 400;
 	font-size: 45px;
 	line-height: 62px;
-	margin: 0 auto 40px auto;
+	margin: 0 auto 0 auto;
 }
 a {
 	color: blue;
 	text-decoration: none;
 	display: inline-table;
 }
-.s::after {
-	content: " ";
-}
-span {
+/*using `i` to wrap items to jiggle*/
+i {
 	display: inline-table;
-}
-#ps {
-	font-size: 20px;
-	line-height: 25px;
-}
-.wrap:hover {
-	cursor: pointer;
-}
-.r {
+	font-style: normal;
 	transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
 	-webkit-perspective: 1;
 }
-
+/*using `em` to wrap punctuation with preceding word*/
+em {
+	font-style: normal;
+	display: inline-table;
+}
+.smile {
+	text-decoration: none !important;
+	border-bottom: none !important;
+	transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+}
+.woodenairplanelamp {
+	background: yellow;
+	color: blue;
+}
+.woodenairplanelamp a, .woodenairplanelamp a:visited {
+	color: red;
+}
+.blue {
+	background: blue;
+	color: white;
+}
+.blue a, .blue a:visited {
+	color: yellow;
+}
+.hypertext {
+	background: white;
+	color: black;
+}
+.hypertext a, .hypertext a:visited {
+	color: blue;
+	text-decoration: underline;
+}
+.nighty {
+	background: black;
+	color: white;
+}
+.nighty a, .nighty a:visited {
+	color: white;
+	text-decoration: underline;
+}
+.hidden {
+	background:	white;
+	color:black;
+}
+.hidden a:not(.smile) {
+	color: transparent;
+	border-bottom: 3px solid black;
+	line-height: 47px;
+}
+.hidden a:hover {
+	color:black; 
+}
 @media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
 	p {
 		font-size:85px;

@@ -1,32 +1,34 @@
 window.onload = function() {
-    wrap();
+    style();
+    $('.smile').click(function() {
+        update();
+    });
 }
 
-function wrap() {
-    $(this).addClass('r');
-    $('body').addClass('wrapped');
-    $('p').each(function(){
-        var text = $(this).html().split(' '),
-            len = text.length,
-            result = []; 
-        for( var i = 0; i < len; i++ ) {
-            if(text[i].indexOf('>') != -1 || text[i].indexOf('<') != -1 || text[i].indexOf('"') != -1 || text[i].indexOf('"') != -1) {
-                if(text[i].indexOf('>') != -1) {
-                    result[i] = text[i] + "&nbsp;";
-                }
-                else {
-                    result[i] =  text[i] + " ";
-                }
-            }
-            else if (text[i] == '  ' ) {
-                
-            }
-            else {
-                result[i] = '<span class="r">' + text[i] + '&nbsp;</span>';
-            }
-        }
-        $(this).html(result.join(''));
-    });
+function style() {
+    $colors = [
+        'hidden',
+        'woodenairplanelamp',
+        'hypertext',
+        'nighty',
+        'blue'
+        ];
+    $index = Math.round(Math.random() * ($colors.length - 1) - 0);
+    var style = $colors[$index];
+    $('body').attr('class',style);
+    wiggle();
+}
+
+function update() {
+    if($index <= $colors.length - 2) {
+        $index += 1;
+    } else {
+        $index = 0;
+    }
+    
+    console.log($index);
+    var style = $colors[$index];
+    $('body').attr('class',style);
     wiggle();
 }
 
@@ -34,17 +36,16 @@ function wiggle() {
     setInterval(function() {
         var width = window.innerWidth;
         var height = window.innerHeight;
-        var texts = $('.r').length;
+        var texts = $('i').length;
         for(var i = 0; i < texts+1; i++) {
             var x = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
             var y = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
             var z = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
-            console.log(x,y,z);
-            if($('.r').eq(i).ismouseover() && $('.r').eq(i).attr('href')) {
-                $('.r').eq(i).transition({x:x/5, y:y/5, rotate:z/5}, 100);
+            if($('i').eq(i).ismouseover() && $('i').has('a')) {
+                $('i').eq(i).transition({x:x/9, y:y/9, rotate:z/9}, 10);
             }
             else {
-                $('.r').eq(i).transition({x:x, y:y, rotate:z}, 100);
+                $('i').eq(i).transition({x:x, y:y, rotate:z}, 90);
             }
         }
     },100);   
