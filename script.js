@@ -1,42 +1,13 @@
 window.onload = function() {
-    wrap();
+    // wrap();
     style();
-}
-
-function wrap() {
-    $(this).addClass('r');
-    $('body').addClass('wrapped');
-    $('p').each(function(){
-        var text = $(this).html().split(' '),
-            len = text.length,
-            result = []; 
-        for( var i = 0; i < len; i++ ) {
-            if(text[i].indexOf('>') != -1 || text[i].indexOf('<') != -1 || text[i].indexOf('"') != -1 || text[i].indexOf('"') != -1) {
-                if(text[i].indexOf('>') != -1) {
-                    result[i] = text[i] + " ";
-                }
-                else {
-                    result[i] =  text[i] + " ";
-                }
-            }
-            else if (text[i] == '  ' ) {
-                
-            }
-            else {
-                result[i] = '<span class="r">' + text[i] + '&nbsp;</span>';
-            }
-        }
-        $(this).html(result.join(''));
-    });
-    $('.refresh').click(function() {
-        style();
-    });
 }
 
 function style() {
     var colors = [
-        "woodenairplanelamp",
-        "hypertext",
+        'woodenairplanelamp',
+        'hypertext',
+        'nighty',
         'rgb',
         'hidden',
         'blue'
@@ -44,25 +15,23 @@ function style() {
     var rand = Math.round(Math.random() * (colors.length - 1) - 0);
     var style = colors[rand];
     $('body').attr('class',style);
-    if($('body').is('.woodenairplanelamp, .hypertext, .rgb, .hidden, .blue')) {
-        wiggle();
-    }
+    wiggle();
 }
 
 function wiggle() {
     setInterval(function() {
         var width = window.innerWidth;
         var height = window.innerHeight;
-        var texts = $('.r').length;
+        var texts = $('i').length;
         for(var i = 0; i < texts+1; i++) {
             var x = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
             var y = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
             var z = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
-            if($('.r').eq(i).ismouseover() && $('.r').eq(i).attr('href')) {
-                $('.r').eq(i).transition({x:x/5, y:y/5, rotate:z/5}, 100);
+            if($('i').eq(i).ismouseover() && $('i').has('a')) {
+                $('i').eq(i).transition({x:x/9, y:y/9, rotate:z/9}, 90);
             }
             else {
-                $('.r').eq(i).transition({x:x, y:y, rotate:z}, 100);
+                $('i').eq(i).transition({x:x, y:y, rotate:z}, 90);
             }
         }
     },100);   
