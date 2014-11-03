@@ -27,7 +27,9 @@ p {
 a {
 	color: inherit;
 	display: inline-table;
-	text-decoration: underline;
+	text-decoration: none;
+	border-bottom: 3px solid;
+	line-height: 44px;
 }
 /*using `i` to wrap items to jiggle*/
 i {
@@ -85,9 +87,8 @@ em {
 }
 .hidden a:not(.smile) {
 	color: transparent;
-	border-bottom: 3px solid black;
-	line-height: 47px;
 	text-decoration: none;
+	border-color: black;
 }
 .hidden a:hover {
 	color:black; 
