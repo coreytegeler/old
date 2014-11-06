@@ -131,4 +131,7 @@ em {
 		font-size:85px;
 		line-height:100px;
 	}
+	a {
+		line-height:105px;
+	}
 }
