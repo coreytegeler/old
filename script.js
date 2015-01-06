@@ -43,7 +43,7 @@ function wiggle() {
             var x = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
             var y = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
             var z = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
-            if($('i').eq(i).ismouseover() && $('i').has('a')) {
+            if($('i').eq(i).ismouseover() && $('i').eq(i).children('a').length) {
                 $('i').eq(i).transition({x:x/9, y:y/9, rotate:z/9}, 10);
             }
             else {
