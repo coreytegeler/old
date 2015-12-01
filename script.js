@@ -73,7 +73,7 @@ function update(action) {
     }
 }
 
-var BIG = 7;
+var BIG = 1;
 function wiggle() {
     var width = window.innerWidth;
     var height = window.innerHeight;
@@ -104,7 +104,7 @@ function wiggle() {
             scale = $(word).attr('data-scale');
             if($(word).ismouseover()) {
                 factor = 9;
-                scale = scale * 4;  
+                scale = scale;  
                 time = 10;
             } 
         }
