@@ -1,2 +1,2 @@
-coreytegeler.github.io
-======================
+coreytegeler.com
+================

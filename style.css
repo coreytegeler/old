@@ -1,4 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+@font-face {
+	font-family: 'Over There';
+	src: url('OverThere.eot');
+	src: url('OverThere.eot?#iefix') format('embedded-opentype'),
+		url('OverThere.woff') format('woff'),
+		url('OverThere.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
 html {
 	height: 100%;
 	width: 100%;
@@ -12,21 +21,28 @@ body {
 	display: table;
 	height: 100%;
 }
+html * {
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 main {
 	padding: 30px;
 	display: table-cell;
 	vertical-align: middle;
-	text-align: justify;
-    text-justify: inter-word;
 }
 p {
-	width:100%;
-	max-width: 980px;
+	width: 980px;
 	display: table;
 	font-weight: 400;
 	font-size: 45px;
 	line-height: 62px;
-	margin: 0 auto 0 auto;
+	text-align: justify;
+    text-justify: inter-word;
+	margin: 0 auto;
 }
 a {
 	color: inherit;
@@ -34,7 +50,6 @@ a {
 	text-decoration: none;
 	border-bottom: 3px solid;
 	line-height: 44px;
-	color:transparent;
 }
 /*using `i` to wrap items to jiggle*/
 i {
@@ -44,19 +59,56 @@ i {
 	-moz-transform-style: preserve-3d;
 	-webkit-transform-style: preserve-3d;
 	-webkit-perspective: 1;
+
+	/*transition: transform 300ms 10000ms linear;*/
+	/*-moz-transition: -moz-transform 300ms 10000ms linear;*/
+	/*-webkit-transition: -webkit-transform 300ms 10000ms linear;*/
+
+  	/*-webkit-animation: 500ms jiggle infinite alternate;*/
 }
+
+@-webkit-keyframes jiggle {
+/*  0% {
+  	-webkit-transform: rotateY(9deg) rotateX(9deg) rotateZ(9deg);
+  }
+  50% {
+    -webkit-transform: rotateX(0deg) rotateZ(9deg) rotateZ(9deg);
+  }
+  100% {
+  	-webkit-transform: rotateY(9deg) rotateX(9deg)  rotateZ(9deg);	
+  }*/
+}
+/*$('i').eq(i).transition({x:x/9, y:y/9, rotate:z/9}, 10);*/
 /*using `em` to wrap punctuation with preceding word*/
 em {
 	font-style: normal;
 	display: inline-table;
 }
-.smile {
+.action {
 	text-decoration: none !important;
 	border-bottom: none !important;
-	transform: rotate(90deg);
+	/*transform: rotate(90deg);
 	-o-transform: rotate(90deg);
 	-moz-transform: rotate(90deg);
-	-webkit-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);*/
+	cursor: pointer;
+}
+.action[data-action="peace"] {
+	transform: scale(1.8);
+	-o-transform: scale(1.8);
+	-moz-transform: scale(1.8);
+	-webkit-transform: scale(1.8);
+	margin-right: 20px;
+} 
+.action[data-action="love"] {
+	transform: scale(1.4);
+	-o-transform: scale(1.4);
+	-moz-transform: scale(1.4);
+	-webkit-transform: scale(1.4);
+	margin-left: 10px;
+} 
+.action:hover, .action.big {
+	cursor: pointer;
 }
 .woodenairplanelamp {
 	background: yellow;
@@ -64,6 +116,7 @@ em {
 }
 .woodenairplanelamp a, .woodenairplanelamp a:visited {
 	color: red;
+	border-color: red;
 }
 .blue {
 	background: blue;
@@ -71,6 +124,7 @@ em {
 }
 .blue a, .blue a:visited {
 	color: yellow;
+	border-color: yellow;
 }
 .hypertext {
 	background: white;
@@ -78,6 +132,7 @@ em {
 }
 .hypertext a, .hypertext a:visited {
 	color: blue;
+	border-color: blue;
 }
 .nighty {
 	background: black;
@@ -85,18 +140,7 @@ em {
 }
 .nighty a, .nighty a:visited {
 	color: white;
-}
-.hidden {
-	background:	white;
-	color:black;
-}
-.hidden a:not(.smile) {
-	color: transparent;
-	text-decoration: none;
-	border-color: black;
-}
-.hidden a:hover {
-	color:black; 
+	border-color: white;
 }
 .yellow {
 	background: yellow;
@@ -104,6 +148,7 @@ em {
 }
 .yellow a, .yellow a:visited {
 	color: red;
+	border-color: red;
 }
 .spring {
 	background: SpringGreen;
@@ -111,6 +156,7 @@ em {
 }
 .spring a, .spring a:visited {
 	color: black;
+	border-color: black;
 }
 .fadedflag {
 	background: RoyalBlue;
@@ -118,6 +164,7 @@ em {
 }
 .fadedflag a, .fadedflag a:visited {
 	color: Tomato;
+	border-color: Tomato;
 }
 .ronald {
 	background: red;
@@ -125,13 +172,52 @@ em {
 }
 .ronald a, .ronald a:visited {
 	color: Gold;
+	border-color: Gold;
+}
+.cactus {
+	background: #fdbbcc;
+	color: #f81c00;
+}
+.cactus a, .cactus a:visited {
+    border-color: #f81c00;
+}
+.hidden a {
+	color: transparent;
+	text-decoration: none;
+
+}
+.hidden a.action {
+	color: inherit;
+}
+.hidden a:hover {
+	color: inherit; 
+}
+.shadow {
+	text-shadow: 3px 3px 3px;
+	-moz-text-shadow: 3px 3px 3px;
+	-webkit-text-shadow: 3px 3px 3px;
+}
+.shadow a:hover {
+	text-shadow: 2px 2px 3px;
+	-moz-text-shadow: 2px 2px 3px;
+	-webkit-text-shadow: 2px 2px 3px;
+}
+.future {
+	font-family: 'Over There';
+}
+.italic i:not(.action) {
+	transform: rotateY(9deg) rotateX(9deg) rotateZ(9deg);
+	-moz-transform: rotateY(9deg) rotateX(9deg) rotateZ(9deg);
+	-webkit-transform: rotateY(9deg) rotateX(9deg) rotateZ(9deg);
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 	p {
+		text-align: left;
 		font-size:85px;
 		line-height:100px;
 	}
 	a {
+
 		line-height:105px;
 		border-width: 6px;
 	}
