@@ -1,0 +1,26 @@
+{
+  "name": "coreytegeler.github.io",
+  "version": "1.0.0",
+  "description": "a website",
+  "main": "jquery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-sass": "sass --watch assets/sass/style.scss:assets/css/style.css",
+    "watch-coffee": "watchify assets/coffee/script.coffee -o assets/js/script.js -dv",
+    "watch-pug": "pug --watch ./*.pug --out ./",
+    "watch": "npm run watch-sass & npm run watch-pug",
+    "build-sass": "sass assets/sass/style.scss:assets/css/style.css --style compressed",
+    "build-coffee": "browserify assets/coffee/script.coffee | uglifyjs -mc > assets/js/script.js",
+    "build": "npm run build-sass & npm run build-pug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/coreytegeler/coreytegeler.github.io.git"
+  },
+  "author": "Corey Tegeler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coreytegeler/coreytegeler.github.io/issues"
+  },
+  "homepage": "https://github.com/coreytegeler/coreytegeler.github.io#readme"
+}
