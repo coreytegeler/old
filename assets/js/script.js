@@ -47,10 +47,9 @@ var thePalette;
 function color() {
     var palettes = [
         'woodenairplanelamp',
-        'hypertext',
+        'default',
         'nighty',
         'blue',
-        'mc',
         'spring',
         'fadedflag',
         'ronald',
@@ -66,6 +65,12 @@ function color() {
         color();
         return;
     }
+
+    var $oldIcon = $('link[rel="icon"]');
+    var $newIcon = $oldIcon.clone();
+    $newIcon.attr('href', 'assets/images/icons/'+newPalette+'.png');
+    $newIcon.insertAfter($oldIcon);
+    $oldIcon.remove();
     console.log('Palette \u21F6 "' + newPalette + '"');
     $('body').removeClass(thePalette).addClass(newPalette);
     thePalette = newPalette;
@@ -87,15 +92,15 @@ function style(index) {
         styleLength = styles.length;
         index = Math.round(Math.random() * (styleLength - 1) - 0);
     }
-    
-    var newStyle = styles[index];
 
+    var newStyle = styles[index];
     if(newStyle == theStyle) {
         style();
         return;
     }
+
     console.log('Style \u21F6 "' + newStyle + '"');
- 
+
     if(theStyle == 'wiggle') {
         $('main i').each(function() {
             $(this).stop();

@@ -360,11 +360,11 @@ footer {
   color: yellow;
   border-color: yellow; }
 
-.hypertext {
+.default {
   background: white;
   color: black; }
 
-.hypertext a, .hypertext a:visited {
+.default a, .default a:visited {
   color: blue;
   border-color: blue; }
 
@@ -375,14 +375,6 @@ footer {
 .nighty a, .nighty a:visited {
   color: white;
   border-color: white; }
-
-.mc {
-  background: yellow;
-  color: black; }
-
-.mc a, .mc a:visited {
-  color: red;
-  border-color: red; }
 
 .spring {
   background: SpringGreen;
