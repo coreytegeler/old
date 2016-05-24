@@ -81,8 +81,7 @@ html * {
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
-  cursor: default; }
+  user-select: none; }
 
 .wrapper {
   width: 100%;
@@ -104,6 +103,7 @@ html * {
       line-height: 1.4em;
       padding-bottom: 1.4em; }
       .wrapper main .inner a {
+        cursor: default;
         line-height: 0.95em; }
       .wrapper main .inner i {
         display: inline-table;
@@ -228,20 +228,16 @@ footer {
           border-color: #FEF035; }
         footer .notes .note#rbma .click {
           height: 1.4em;
-          margin-bottom: -0.25em;
           padding-right: 0.5em; }
+          footer .notes .note#rbma .click img {
+            margin-bottom: -0.25em;
+            height: inherit; }
           footer .notes .note#rbma .click:hover, footer .notes .note#rbma .click .hover, footer .notes .note#rbma .click:hover img {
             cursor: pointer !important;
             animation: shake 300ms infinite;
             -moz-animation: shake 300ms infinite;
             -webkit-animation: shake 300ms infinite; }
-          footer .notes .note#rbma .click.toggle *:first-child {
-            display: inline-block; }
-          footer .notes .note#rbma .click.toggle *:last-child {
-            display: none; }
-          footer .notes .note#rbma .click.toggle img {
-            height: inherit; }
-          footer .notes .note#rbma .click.toggle span {
+          footer .notes .note#rbma .click.logo span {
             background-image: url("../images/underline.png");
             background-size: 12px 8px;
             background-position: 0px bottom;
@@ -249,10 +245,22 @@ footer {
             text-shadow: -2px 2px 1px black, 2px -2px 1px black, -2px -2px 1px black, 2px 2px 1px black;
             -moz-text-shadow: -2px 2px 1px black, 2px -2px 1px black, -2px -2px 1px black, 2px 2px 1px black;
             -webkit-text-shadow: -2px 2px 1px black, 2px -2px 1px black, -2px -2px 1px black, 2px 2px 1px black; }
-          footer .notes .note#rbma .click.toggle.toggled *:first-child {
-            display: none; }
-          footer .notes .note#rbma .click.toggle.toggled *:last-child {
-            display: inline-block; }
+          footer .notes .note#rbma .click.japan {
+            position: relative; }
+            footer .notes .note#rbma .click.japan.toggled img {
+              display: inline-block !important;
+              visibility: hidden; }
+            footer .notes .note#rbma .click.japan iframe {
+              position: absolute;
+              transform: scale(0.28);
+              -moz-transform: scale(0.28);
+              -webkit-transform: scale(0.28);
+              transform-origin: top left;
+              -moz-transform-origin: top left;
+              -webkit-transform-origin: top left;
+              top: -35%;
+              left: 0;
+              pointer-events: none; }
       footer .notes .note#soylent {
         background: #FFFFFF;
         color: #000000;
@@ -275,7 +283,9 @@ footer {
           height: 1em;
           position: relative;
           display: none;
-          cursor: pointer; }
+          cursor: pointer !important; }
+          footer .notes .note#pcgd .svg:hover {
+            cursor: pointer !important; }
           footer .notes .note#pcgd .svg svg {
             width: 1em;
             position: absolute;
@@ -324,6 +334,15 @@ footer {
       line-height: 1.5em; }
       footer .notes p a {
         border-bottom-width: 0.1em; }
+
+.toggle *:first-child {
+  display: inline-block; }
+.toggle *:last-child {
+  display: none; }
+.toggle.toggled *:first-child {
+  display: none; }
+.toggle.toggled *:last-child {
+  display: inline-block; }
 
 .woodenairplanelamp {
   background: yellow;

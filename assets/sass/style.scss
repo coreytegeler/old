@@ -33,7 +33,6 @@ html * {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  cursor: default;
 }
 .wrapper {
 	width: 100%;
@@ -55,6 +54,7 @@ html * {
 			line-height: 1.4em;
 			padding-bottom: 1.4em;
 			a {
+				cursor: default;
 				line-height: 0.95em;
 			}
 			i {
@@ -198,24 +198,18 @@ footer {
 				}
 				.click {
 					height: 1.4em;
-    			margin-bottom: -0.25em;
     			padding-right: 0.5em;
+    			img {
+    				margin-bottom: -0.25em;
+						height: inherit;
+    			}
 					&:hover, .hover, &:hover img {
 						cursor: pointer !important;
 						animation: shake 300ms infinite;
 						-moz-animation: shake 300ms infinite;
 						-webkit-animation: shake 300ms infinite;
 					}
-					&.toggle {
-						*:first-child {
-							display: inline-block;
-						}
-						*:last-child {
-							display: none;
-						}
-						img {
-							height: inherit;
-						}
+					&.logo {
 						span {
 							background-image: url("../images/underline.png");
 							background-size: 12px 8px;
@@ -225,13 +219,26 @@ footer {
 							-moz-text-shadow: -2px 2px 1px black, 2px -2px 1px black, -2px -2px 1px black, 2px 2px 1px black;
 							-webkit-text-shadow: -2px 2px 1px black, 2px -2px 1px black, -2px -2px 1px black, 2px 2px 1px black;
 						}
+					}
+					&.japan {
+						position: relative;
 						&.toggled {
-							*:first-child {
-								display: none;
+							img {
+								display: inline-block !important;
+								visibility: hidden;
 							}
-							*:last-child {
-								display: inline-block;
-							}
+						}
+						iframe {
+							position: absolute;
+							transform: scale(0.28);
+							-moz-transform: scale(0.28);
+							-webkit-transform: scale(0.28);
+							transform-origin: top left;
+							-moz-transform-origin: top left;
+							-webkit-transform-origin: top left;
+							top: -35%;
+							left: 0;
+							pointer-events: none;
 						}
 					}
 				}
@@ -262,7 +269,10 @@ footer {
 					height: 1em;
 					position: relative;
 					display: none;
-					cursor: pointer;
+					cursor: pointer !important;
+					&:hover {
+						cursor: pointer !important;
+					}
 					svg {
 						width: 1em;
 						position: absolute;
@@ -324,6 +334,23 @@ footer {
 			a {
 				border-bottom-width: 0.1em;
 			}
+		}
+	}
+}
+
+.toggle {
+	*:first-child {
+		display: inline-block;
+	}
+	*:last-child {
+		display: none;
+	}
+	&.toggled {
+		*:first-child {
+			display: none;
+		}
+		*:last-child {
+			display: inline-block;
 		}
 	}
 }

@@ -191,15 +191,31 @@ function compost() {
 }
 
 function rbma() {
+    var player;
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    window.onYouTubeIframeAPIReady = function() {
+        player = new YT.Player('anthem');
+    }
+
     $('#rbma .click').on('click', function() {
         var data = $(this).attr('data-data');
         switch (data) {
             case 'confetti':
                 $('#rbma').toggleClass(data);
                 break;
-            case 'toggle':
+            case 'logo':
                 $(this).toggleClass('toggled');
+                break;
             case 'japan':
+                $(this).toggleClass('toggled');
+                if($(this).hasClass('toggled')) {
+                    player.playVideo();
+                } else {
+                    player.stopVideo();
+                }
                 break;
         }
         
