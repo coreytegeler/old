@@ -194,24 +194,22 @@ function compost() {
 	paper.view.draw();
 }
 
+
+var player;
+function onYouTubeIframeAPIReady() {
+	player = new YT.Player('player', {
+		height: '230',
+		width: '200',
+		videoId: 'teeOavr7yLg'
+	});
+}
 function rbma() {
 	var tag = document.createElement('script');
 	tag.src = "https://www.youtube.com/iframe_api";
 	var firstScriptTag = document.getElementsByTagName('script')[0];
 	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-	var player;
-	function onYouTubeIframeAPIReady() {
-		player = new YT.Player('player', {
-			height: '230',
-			width: '200',
-			videoId: 'teeOavr7yLg'
-		});
-		console.log(player);
-	}
-
-
 	$('#rbma .click').on('click', function() {
+		console.log(player);
 		var data = $(this).attr('data-data');
 		switch (data) {
 			case 'confetti':
