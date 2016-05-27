@@ -197,7 +197,7 @@ function compost() {
 
 var player;
 function onYouTubeIframeAPIReady() {
-	player = new YT.Player('player', {
+	player = new YT.Player('anthem', {
 		height: '230',
 		width: '200',
 		videoId: 'teeOavr7yLg'
