@@ -136,7 +136,7 @@ sup {
   margin-left: -0.4em; }
   sup a {
     border: none;
-    padding: 0; }
+    padding: 0 2px; }
 
 .hover {
   cursor: pointer !important; }
