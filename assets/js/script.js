@@ -209,7 +209,6 @@ function rbma() {
 	var firstScriptTag = document.getElementsByTagName('script')[0];
 	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 	$('#rbma .click').on('click', function() {
-		console.log(player);
 		var data = $(this).attr('data-data');
 		switch (data) {
 			case 'confetti':
