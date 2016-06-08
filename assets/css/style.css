@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
 @-webkit-keyframes fan {
   0% {
@@ -52,28 +51,24 @@
     -webkit-transform: rotate(0deg) translateZ(0); }
   75% {
     -webkit-transform: rotate(-3deg) translateZ(0); } }
-@font-face {
-  font-family: 'Over There';
-  src: url("OverThere.eot");
-  src: url("OverThere.eot?#iefix") format("embedded-opentype"), url("OverThere.woff") format("woff"), url("OverThere.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
 html {
   height: 100%;
   width: 100%;
-  display: block; }
+  display: block;
+  overflow: hidden; }
 
 body {
   height: 100%;
   display: block;
-  font-family: 'Lora', serif;
   margin: auto;
+  overflow-y: scroll;
+  border-bottom: black;
   color: black;
-  text-rendering: optimizeLegibility;
-  font-weight: 400;
+  font-family: 'Lora', serif;
   font-size: 45px;
-  line-height: 1em;
-  border-bottom: black; }
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  line-height: 1em; }
 
 html * {
   -webkit-touch-callout: none;
@@ -103,7 +98,7 @@ html * {
       line-height: 1.4em;
       padding-bottom: 1.4em; }
       .wrapper main .inner a {
-        cursor: default;
+        cursor: alias;
         line-height: 0.95em; }
       .wrapper main .inner i {
         display: inline-table;
@@ -119,7 +114,6 @@ html * {
 p {
   margin: 0;
   text-align: justify;
-  text-justify: inter-word;
   padding: 30px; }
 
 a {
@@ -128,18 +122,16 @@ a {
   border-bottom: 3px solid;
   padding-bottom: 0.1em; }
 
-a:hover {
-  cursor: pointer !important; }
-
 sup {
   font-size: 0.5em;
   margin-left: -0.4em; }
+  sup:hover {
+    cursor: s-resize !important; }
   sup a {
     border: none;
     padding: 0 2px; }
-
-.hover {
-  cursor: pointer !important; }
+    sup a:hover {
+      cursor: s-resize !important; }
 
 .symbols {
   position: absolute;
@@ -307,8 +299,8 @@ footer {
       display: inline;
       padding-right: 10px; }
     footer .notes h2 {
-      font-size: 0.5em;
-      line-height: 0.6em;
+      font-size: 0.55em;
+      line-height: 1em;
       font-weight: normal;
       margin: 0;
       display: inline; }
@@ -316,18 +308,22 @@ footer {
         color: inherit !important;
         font-style: italic;
         border: none; }
+        footer .notes h2 a:hover {
+          cursor: alias !important; }
     footer .notes h3 {
-      font-size: 0.45em;
-      line-height: 0.5em;
+      font-size: 0.55em;
+      line-height: 1em;
       font-weight: normal;
       margin: 0;
       display: inline; }
-      footer .notes h3::after {
-        content: ' ➸'; }
       footer .notes h3 a {
         line-height: inherit;
         border: none;
         font-style: italic; }
+        footer .notes h3 a:hover {
+          cursor: alias !important; }
+    footer .notes .out:hover {
+      cursor: alias !important; }
     footer .notes p {
       padding: 2em 0;
       font-size: 0.7em;
@@ -344,75 +340,68 @@ footer {
 .toggle.toggled *:last-child {
   display: inline-block; }
 
-.woodenairplanelamp {
+.wooden-airplane-lamp {
   background: yellow;
   color: blue; }
-
-.woodenairplanelamp a, .woodenairplanelamp a:visited {
-  color: red;
-  border-color: red; }
+  .wooden-airplane-lamp a, .wooden-airplane-lamp a:visited {
+    color: red;
+    border-color: red; }
 
 .blue {
   background: blue;
   color: white; }
-
-.blue a, .blue a:visited {
-  color: yellow;
-  border-color: yellow; }
+  .blue a, .blue a:visited {
+    color: yellow;
+    border-color: yellow; }
 
 .default {
   background: white;
   color: black; }
-
-.default a, .default a:visited {
-  color: blue;
-  border-color: blue; }
+  .default a, .default a:visited {
+    color: blue;
+    border-color: blue; }
 
 .nighty {
   background: black;
   color: white; }
-
-.nighty a, .nighty a:visited {
-  color: white;
-  border-color: white; }
+  .nighty a, .nighty a:visited {
+    color: white;
+    border-color: white; }
 
 .spring {
   background: SpringGreen;
   color: black; }
+  .spring a, .spring a:visited {
+    color: black;
+    border-color: black; }
 
-.spring a, .spring a:visited {
-  color: black;
-  border-color: black; }
-
-.fadedflag {
+.old-glory {
   background: RoyalBlue;
   color: white; }
-
-.fadedflag a, .fadedflag a:visited {
-  color: Tomato;
-  border-color: Tomato; }
+  .old-glory a, .old-glory a:visited {
+    color: Tomato;
+    border-color: Tomato; }
 
 .ronald {
   background: red;
   color: white; }
-
-.ronald a, .ronald a:visited {
-  color: Gold;
-  border-color: Gold; }
+  .ronald a, .ronald a:visited {
+    color: Gold;
+    border-color: Gold; }
 
 .cactus {
   background: #fdbbcc;
   color: #f81c00; }
+  .cactus a, .cactus a:visited {
+    color: #f81c00;
+    border-color: #f81c00; }
 
-.cactus a, .cactus a:visited {
-  border-color: #f81c00; }
-
-.longsleeve {
-  background-color: #f9e312;
+.long-sleeve {
+  background: #f9e312;
   color: #00447c; }
-
-.longsleeve a, .longsleeve a:visited {
-  border-color: #00447c; }
+  .long-sleeve a, .long-sleeve a:visited {
+    color: #00447c;
+    border-color: #00447c; }
 
 .ad-blocker a {
   color: transparent;
@@ -424,14 +413,14 @@ footer {
   text-shadow: 3px 3px 3px;
   -moz-text-shadow: 3px 3px 3px;
   -webkit-text-shadow: 3px 3px 3px; }
+  .shadow a:hover {
+    text-shadow: 2px 2px 3px;
+    -moz-text-shadow: 2px 2px 3px;
+    -webkit-text-shadow: 2px 2px 3px; }
 
-.shadow a:hover {
-  text-shadow: 2px 2px 3px;
-  -moz-text-shadow: 2px 2px 3px;
-  -webkit-text-shadow: 2px 2px 3px; }
-
-.future {
-  /*font-family: 'Over There';*/ }
+.farsighted {
+  filter: blur(8px);
+  -webkit-filter: blur(8px); }
 
 .italic i:not(.symbol) {
   transform: rotateY(12deg) rotateX(12deg) rotateZ(12deg) !important;

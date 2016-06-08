@@ -1,0 +1,10 @@
+@mixin style($name, $uno, $dos, $tres) {
+	.#{$name} {
+		background: $uno;
+		color: $dos;
+		a, a:visited {
+			color: $tres;
+			border-color: $tres;
+		}
+	}
+}

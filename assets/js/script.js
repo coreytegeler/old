@@ -11,16 +11,18 @@ window.onload = function() {
 		var action = $(this).attr('data-action');
 		update(action);
 	});
-	setInterval(function() {
-		if($('main').hasClass('wiggle')) {
-				wiggle();    
-		}
-	}, 90);
+	setTimeout(function() {
+		setInterval(function() {
+			if($('main').hasClass('wiggle')) {
+					wiggle();    
+			}
+		}, 90);
+	},500);
 }
 
 $(window).resize(function() {
 	font();
-	var $compostPile = $('.note.compost-pile');
+	var $compostPile = $('.note#compost-pile');
 	var noteWidth = $compostPile.innerWidth();
 	var noteHeight = $compostPile.innerHeight();
 	var compostCanvas = document.getElementsByTagName('canvas')[0];
@@ -45,16 +47,15 @@ function font() {
 var thePalette;
 function color() {
 	var palettes = [
-		'woodenairplanelamp',
-		'default',
+		'wooden-airplane-lamp',
 		'nighty',
 		'blue',
 		'spring',
-		'fadedflag',
+		'old-glory',
 		'ronald',
 		'cactus',
-		'longsleeve',
-		' ' //not on load     
+		'long-sleeve',
+		'default' //not on load     
 	];
 	paletteLength = palettes.length;
 	index = Math.round(Math.random() * (paletteLength - 2) - 0);
@@ -84,7 +85,8 @@ function style(index) {
 		'ad-blocker',
 		'italic',
 		'from-the-other-side',
-		'blacked-out'
+		'blacked-out',
+		'farsighted'
 	];
 
 	if(index == undefined) {
