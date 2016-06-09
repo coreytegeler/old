@@ -132,12 +132,13 @@ html(lang="en-US")
             i me
             i .
           div.symbols
-            i.action.symbol(data-action="peace" data-scale="1.8" title="Click me more Peace!")
-              | &#x270c;
+            i.action.symbol(data-action="peace" data-scale="1.8")
+              include 'assets/images/peace.svg'
+
             i
               | &amp;
-            i.action.symbol(data-action="love" data-scale="1.4" title="Click me for Love!")
-              | &#9825;
+            i.action.symbol(data-action="love" data-scale="1.4")
+              include 'assets/images/love.svg'
     footer
       .notes
         .note#compost-pile

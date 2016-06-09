@@ -139,12 +139,16 @@ sup {
   bottom: 0px; }
   .symbols .symbol {
     text-decoration: none !important;
-    border-bottom: none !important;
-    /*transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);*/
-    cursor: pointer; }
+    border-bottom: none !important; }
+    .symbols .symbol:hover {
+      cursor: pointer; }
+    .symbols .symbol svg {
+      height: 1em !important;
+      width: auto;
+      display: inline-table;
+      fill: currentColor; }
+      .symbols .symbol svg:hover {
+        cursor: pointer; }
 
 .symbol[data-action="peace"] {
   transform: scale(1.8);
@@ -343,6 +347,8 @@ footer {
 .wooden-airplane-lamp {
   background: yellow;
   color: blue; }
+  .wooden-airplane-lamp svg {
+    fill: blue; }
   .wooden-airplane-lamp a, .wooden-airplane-lamp a:visited {
     color: red;
     border-color: red; }
@@ -350,6 +356,8 @@ footer {
 .blue {
   background: blue;
   color: white; }
+  .blue svg {
+    fill: white; }
   .blue a, .blue a:visited {
     color: yellow;
     border-color: yellow; }
@@ -357,6 +365,8 @@ footer {
 .default {
   background: white;
   color: black; }
+  .default svg {
+    fill: black; }
   .default a, .default a:visited {
     color: blue;
     border-color: blue; }
@@ -364,6 +374,8 @@ footer {
 .nighty {
   background: black;
   color: white; }
+  .nighty svg {
+    fill: white; }
   .nighty a, .nighty a:visited {
     color: white;
     border-color: white; }
@@ -371,6 +383,8 @@ footer {
 .spring {
   background: SpringGreen;
   color: black; }
+  .spring svg {
+    fill: black; }
   .spring a, .spring a:visited {
     color: black;
     border-color: black; }
@@ -378,6 +392,8 @@ footer {
 .old-glory {
   background: RoyalBlue;
   color: white; }
+  .old-glory svg {
+    fill: white; }
   .old-glory a, .old-glory a:visited {
     color: Tomato;
     border-color: Tomato; }
@@ -385,6 +401,8 @@ footer {
 .ronald {
   background: red;
   color: white; }
+  .ronald svg {
+    fill: white; }
   .ronald a, .ronald a:visited {
     color: Gold;
     border-color: Gold; }
@@ -392,6 +410,8 @@ footer {
 .cactus {
   background: #fdbbcc;
   color: #f81c00; }
+  .cactus svg {
+    fill: #f81c00; }
   .cactus a, .cactus a:visited {
     color: #f81c00;
     border-color: #f81c00; }
@@ -399,6 +419,8 @@ footer {
 .long-sleeve {
   background: #f9e312;
   color: #00447c; }
+  .long-sleeve svg {
+    fill: #00447c; }
   .long-sleeve a, .long-sleeve a:visited {
     color: #00447c;
     border-color: #00447c; }

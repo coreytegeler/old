@@ -97,11 +97,18 @@ sup {
 	.symbol {
 		text-decoration: none !important;
 		border-bottom: none !important;
-		/*transform: rotate(90deg);
-		-o-transform: rotate(90deg);
-		-moz-transform: rotate(90deg);
-		-webkit-transform: rotate(90deg);*/
-		cursor: pointer;
+		&:hover {
+			cursor: pointer;
+		}
+		svg {
+			height: 1em !important;
+			width: auto;
+			display: inline-table;
+			fill: currentColor;
+			&:hover {
+				cursor: pointer;
+			}
+		}
 	}
 }
 .symbol[data-action="peace"] {
