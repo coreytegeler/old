@@ -143,27 +143,83 @@ footer {
 				margin: auto;
 			}
 			&#iscp {
+				position: relative;
 				background: #ff5000;
 				color: #ffffff;
 				-webkit-transition: background 150ms ease-in-out;
 				-moz-transition: background 150ms ease-in-out;
 				transition: background 150ms ease-in-out;
-				&.archive {
-					background: #13172F;
-					.past {
-						color: #ff5000;
-					}
-				}
-				.past {
-					color: #13172F;
-					-webkit-transition: color 150ms ease-in-out;
-					-moz-transition: color 150ms ease-in-out;
-					transition: color 150ms ease-in-out;
-				}
+				// &.archive {
+				// 	background: #13172F;
+				// 	.past {
+				// 		color: #ff5000;
+				// 	}
+				// }
+				// .past {
+				// 	color: #13172F;
+				// 	-webkit-transition: color 150ms ease-in-out;
+				// 	-moz-transition: color 150ms ease-in-out;
+				// 	transition: color 150ms ease-in-out;
+				// }
   			a {
   				color: #ffffff;
   				border-color: #ffffff;
   			}
+  			.inner {
+  				width: calc(100% - 7em);
+  			}
+	  		.sandwich {
+	  			border-top: .2em solid white;
+	  			border-bottom: .2em solid white;
+	  			padding: 1em 0;
+	  			margin: .6em 0;
+	  		}
+	  		.side {
+	  			position: absolute;
+	  			top: 0;
+	  			width: 3em;
+	  			height: 100%;
+	  			background: #ff5000;
+	  			.inner {
+	  				width: 2.6em;
+	  				height: 100%;
+	  				margin: 0;
+	  				.top {
+	  					width: 2.4em;
+	  					height: 2.6em;
+	  					position: absolute;
+	  					top: 0;
+	  					border-bottom: .2em solid white;
+	  				}
+	  				.bottom {
+	  					width: 2.4em;
+	  					height: 2.6em;
+	  					position: absolute;
+	  					bottom: 0;
+	  					border-top: .2em solid white;
+	  				}
+	  			}
+	  			&.left {
+	  				left: 0;
+	  				.inner {
+	  					margin-right: .2em;
+		  				border-right: .2em solid white;
+		  				.top, .bottom {
+		  					left: 0;
+		  				}
+		  			}
+	  			}
+	  			&.right {
+	  				right: 0;
+	  				.inner {
+	  					margin-left: .2em;
+		  				border-left: .2em solid white;
+		  				.top, .bottom {
+		  					right: 0;
+		  				}
+		  			}
+	  			}
+	  		}
 			}
 			&#compost-pile {
 				background: #73db71;
@@ -415,4 +471,10 @@ footer {
 	-ms-animation: fan 200ms infinite linear;
 	-o-animation: fan 200ms infinite linear;
 	animation: fan 200ms infinite linear;
+}
+main:not(.fan) i:not(.symbol) {
+	-webkit-transform: rotateZ(0);
+	-ms-transform: rotateZ(0);
+	-o-transform: rotateZ(0);
+	transform: rotateZ(0);
 }

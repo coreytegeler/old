@@ -180,23 +180,58 @@ footer {
         display: table;
         margin: auto; }
       footer .notes .note#iscp {
+        position: relative;
         background: #ff5000;
         color: #ffffff;
         -webkit-transition: background 150ms ease-in-out;
         -moz-transition: background 150ms ease-in-out;
         transition: background 150ms ease-in-out; }
-        footer .notes .note#iscp.archive {
-          background: #13172F; }
-          footer .notes .note#iscp.archive .past {
-            color: #ff5000; }
-        footer .notes .note#iscp .past {
-          color: #13172F;
-          -webkit-transition: color 150ms ease-in-out;
-          -moz-transition: color 150ms ease-in-out;
-          transition: color 150ms ease-in-out; }
         footer .notes .note#iscp a {
           color: #ffffff;
           border-color: #ffffff; }
+        footer .notes .note#iscp .inner {
+          width: calc(100% - 7em); }
+        footer .notes .note#iscp .sandwich {
+          border-top: .2em solid white;
+          border-bottom: .2em solid white;
+          padding: 1em 0;
+          margin: .6em 0; }
+        footer .notes .note#iscp .side {
+          position: absolute;
+          top: 0;
+          width: 3em;
+          height: 100%;
+          background: #ff5000; }
+          footer .notes .note#iscp .side .inner {
+            width: 2.6em;
+            height: 100%;
+            margin: 0; }
+            footer .notes .note#iscp .side .inner .top {
+              width: 2.4em;
+              height: 2.6em;
+              position: absolute;
+              top: 0;
+              border-bottom: .2em solid white; }
+            footer .notes .note#iscp .side .inner .bottom {
+              width: 2.4em;
+              height: 2.6em;
+              position: absolute;
+              bottom: 0;
+              border-top: .2em solid white; }
+          footer .notes .note#iscp .side.left {
+            left: 0; }
+            footer .notes .note#iscp .side.left .inner {
+              margin-right: .2em;
+              border-right: .2em solid white; }
+              footer .notes .note#iscp .side.left .inner .top, footer .notes .note#iscp .side.left .inner .bottom {
+                left: 0; }
+          footer .notes .note#iscp .side.right {
+            right: 0; }
+            footer .notes .note#iscp .side.right .inner {
+              margin-left: .2em;
+              border-left: .2em solid white; }
+              footer .notes .note#iscp .side.right .inner .top, footer .notes .note#iscp .side.right .inner .bottom {
+                right: 0; }
       footer .notes .note#compost-pile {
         background: #73db71;
         color: #fbfffb;
@@ -465,5 +500,11 @@ footer {
   -ms-animation: fan 200ms infinite linear;
   -o-animation: fan 200ms infinite linear;
   animation: fan 200ms infinite linear; }
+
+main:not(.fan) i:not(.symbol) {
+  -webkit-transform: rotateZ(0);
+  -ms-transform: rotateZ(0);
+  -o-transform: rotateZ(0);
+  transform: rotateZ(0); }
 
 /*# sourceMappingURL=style.css.map */
