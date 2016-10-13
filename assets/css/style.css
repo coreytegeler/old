@@ -24,7 +24,7 @@
     transform: rotateZ(0deg); }
   100% {
     transform: rotateZ(360deg); } }
-@keyframes shake {
+@keyframes wiggle {
   0% {
     transform: rotate(0deg) translateZ(0); }
   25% {
@@ -33,7 +33,7 @@
     transform: rotate(0deg) translateZ(0); }
   75% {
     transform: rotate(-3deg) translateZ(0); } }
-@-moz-keyframes shake {
+@-moz-keyframes wiggle {
   0% {
     -moz-transform: rotate(0deg) translateZ(0); }
   25% {
@@ -42,7 +42,7 @@
     -moz-transform: rotate(0deg) translateZ(0); }
   75% {
     -moz-transform: rotate(-3deg) translateZ(0); } }
-@-webkit-keyframes shake {
+@-webkit-keyframes wiggle {
   0% {
     -webkit-transform: rotate(0deg) translateZ(0); }
   25% {
@@ -85,7 +85,8 @@ html * {
   min-height: 100%;
   display: table;
   margin: 0 auto;
-  position: relative; }
+  position: relative;
+  opacity: 0; }
   .wrapper main {
     min-height: calc(100vh - 100px);
     padding: 50px 0;
@@ -246,6 +247,12 @@ footer {
         footer .notes .note#compost-pile a {
           color: #fbfffb;
           border-color: #fbfffb; }
+      footer .notes .note#ceremony {
+        background: white;
+        color: black; }
+        footer .notes .note#ceremony a {
+          color: red;
+          border-color: red; }
       footer .notes .note#rbma {
         background: #000000;
         color: #FEF035; }
@@ -265,9 +272,9 @@ footer {
             height: inherit; }
           footer .notes .note#rbma .click:hover, footer .notes .note#rbma .click .hover, footer .notes .note#rbma .click:hover img {
             cursor: pointer !important;
-            animation: shake 300ms infinite;
-            -moz-animation: shake 300ms infinite;
-            -webkit-animation: shake 300ms infinite; }
+            animation: wiggle 300ms infinite;
+            -moz-animation: wiggle 300ms infinite;
+            -webkit-animation: wiggle 300ms infinite; }
           footer .notes .note#rbma .click.logo span {
             background-image: url("../images/underline.png");
             background-size: 12px 8px;
@@ -292,17 +299,6 @@ footer {
               top: -35%;
               left: 0;
               pointer-events: none; }
-      footer .notes .note#soylent {
-        background: #FFFFFF;
-        color: #000000;
-        background-repeat: no-repeat;
-        background-position: right center;
-        background-size: cover; }
-        footer .notes .note#soylent:not(.mountain) {
-          background-image: none !important; }
-        footer .notes .note#soylent a {
-          color: #000000;
-          border-color: #000000; }
       footer .notes .note#pcgd {
         background: #333399;
         color: #FFFF33; }

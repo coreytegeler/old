@@ -8,10 +8,7 @@
     "watch-sass": "sass --watch assets/sass/style.scss:assets/css/style.css",
     "watch-coffee": "watchify assets/coffee/script.coffee -o assets/js/script.js -dv",
     "watch-pug": "pug --watch ./*.pug --out ./",
-    "watch": "npm run watch-sass & npm run watch-pug",
-    "build-sass": "sass assets/sass/style.scss:assets/css/style.css --style compressed",
-    "build-coffee": "browserify assets/coffee/script.coffee | uglifyjs -mc > assets/js/script.js",
-    "build": "npm run build-sass & npm run build-pug"
+    "watch": "npm run watch-sass & npm run watch-pug"
   },
   "repository": {
     "type": "git",

@@ -18,6 +18,9 @@ window.onload = function() {
 			}
 		}, 90);
 	},500);
+	$('.wrapper').transition({
+		opacity: 1
+	}, 200, 'easeInOutQuad')
 }
 
 $(window).resize(function() {
