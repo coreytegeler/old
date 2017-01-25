@@ -4,7 +4,6 @@
   "description": "a website",
   "main": "jquery.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "watch-sass": "sass --watch assets/sass/style.scss:assets/css/style.css",
     "watch-coffee": "watchify assets/coffee/script.coffee -o assets/js/script.js -dv",
     "watch-pug": "pug --watch ./*.pug --out ./",

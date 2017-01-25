@@ -7,6 +7,7 @@ window.onload = function() {
 	purchase();
 	rbma();
 	soylent();
+	qr();
 	$('.action').click(function() {
 		var action = $(this).attr('data-action');
 		update(action);
@@ -252,6 +253,34 @@ function soylent() {
 	}).on('mouseleave', '#soylent .reveal', function() {
 		$('#soylent').removeClass('mountain');
 	});
+}
+
+function qr() {
+  wrapColor($('#qr'))
+}
+
+function wrapColor(el) {
+	var colors = ['ff33ff','3399cc','ff6633','b619cc','33cc33','ff0000'];
+	$els = $(el).children()
+	$els.each(function(i, el) {
+		if($(el).children(':not(br)').length) {
+			wrapColor(el)
+		} else {
+			console.log(el)
+			var chars = $(el).text().split('')
+		  $(el).empty()
+		  var colorIndex = 0
+		  $(chars).each(function(i, char) {
+		  	var color = colors[colorIndex]
+				$(el).append('<span style="color:#'+color+'">' + char + '</span>')
+				if(colorIndex < colors.length-1) {
+			    colorIndex++
+			  } else {
+			    colorIndex = 0
+			  }
+			})
+		}
+	})
 }
 
 function random(min, max) {

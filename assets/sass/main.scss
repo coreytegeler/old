@@ -47,6 +47,11 @@ html * {
 			font-size: 1em;
 			line-height: 1.4em;
 			padding-bottom: 1.4em;
+			p {
+				margin: 0;
+				text-align: justify;
+			  padding: 30px;    
+			}
 			a {
 				cursor: alias;
 				line-height: 0.95em;
@@ -65,11 +70,6 @@ html * {
 			}
 		}
 	}
-}
-p {
-	margin: 0;
-	text-align: justify;
-  padding: 30px;    
 }
 a {
 	color: inherit;
@@ -247,6 +247,40 @@ footer {
   				border-color: red;
   			}
 			}
+			&#pcgd {
+				background: #333399;
+				color: #FFFF33;
+				a {
+					color: #FFFF33;
+					border-color: #FFFF33;
+				}
+				.svg {
+					width: 1em;
+					height: 1em;
+					position: relative;
+					display: none;
+					cursor: pointer !important;
+					&:hover {
+						cursor: pointer !important;
+					}
+					svg {
+						width: 1em;
+						position: absolute;
+						bottom: -2px;
+						right: 0;
+						display: inline-block;
+						line-height: 1.2em;
+						vertical-align: baseline;
+						fill: #FFFF33 !important;
+						* {
+							fill: #FFFF33 !important;
+						}
+					}
+					&:first-of-type {
+						display: inline-block;
+					}
+				}
+			}
 			&#rbma {
 				background: #000000;
 				color: #FEF035;
@@ -307,38 +341,12 @@ footer {
 					}
 				}
 			}
-			&#pcgd {
-				background: #333399;
-				color: #FFFF33;
+			&#qr {
+				background: white;
+				color: black;
 				a {
-					color: #FFFF33;
-					border-color: #FFFF33;
-				}
-				.svg {
-					width: 1em;
-					height: 1em;
-					position: relative;
-					display: none;
-					cursor: pointer !important;
-					&:hover {
-						cursor: pointer !important;
-					}
-					svg {
-						width: 1em;
-						position: absolute;
-						bottom: -2px;
-						right: 0;
-						display: inline-block;
-						line-height: 1.2em;
-						vertical-align: baseline;
-						fill: #FFFF33 !important;
-						* {
-							fill: #FFFF33 !important;
-						}
-					}
-					&:first-of-type {
-						display: inline-block;
-					}
+					color: black;
+					border-color: black;
 				}
 			}
 		}
@@ -386,12 +394,19 @@ footer {
 		.out:hover {
 			cursor: alias !important;
 		}
-		p {
+		.text {
 			padding: 2em 0;
 			font-size: 0.7em;
     	line-height: 1.5em;
+    	text-align: justify;
 			a {
 				border-bottom-width: 0.1em;
+			}
+			p {
+				margin: 0 0 1em 0;
+				&:last-child {
+					margin: 0;
+				}
 			}
 		}
 	}
