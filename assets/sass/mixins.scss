@@ -9,5 +9,13 @@
 			color: $tres;
 			border-color: $tres;
 		}
+		#info {
+			background: $dos;
+			color: $uno;
+			a, a:visited {
+				color: $uno;
+				border-color: $uno;
+			}
+		}
 	}
 }

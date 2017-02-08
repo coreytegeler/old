@@ -167,214 +167,214 @@ sup {
 .symbol:hover, .action.big {
   cursor: pointer; }
 
-footer {
+.notes {
   width: 100%; }
-  footer .notes {
-    width: 100%; }
-    footer .notes .note {
-      width: 100%;
-      padding: 2em 0; }
-      footer .notes .note .inner {
-        width: 80%;
-        max-width: 980px;
-        display: table;
-        margin: auto; }
-      footer .notes .note#iscp {
-        position: relative;
-        background: #ff5000;
+  .notes .note {
+    width: 100%;
+    padding: 2em 0; }
+    .notes .note .inner {
+      width: 80%;
+      max-width: 980px;
+      display: table;
+      margin: auto; }
+    .notes .note#info .text {
+      padding: 0; }
+    .notes .note#iscp {
+      position: relative;
+      background: #ff5000;
+      color: #ffffff;
+      -webkit-transition: background 150ms ease-in-out;
+      -moz-transition: background 150ms ease-in-out;
+      transition: background 150ms ease-in-out; }
+      .notes .note#iscp a {
         color: #ffffff;
-        -webkit-transition: background 150ms ease-in-out;
-        -moz-transition: background 150ms ease-in-out;
-        transition: background 150ms ease-in-out; }
-        footer .notes .note#iscp a {
-          color: #ffffff;
-          border-color: #ffffff; }
-        footer .notes .note#iscp .inner {
-          width: calc(100% - 7em); }
-        footer .notes .note#iscp .sandwich {
-          border-top: .2em solid white;
-          border-bottom: .2em solid white;
-          padding: 1em 0;
-          margin: .6em 0; }
-        footer .notes .note#iscp .side {
-          position: absolute;
-          top: 0;
-          width: 3em;
+        border-color: #ffffff; }
+      .notes .note#iscp .inner {
+        width: calc(100% - 7em); }
+      .notes .note#iscp .sandwich {
+        border-top: .2em solid white;
+        border-bottom: .2em solid white;
+        padding: 1em 0;
+        margin: .6em 0; }
+      .notes .note#iscp .side {
+        position: absolute;
+        top: 0;
+        width: 3em;
+        height: 100%;
+        background: #ff5000; }
+        .notes .note#iscp .side .inner {
+          width: 2.6em;
           height: 100%;
-          background: #ff5000; }
-          footer .notes .note#iscp .side .inner {
-            width: 2.6em;
-            height: 100%;
-            margin: 0; }
-            footer .notes .note#iscp .side .inner .top {
-              width: 2.4em;
-              height: 2.6em;
-              position: absolute;
-              top: 0;
-              border-bottom: .2em solid white; }
-            footer .notes .note#iscp .side .inner .bottom {
-              width: 2.4em;
-              height: 2.6em;
-              position: absolute;
-              bottom: 0;
-              border-top: .2em solid white; }
-          footer .notes .note#iscp .side.left {
-            left: 0; }
-            footer .notes .note#iscp .side.left .inner {
-              margin-right: .2em;
-              border-right: .2em solid white; }
-              footer .notes .note#iscp .side.left .inner .top, footer .notes .note#iscp .side.left .inner .bottom {
-                left: 0; }
-          footer .notes .note#iscp .side.right {
-            right: 0; }
-            footer .notes .note#iscp .side.right .inner {
-              margin-left: .2em;
-              border-left: .2em solid white; }
-              footer .notes .note#iscp .side.right .inner .top, footer .notes .note#iscp .side.right .inner .bottom {
-                right: 0; }
-      footer .notes .note#compost-pile {
-        background: #73db71;
-        color: #fbfffb;
-        position: relative;
-        overflow: hidden; }
-        footer .notes .note#compost-pile canvas {
-          pointer-events: none;
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: 10; }
-        footer .notes .note#compost-pile a {
-          color: #fbfffb;
-          border-color: #fbfffb; }
-      footer .notes .note#ceremony {
-        background: white;
-        color: black; }
-        footer .notes .note#ceremony a {
-          color: red;
-          border-color: red; }
-      footer .notes .note#pcgd {
-        background: #333399;
-        color: #FFFF33; }
-        footer .notes .note#pcgd a {
-          color: #FFFF33;
-          border-color: #FFFF33; }
-        footer .notes .note#pcgd .svg {
-          width: 1em;
-          height: 1em;
-          position: relative;
-          display: none;
-          cursor: pointer !important; }
-          footer .notes .note#pcgd .svg:hover {
-            cursor: pointer !important; }
-          footer .notes .note#pcgd .svg svg {
-            width: 1em;
-            position: absolute;
-            bottom: -2px;
-            right: 0;
-            display: inline-block;
-            line-height: 1.2em;
-            vertical-align: baseline;
-            fill: #FFFF33 !important; }
-            footer .notes .note#pcgd .svg svg * {
-              fill: #FFFF33 !important; }
-          footer .notes .note#pcgd .svg:first-of-type {
-            display: inline-block; }
-      footer .notes .note#rbma {
-        background: #000000;
-        color: #FEF035; }
-        footer .notes .note#rbma.confetti {
-          background-size: auto;
-          background-repeat: repeat;
-          background-position: center;
-          background-image: url(../images/confetti.gif); }
-        footer .notes .note#rbma a {
-          color: #FEF035;
-          border-color: #FEF035; }
-        footer .notes .note#rbma .click {
-          height: 1.4em;
-          padding-right: 0.5em; }
-          footer .notes .note#rbma .click img {
-            margin-bottom: -0.25em;
-            height: inherit; }
-          footer .notes .note#rbma .click:hover, footer .notes .note#rbma .click .hover, footer .notes .note#rbma .click:hover img {
-            cursor: pointer !important;
-            animation: wiggle 300ms infinite;
-            -moz-animation: wiggle 300ms infinite;
-            -webkit-animation: wiggle 300ms infinite; }
-          footer .notes .note#rbma .click.logo span {
-            background-image: url("../images/underline.png");
-            background-size: 12px 8px;
-            background-position: 0px bottom;
-            background-repeat: repeat-x;
-            text-shadow: -2px 2px 1px black, 2px -2px 1px black, -2px -2px 1px black, 2px 2px 1px black;
-            -moz-text-shadow: -2px 2px 1px black, 2px -2px 1px black, -2px -2px 1px black, 2px 2px 1px black;
-            -webkit-text-shadow: -2px 2px 1px black, 2px -2px 1px black, -2px -2px 1px black, 2px 2px 1px black; }
-          footer .notes .note#rbma .click.japan {
-            position: relative; }
-            footer .notes .note#rbma .click.japan.toggled img {
-              display: inline-block !important;
-              visibility: hidden; }
-            footer .notes .note#rbma .click.japan iframe {
-              position: absolute;
-              transform: scale(0.28);
-              -moz-transform: scale(0.28);
-              -webkit-transform: scale(0.28);
-              transform-origin: top left;
-              -moz-transform-origin: top left;
-              -webkit-transform-origin: top left;
-              top: -35%;
-              left: 0;
-              pointer-events: none; }
-      footer .notes .note#qr {
-        background: white;
-        color: black; }
-        footer .notes .note#qr a {
-          color: black;
-          border-color: black; }
-    footer .notes h1 {
-      font-size: 1em;
-      line-height: 1.1em;
-      font-weight: normal;
-      margin: 0;
-      display: inline;
-      padding-right: 10px; }
-    footer .notes h2 {
-      font-size: 0.55em;
-      line-height: 1em;
-      font-weight: normal;
-      margin: 0;
-      display: inline; }
-      footer .notes h2 a {
-        color: inherit !important;
-        font-style: italic;
-        border: none; }
-        footer .notes h2 a:hover {
-          cursor: alias !important; }
-    footer .notes h3 {
-      font-size: 0.55em;
-      line-height: 1em;
-      font-weight: normal;
-      margin: 0;
-      display: inline; }
-      footer .notes h3 a {
-        line-height: inherit;
-        border: none;
-        font-style: italic; }
-        footer .notes h3 a:hover {
-          cursor: alias !important; }
-    footer .notes .out:hover {
-      cursor: alias !important; }
-    footer .notes .text {
-      padding: 2em 0;
-      font-size: 0.7em;
-      line-height: 1.5em;
-      text-align: justify; }
-      footer .notes .text a {
-        border-bottom-width: 0.1em; }
-      footer .notes .text p {
-        margin: 0 0 1em 0; }
-        footer .notes .text p:last-child {
           margin: 0; }
+          .notes .note#iscp .side .inner .top {
+            width: 2.4em;
+            height: 2.6em;
+            position: absolute;
+            top: 0;
+            border-bottom: .2em solid white; }
+          .notes .note#iscp .side .inner .bottom {
+            width: 2.4em;
+            height: 2.6em;
+            position: absolute;
+            bottom: 0;
+            border-top: .2em solid white; }
+        .notes .note#iscp .side.left {
+          left: 0; }
+          .notes .note#iscp .side.left .inner {
+            margin-right: .2em;
+            border-right: .2em solid white; }
+            .notes .note#iscp .side.left .inner .top, .notes .note#iscp .side.left .inner .bottom {
+              left: 0; }
+        .notes .note#iscp .side.right {
+          right: 0; }
+          .notes .note#iscp .side.right .inner {
+            margin-left: .2em;
+            border-left: .2em solid white; }
+            .notes .note#iscp .side.right .inner .top, .notes .note#iscp .side.right .inner .bottom {
+              right: 0; }
+    .notes .note#compost-pile {
+      background: #73db71;
+      color: #fbfffb;
+      position: relative;
+      overflow: hidden; }
+      .notes .note#compost-pile canvas {
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10; }
+      .notes .note#compost-pile a {
+        color: #fbfffb;
+        border-color: #fbfffb; }
+    .notes .note#ceremony {
+      background: white;
+      color: black; }
+      .notes .note#ceremony a {
+        color: red;
+        border-color: red; }
+    .notes .note#pcgd {
+      background: #333399;
+      color: #FFFF33; }
+      .notes .note#pcgd a {
+        color: #FFFF33;
+        border-color: #FFFF33; }
+      .notes .note#pcgd .svg {
+        width: 1em;
+        height: 1em;
+        position: relative;
+        display: none;
+        cursor: pointer !important; }
+        .notes .note#pcgd .svg:hover {
+          cursor: pointer !important; }
+        .notes .note#pcgd .svg svg {
+          width: 1em;
+          position: absolute;
+          bottom: -2px;
+          right: 0;
+          display: inline-block;
+          line-height: 1.2em;
+          vertical-align: baseline;
+          fill: #FFFF33 !important; }
+          .notes .note#pcgd .svg svg * {
+            fill: #FFFF33 !important; }
+        .notes .note#pcgd .svg:first-of-type {
+          display: inline-block; }
+    .notes .note#rbma {
+      background: #000000;
+      color: #FEF035; }
+      .notes .note#rbma.confetti {
+        background-size: auto;
+        background-repeat: repeat;
+        background-position: center;
+        background-image: url(../images/confetti.gif); }
+      .notes .note#rbma a {
+        color: #FEF035;
+        border-color: #FEF035; }
+      .notes .note#rbma .click {
+        height: 1.4em;
+        padding-right: 0.5em; }
+        .notes .note#rbma .click img {
+          margin-bottom: -0.25em;
+          height: inherit; }
+        .notes .note#rbma .click:hover, .notes .note#rbma .click .hover, .notes .note#rbma .click:hover img {
+          cursor: pointer !important;
+          animation: wiggle 300ms infinite;
+          -moz-animation: wiggle 300ms infinite;
+          -webkit-animation: wiggle 300ms infinite; }
+        .notes .note#rbma .click.logo span {
+          background-image: url("../images/underline.png");
+          background-size: 12px 8px;
+          background-position: 0px bottom;
+          background-repeat: repeat-x;
+          text-shadow: -2px 2px 1px black, 2px -2px 1px black, -2px -2px 1px black, 2px 2px 1px black;
+          -moz-text-shadow: -2px 2px 1px black, 2px -2px 1px black, -2px -2px 1px black, 2px 2px 1px black;
+          -webkit-text-shadow: -2px 2px 1px black, 2px -2px 1px black, -2px -2px 1px black, 2px 2px 1px black; }
+        .notes .note#rbma .click.japan {
+          position: relative; }
+          .notes .note#rbma .click.japan.toggled img {
+            display: inline-block !important;
+            visibility: hidden; }
+          .notes .note#rbma .click.japan iframe {
+            position: absolute;
+            transform: scale(0.28);
+            -moz-transform: scale(0.28);
+            -webkit-transform: scale(0.28);
+            transform-origin: top left;
+            -moz-transform-origin: top left;
+            -webkit-transform-origin: top left;
+            top: -35%;
+            left: 0;
+            pointer-events: none; }
+    .notes .note#qr {
+      background: white;
+      color: black; }
+      .notes .note#qr a {
+        color: black;
+        border-color: black; }
+  .notes h1 {
+    font-size: 1em;
+    line-height: 1.1em;
+    font-weight: normal;
+    margin: 0;
+    display: inline;
+    padding-right: 10px; }
+  .notes h2 {
+    font-size: 0.55em;
+    line-height: 1em;
+    font-weight: normal;
+    margin: 0;
+    display: inline; }
+    .notes h2 a {
+      color: inherit !important;
+      font-style: italic;
+      border: none; }
+      .notes h2 a:hover {
+        cursor: alias !important; }
+  .notes h3 {
+    font-size: 0.55em;
+    line-height: 1em;
+    font-weight: normal;
+    margin: 0;
+    display: inline; }
+    .notes h3 a {
+      line-height: inherit;
+      border: none;
+      font-style: italic; }
+      .notes h3 a:hover {
+        cursor: alias !important; }
+  .notes .out:hover {
+    cursor: alias !important; }
+  .notes .text {
+    padding: 2em 0;
+    font-size: 0.7em;
+    line-height: 1.5em;
+    text-align: justify; }
+    .notes .text a {
+      border-bottom-width: 0.1em; }
+    .notes .text p {
+      margin: 0 0 1em 0; }
+      .notes .text p:last-child {
+        margin: 0; }
 
 .toggle *:first-child {
   display: inline-block; }
@@ -393,6 +393,12 @@ footer {
   .wooden-airplane-lamp a, .wooden-airplane-lamp a:visited {
     color: red;
     border-color: red; }
+  .wooden-airplane-lamp #info {
+    background: blue;
+    color: yellow; }
+    .wooden-airplane-lamp #info a, .wooden-airplane-lamp #info a:visited {
+      color: yellow;
+      border-color: yellow; }
 
 .blue {
   background: blue;
@@ -402,6 +408,12 @@ footer {
   .blue a, .blue a:visited {
     color: yellow;
     border-color: yellow; }
+  .blue #info {
+    background: white;
+    color: blue; }
+    .blue #info a, .blue #info a:visited {
+      color: blue;
+      border-color: blue; }
 
 .default {
   background: white;
@@ -411,6 +423,12 @@ footer {
   .default a, .default a:visited {
     color: blue;
     border-color: blue; }
+  .default #info {
+    background: black;
+    color: white; }
+    .default #info a, .default #info a:visited {
+      color: white;
+      border-color: white; }
 
 .nighty {
   background: black;
@@ -420,6 +438,12 @@ footer {
   .nighty a, .nighty a:visited {
     color: white;
     border-color: white; }
+  .nighty #info {
+    background: white;
+    color: black; }
+    .nighty #info a, .nighty #info a:visited {
+      color: black;
+      border-color: black; }
 
 .spring {
   background: SpringGreen;
@@ -429,6 +453,12 @@ footer {
   .spring a, .spring a:visited {
     color: black;
     border-color: black; }
+  .spring #info {
+    background: black;
+    color: SpringGreen; }
+    .spring #info a, .spring #info a:visited {
+      color: SpringGreen;
+      border-color: SpringGreen; }
 
 .old-glory {
   background: RoyalBlue;
@@ -438,6 +468,12 @@ footer {
   .old-glory a, .old-glory a:visited {
     color: Tomato;
     border-color: Tomato; }
+  .old-glory #info {
+    background: white;
+    color: RoyalBlue; }
+    .old-glory #info a, .old-glory #info a:visited {
+      color: RoyalBlue;
+      border-color: RoyalBlue; }
 
 .ronald {
   background: red;
@@ -447,6 +483,12 @@ footer {
   .ronald a, .ronald a:visited {
     color: Gold;
     border-color: Gold; }
+  .ronald #info {
+    background: white;
+    color: red; }
+    .ronald #info a, .ronald #info a:visited {
+      color: red;
+      border-color: red; }
 
 .cactus {
   background: #fdbbcc;
@@ -456,6 +498,12 @@ footer {
   .cactus a, .cactus a:visited {
     color: #f81c00;
     border-color: #f81c00; }
+  .cactus #info {
+    background: #f81c00;
+    color: #fdbbcc; }
+    .cactus #info a, .cactus #info a:visited {
+      color: #fdbbcc;
+      border-color: #fdbbcc; }
 
 .long-sleeve {
   background: #f9e312;
@@ -465,6 +513,12 @@ footer {
   .long-sleeve a, .long-sleeve a:visited {
     color: #00447c;
     border-color: #00447c; }
+  .long-sleeve #info {
+    background: #00447c;
+    color: #f9e312; }
+    .long-sleeve #info a, .long-sleeve #info a:visited {
+      color: #f9e312;
+      border-color: #f9e312; }
 
 .ad-blocker a {
   color: transparent;
