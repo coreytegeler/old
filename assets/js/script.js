@@ -90,7 +90,9 @@ function style(index) {
 		'italic',
 		'from-the-other-side',
 		'blacked-out',
-		'farsighted'
+		'farsighted',
+		'mini',
+		'jumbo'
 	];
 
 	if(index == undefined) {

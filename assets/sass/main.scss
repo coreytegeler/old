@@ -462,6 +462,20 @@ sup {
   filter: blur(8px);
   -webkit-filter: blur(8px);
 }
+.mini {
+	p {
+		transform: scale(.2) !important;
+		-moz-transform: scale(.2) !important;
+		-webkit-transform: scale(.2) !important;
+	}
+}
+.jumbo {
+	p {
+		transform: scale(2) !important;
+		-moz-transform: scale(2) !important;
+		-webkit-transform: scale(2) !important;
+	}
+}
 .italic i:not(.symbol) {
 	transform: rotateY(12deg) rotateX(12deg) rotateZ(12deg) !important;
 	-moz-transform: rotateY(12deg) rotateX(12deg) rotateZ(12deg) !important;
