@@ -8,7 +8,7 @@ window.onload = function() {
 	rbma();
 	soylent();
 	qr();
-	resiz();
+	resize();
 	$('.action').click(function() {
 		var action = $(this).attr('data-action');
 		update(action);
@@ -270,7 +270,6 @@ function wrapColor(el) {
 		if($(el).children(':not(br)').length) {
 			wrapColor(el)
 		} else {
-			console.log(el)
 			var chars = $(el).text().split('')
 		  $(el).empty()
 		  var colorIndex = 0
