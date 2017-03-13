@@ -8,6 +8,7 @@ window.onload = function() {
 	rbma();
 	soylent();
 	qr();
+	resiz();
 	$('.action').click(function() {
 		var action = $(this).attr('data-action');
 		update(action);
@@ -24,7 +25,8 @@ window.onload = function() {
 	}, 200, 'easeInOutQuad')
 }
 
-$(window).resize(function() {
+
+function resize() {
 	font();
 	var $compostPile = $('.note#compost-pile');
 	var noteWidth = $compostPile.innerWidth();
@@ -38,7 +40,7 @@ $(window).resize(function() {
 			height: noteHeight
 		});
 	}
-}).resize();
+}
 
 function font() {
 	var fontSize = parseInt($('body').css('fontSize'));
