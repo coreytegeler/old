@@ -238,11 +238,16 @@ sup {
 				top: 0;
 				left: 0;
 				z-index: 10;
+				display: none;
 			}
 			a {
 				color: #fbfffb;
 				border-color: #fbfffb;
 			}
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url(../images/compost.svg); 
 		}
 		&#ceremony {
 			background: white;

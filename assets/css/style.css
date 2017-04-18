@@ -238,13 +238,18 @@ sup {
       background: #73db71;
       color: #fbfffb;
       position: relative;
-      overflow: hidden; }
+      overflow: hidden;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url(../images/compost.svg); }
       .notes .note#compost-pile canvas {
         pointer-events: none;
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 10; }
+        z-index: 10;
+        display: none; }
       .notes .note#compost-pile a {
         color: #fbfffb;
         border-color: #fbfffb; }

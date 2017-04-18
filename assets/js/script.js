@@ -2,7 +2,6 @@ window.onload = function() {
 	color();
 	style(0);
 	font();
-	compost();
 	iscp();
 	purchase();
 	rbma();
@@ -28,18 +27,6 @@ window.onload = function() {
 
 function resize() {
 	font();
-	var $compostPile = $('.note#compost-pile');
-	var noteWidth = $compostPile.innerWidth();
-	var noteHeight = $compostPile.innerHeight();
-	var compostCanvas = document.getElementsByTagName('canvas')[0];
-	if(compostCanvas) {
-		compostCanvas.width = noteWidth;
-		compostCanvas.height = noteHeight;
-		$(compostCanvas).css({
-			width: noteWidth,
-			height: noteHeight
-		});
-	}
 }
 
 function font() {
@@ -152,58 +139,6 @@ function wiggle() {
 		$(word).transition({x:x, y:y, rotate:z, scale: scale}, time);        
 	}    
 }
-
-function compost() {
-	var $note = $('#compost-pile');
-	var noteWidth = $note.innerWidth();
-	var noteHeight = $note.innerHeight();
-	var compostPaper = new paper.PaperScope();
-	var canvas = document.createElement('canvas');
-	canvas.width = noteWidth;
-	canvas.height = noteHeight;
-	$(canvas).addClass('compost')
-		.attr('resize', true)
-		.css({
-				width: noteWidth,
-				height: noteHeight
-		}).
-		appendTo($note);
-	compostPaper.setup(canvas);
-	var symbols = [];
-	var svgs = ['apple','banana','beet','carrot','dirt0','dirt1','dirt2','dirt3','dirt4','dirt5','egg1','egg2','peanut','tomato'];
-	for(var i = 0; i < svgs.length; i++) {
-		var imgUrl = '/assets/images/compost/'+svgs[i]+'.svg';
-		$.ajax({
-			type: "GET",
-			async: false,
-			url: imgUrl,
-			success: function(svg){
-				var importedSvg = paper.project.importSVG(svg);
-				var symbol = new paper.Symbol(importedSvg);
-				symbols[i] = symbol;
-			}
-		});
-	}
-	for(var y = 0; y < 4000; y += 130) {
-		for(var x = 0; x < 4000; x += 130) {
-			var index = random(0,symbols.length);
-			var symbol = symbols[index];
-			var shiftX = random(-90,90);
-			var shiftY = random(-90,90);
-			if(symbol != undefined) {
-				var newSymbol = symbol.place({
-					x: x + shiftX,
-					y: y + shiftY
-				});
-				newSymbol.rotate(random(0, 360));
-				newSymbol.scale(0.25);
-				newSymbol.sendToBack();
-			}
-		}
-	}
-	paper.view.draw();
-}
-
 
 var player;
 function onYouTubeIframeAPIReady() {
