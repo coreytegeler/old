@@ -179,18 +179,49 @@ sup {
       max-width: 980px;
       display: table;
       margin: auto; }
-    .notes .note#info .text {
-      padding: 0; }
+    .notes .note#info {
+      width: calc(100% - 1em);
+      border: .5em solid; }
+      .notes .note#info .text {
+        padding: 0; }
+    .notes .note#rz {
+      background: #f8e5e3;
+      color: #d02630;
+      position: relative; }
+      .notes .note#rz a {
+        color: #d02630;
+        border-color: #d02630; }
+      .notes .note#rz .pattern {
+        width: 100%;
+        height: 45px;
+        background-size: 30px 15px;
+        background-image: url(../images/zim.svg);
+        position: absolute;
+        left: 0; }
+        .notes .note#rz .pattern.top {
+          top: 1px; }
+        .notes .note#rz .pattern.bottom {
+          bottom: 1px; }
+    .notes .note#mts {
+      background-image: url(../images/map.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #000;
+      color: #fff; }
+      .notes .note#mts a {
+        color: #fff;
+        border-color: #fff; }
     .notes .note#iscp {
       position: relative;
       background: #ff5000;
-      color: #ffffff;
+      color: #fff;
       -webkit-transition: background 150ms ease-in-out;
       -moz-transition: background 150ms ease-in-out;
       transition: background 150ms ease-in-out; }
       .notes .note#iscp a {
-        color: #ffffff;
-        border-color: #ffffff; }
+        color: #fff;
+        border-color: #fff; }
       .notes .note#iscp .inner {
         width: calc(100% - 7em); }
       .notes .note#iscp .sandwich {
@@ -342,37 +373,31 @@ sup {
       .notes .note#qr a {
         color: black;
         border-color: black; }
-  .notes h1 {
-    font-size: 1em;
-    line-height: 1.1em;
-    font-weight: normal;
+  .notes h1, .notes h2, .notes h3, .notes h4 {
     margin: 0;
     display: inline;
-    padding-right: 10px; }
-  .notes h2 {
-    font-size: 0.55em;
-    line-height: 1em;
-    font-weight: normal;
-    margin: 0;
-    display: inline; }
-    .notes h2 a {
+    font-weight: normal; }
+    .notes h1 a, .notes h2 a, .notes h3 a, .notes h4 a {
       color: inherit !important;
       font-style: italic;
       border: none; }
-      .notes h2 a:hover {
+      .notes h1 a:hover, .notes h2 a:hover, .notes h3 a:hover, .notes h4 a:hover {
         cursor: alias !important; }
+  .notes h1 {
+    font-size: 1em;
+    line-height: 1.1em;
+    padding-right: 10px; }
+  .notes h2 {
+    font-size: 0.55em;
+    line-height: 1em; }
   .notes h3 {
     font-size: 0.55em;
-    line-height: 1em;
-    font-weight: normal;
-    margin: 0;
-    display: inline; }
-    .notes h3 a {
-      line-height: inherit;
-      border: none;
-      font-style: italic; }
-      .notes h3 a:hover {
-        cursor: alias !important; }
+    line-height: 1em; }
+  .notes h4 {
+    display: table;
+    font-size: 0.4em;
+    line-height: 1.3em;
+    margin-top: .5em; }
   .notes .out:hover {
     cursor: alias !important; }
   .notes .text {
@@ -406,7 +431,8 @@ sup {
     border-color: red; }
   .wooden-airplane-lamp #info {
     background: blue;
-    color: yellow; }
+    color: yellow;
+    border-color: yellow; }
     .wooden-airplane-lamp #info a, .wooden-airplane-lamp #info a:visited {
       color: yellow;
       border-color: yellow; }
@@ -421,7 +447,8 @@ sup {
     border-color: yellow; }
   .blue #info {
     background: white;
-    color: blue; }
+    color: blue;
+    border-color: blue; }
     .blue #info a, .blue #info a:visited {
       color: blue;
       border-color: blue; }
@@ -436,7 +463,8 @@ sup {
     border-color: blue; }
   .default #info {
     background: black;
-    color: white; }
+    color: white;
+    border-color: white; }
     .default #info a, .default #info a:visited {
       color: white;
       border-color: white; }
@@ -451,7 +479,8 @@ sup {
     border-color: white; }
   .nighty #info {
     background: white;
-    color: black; }
+    color: black;
+    border-color: black; }
     .nighty #info a, .nighty #info a:visited {
       color: black;
       border-color: black; }
@@ -466,7 +495,8 @@ sup {
     border-color: black; }
   .spring #info {
     background: black;
-    color: SpringGreen; }
+    color: SpringGreen;
+    border-color: SpringGreen; }
     .spring #info a, .spring #info a:visited {
       color: SpringGreen;
       border-color: SpringGreen; }
@@ -481,7 +511,8 @@ sup {
     border-color: Tomato; }
   .old-glory #info {
     background: white;
-    color: RoyalBlue; }
+    color: RoyalBlue;
+    border-color: RoyalBlue; }
     .old-glory #info a, .old-glory #info a:visited {
       color: RoyalBlue;
       border-color: RoyalBlue; }
@@ -496,7 +527,8 @@ sup {
     border-color: Gold; }
   .ronald #info {
     background: white;
-    color: red; }
+    color: red;
+    border-color: red; }
     .ronald #info a, .ronald #info a:visited {
       color: red;
       border-color: red; }
@@ -511,7 +543,8 @@ sup {
     border-color: #f81c00; }
   .cactus #info {
     background: #f81c00;
-    color: #fdbbcc; }
+    color: #fdbbcc;
+    border-color: #fdbbcc; }
     .cactus #info a, .cactus #info a:visited {
       color: #fdbbcc;
       border-color: #fdbbcc; }
@@ -526,7 +559,8 @@ sup {
     border-color: #00447c; }
   .long-sleeve #info {
     background: #00447c;
-    color: #f9e312; }
+    color: #f9e312;
+    border-color: #f9e312; }
     .long-sleeve #info a, .long-sleeve #info a:visited {
       color: #f9e312;
       border-color: #f9e312; }

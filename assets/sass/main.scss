@@ -144,14 +144,51 @@ sup {
 			margin: auto;
 		}
 		&#info {
+			width: calc(100% - 1em);
+			border: .5em solid;
 			.text {
 				padding: 0;
+			}
+		}
+		&#rz {
+			background: #f8e5e3;
+			color: #d02630;
+			position: relative;
+			a {
+				color: #d02630;
+				border-color: #d02630;
+			}
+			.pattern {
+				width: 100%;
+				height: 45px;
+				background-size: 30px 15px;
+				background-image: url(../images/zim.svg);
+				position: absolute;
+				left: 0;
+				&.top {
+					top: 1px;
+				}
+				&.bottom {
+			   	bottom: 1px; 
+				}
+			}
+		}
+		&#mts {
+			background-image: url(../images/map.jpg);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: #000;
+			color: #fff;
+			a {
+				color: #fff;
+				border-color: #fff;
 			}
 		}
 		&#iscp {
 			position: relative;
 			background: #ff5000;
-			color: #ffffff;
+			color: #fff;
 			-webkit-transition: background 150ms ease-in-out;
 			-moz-transition: background 150ms ease-in-out;
 			transition: background 150ms ease-in-out;
@@ -168,8 +205,8 @@ sup {
 			// 	transition: color 150ms ease-in-out;
 			// }
 			a {
-				color: #ffffff;
-				border-color: #ffffff;
+				color: #fff;
+				border-color: #fff;
 			}
 			.inner {
 				width: calc(100% - 7em);
@@ -366,20 +403,10 @@ sup {
 			}
 		}
 	}
-	h1 {
-		font-size: 1em;
-		line-height: 1.1em;
-		font-weight: normal;
+	h1, h2, h3, h4 {
 		margin: 0;
 		display: inline;
-		padding-right: 10px;
-	}
-	h2 {
-		font-size: 0.55em;
-		line-height: 1em;
 		font-weight: normal;
-		margin: 0;
-		display: inline;
 		a {
 			color: inherit !important;
 			font-style: italic;
@@ -389,23 +416,24 @@ sup {
 			}
 		}
 	}
+	h1 {
+		font-size: 1em;
+		line-height: 1.1em;
+		padding-right: 10px;
+	}
+	h2 {
+		font-size: 0.55em;
+		line-height: 1em;
+	}
 	h3 {
 		font-size: 0.55em;
 		line-height: 1em;
-		font-weight: normal;
-		margin: 0;
-		display: inline;
-		&::after {
-			// content: ' ➸';
-		}
-		a {
-			line-height: inherit;
-			border: none;
-			font-style: italic;
-			&:hover {
-				cursor: alias !important;
-			}
-		}
+	}
+	h4 {
+		display: table;
+		font-size: 0.4em;
+		line-height: 1.3em;
+		margin-top: .5em;
 	}
 	.out:hover {
 		cursor: alias !important;
@@ -452,6 +480,7 @@ sup {
 @include style('ronald', red, white, Gold);
 @include style('cactus', #fdbbcc, #f81c00, #f81c00);
 @include style('long-sleeve', #f9e312, #00447c, #00447c);
+
 .ad-blocker {
 	a {
 		color: transparent;
