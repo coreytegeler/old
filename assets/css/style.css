@@ -123,6 +123,8 @@ a {
   text-decoration: none;
   border-bottom: 3px solid;
   padding-bottom: 0.1em; }
+  a:hover {
+    cursor: alias !important; }
 
 sup {
   font-size: 0.5em;
@@ -381,8 +383,6 @@ sup {
       color: inherit !important;
       font-style: italic;
       border: none; }
-      .notes h1 a:hover, .notes h2 a:hover, .notes h3 a:hover, .notes h4 a:hover {
-        cursor: alias !important; }
   .notes h1 {
     font-size: 1em;
     line-height: 1.1em;
