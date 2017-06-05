@@ -93,6 +93,10 @@ html * {
     min-height: calc(100vh - 100px);
     padding: 50px 0;
     display: table; }
+    .wrapper main i, .wrapper main a, .wrapper main em {
+      display: inline-table;
+      hyphens: manual;
+      word-break: break-word; }
     .wrapper main .inner {
       display: table-cell;
       vertical-align: middle;
@@ -102,21 +106,18 @@ html * {
       padding-bottom: 1.4em; }
       .wrapper main .inner p {
         margin: 0;
-        text-align: justify;
         padding: 30px; }
       .wrapper main .inner a {
         cursor: alias;
         line-height: 0.95em; }
       .wrapper main .inner i {
-        display: inline-table;
         font-style: normal;
         transform-style: preserve-3d;
         -moz-transform-style: preserve-3d;
         -webkit-transform-style: preserve-3d;
         -webkit-perspective: 1000; }
       .wrapper main .inner em {
-        font-style: normal;
-        display: inline-table; }
+        font-style: normal; }
 
 a {
   color: inherit;

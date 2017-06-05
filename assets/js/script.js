@@ -1,11 +1,11 @@
 window.onload = function() {
+	$body = $('body');
 	color();
 	style(0);
 	font();
 	iscp();
 	purchase();
 	rbma();
-	soylent();
 	qr();
 	resize();
 	$('.action').click(function() {
@@ -30,11 +30,11 @@ function resize() {
 }
 
 function font() {
-	var fontSize = parseInt($('body').css('fontSize'));
+	var fontSize = parseInt($body.css('fontSize'));
 	var wrapperWidth = $('.wrapper').innerWidth();
 	var ratio = 980/45;
 	var newFontSize = wrapperWidth / ratio;
-	$('body').css({'fontSize':newFontSize});
+	$body.css({'fontSize':newFontSize});
 }
 
 var thePalette;
@@ -65,7 +65,7 @@ function color() {
 	$newIcon.insertAfter($oldIcon);
 	$oldIcon.remove();
 	console.log('Palette \u21F6 "' + newPalette + '"');
-	$('body').removeClass(thePalette).addClass(newPalette);
+	$body.removeClass(thePalette).addClass(newPalette);
 	thePalette = newPalette;
 }
 
@@ -125,18 +125,18 @@ function wiggle() {
 	var height = window.innerHeight;
 	var texts = $('main i').length;
 	for(var i = 0; i < texts; i++) {
-		var word = $('main i').eq(i);
+		var $word = $('main i').eq(i);
 		var x = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
 		var y = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
 		var z = (Math.floor((Math.random() * 3) + 1)) * (Math.round(Math.random()) * 2 - 1);
 		var time = 90;
 		var scale = 1;
 
-		if($(word).is('.symbol')) {
-			scale = $(word).attr('data-scale');
+		if($word.is('.symbol')) {
+			scale = $word.attr('data-scale');
 		}
 
-		$(word).transition({x:x, y:y, rotate:z, scale: scale}, time);        
+		$word.transition({x:x, y:y, rotate:z, scale: scale}, time);        
 	}    
 }
 
@@ -181,16 +181,8 @@ function iscp() {
 }
 
 function purchase() {
-	$('body').on('click', '#pcgd .svg:first-of-type', function() {
+	$body.on('click', '#pcgd .svg:first-of-type', function() {
 		$(this).insertAfter($('#pcgd .svg:last-of-type'));
-	});
-}
-
-function soylent() {
-	$('body').on('mouseenter', '#soylent .reveal', function() {
-		$('#soylent').addClass('mountain');
-	}).on('mouseleave', '#soylent .reveal', function() {
-		$('#soylent').removeClass('mountain');
 	});
 }
 

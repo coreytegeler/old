@@ -42,6 +42,11 @@ html * {
 		min-height: calc(100vh - 100px);
 		padding: 50px 0;
 		display: table;
+		i, a, em {
+			display: inline-table;
+			hyphens: manual;
+	    word-break: break-word;
+	  }
 		.inner {
 			display: table-cell;
 			vertical-align: middle;
@@ -51,15 +56,14 @@ html * {
 			padding-bottom: 1.4em;
 			p {
 				margin: 0;
-				text-align: justify;
-			  padding: 30px;    
+				// text-align: justify;
+			  padding: 30px;  
 			}
 			a {
 				cursor: alias;
 				line-height: 0.95em;
 			}
 			i {
-				display: inline-table;
 				font-style: normal;
 				transform-style: preserve-3d;
 				-moz-transform-style: preserve-3d;
@@ -68,7 +72,6 @@ html * {
 			}
 			em {
 				font-style: normal;
-				display: inline-table;
 			}
 		}
 	}

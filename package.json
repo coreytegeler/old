@@ -1,13 +1,14 @@
 {
   "name": "coreytegeler.github.io",
   "version": "1.0.0",
-  "description": "a website",
+  "description": "a website to brag about stuff",
   "main": "jquery.js",
   "scripts": {
     "watch-sass": "sass --watch assets/sass/style.scss:assets/css/style.css",
     "watch-coffee": "watchify assets/coffee/script.coffee -o assets/js/script.js -dv",
     "watch-pug": "pug --watch ./*.pug --out ./",
-    "watch": "npm run watch-sass & npm run watch-pug"
+    "watch": "npm run watch-sass & npm run watch-pug",
+    "go": "npm run watch & node_server"
   },
   "repository": {
     "type": "git",
