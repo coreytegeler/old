@@ -1,4 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+-var time = Date.now()
 html(lang="en-US")
   head(profile="http://www.w3.org/2005/10/profile")
     meta(name="viewport" content="width=device-width, initial-scale=1")
@@ -8,12 +9,12 @@ html(lang="en-US")
     meta(name="author" content="Corey Tegeler")
     title Corey Tegeler's Website
     link(type="image/png" rel="icon" href="assets/images/icons/default.png")
-    link(type="text/css" rel="stylesheet" href="assets/css/style.css?version=3.1")
+    link(type="text/css" rel="stylesheet" href="assets/css/style.css?version="+time)
     script(type="text/javascript" src="assets/js/jquery.js")
     script(type="text/javascript" src="assets/js/jquery.transit.min.js")
     script(type="text/javascript" src="assets/js/jquery.fittext.js")
     script(type="text/javascript" src="assets/js/paper.js")
-    script(type="text/javascript" src="assets/js/script.js?version=3.1")
+    script(type="text/javascript" src="assets/js/scripts.js?version="+time)
   body
     .wrapper
       main
@@ -114,9 +115,11 @@ html(lang="en-US")
               a(href="http://www.pentagram.com/" target="_blank") Pentagram
               |  &amp; 
               a(href="http://okfoc.us/" target="_blank") OKFocus
+              | .
       .note#mts
         .inner
-          h1 1 — Mapping the Spirit
+          h1 1 — 
+            a(href="http://www.mappingthespirit.com/" target="_blank") Mapping the Spirit
           h2 w/  
             a(href="www.kameelahr.com" target="_blank") Kameelah Janan Rasheed
           .details
@@ -158,7 +161,8 @@ html(lang="en-US")
       .note#iscp
         .sandwich
           .inner
-            h1 2 — International Studio &amp; Curatorial Program
+            h1 2 — 
+              a(href="http://www.iscp-nyc.org/" target="_blank") International Studio &amp; Curatorial Program
             h2 w/  
               a(href="http://othermeans.us" target="_blank") Other Means 
             .text
@@ -185,7 +189,8 @@ html(lang="en-US")
             a(href="http://compost-pile.org/" target="_blank") compost-pile.org
       .note#ceremony
         .inner
-          h1 4 — Af·fixing Ceremony: Four Movements for Essex
+          h1 4 — 
+            a(href="http://www.tionam.com/" target="_blank") Af·fixing Ceremony: Four Movements for Essex
           h2 w/  
             a(href="http://www.tionam.com/" target="_blank") Tiona McLodden
           .text
@@ -212,19 +217,14 @@ html(lang="en-US")
           h1 5 —
             .svg
               include assets/images/p/1.svg
-            .svg
               include assets/images/p/2.svg
-            .svg
               include assets/images/p/3.svg
-            .svg
               include assets/images/p/4.svg
-            .svg
               include assets/images/p/5.svg
-            .svg
               include assets/images/p/6.svg
-            .svg
               include assets/images/p/7.svg
-            |urchase College Graphic Design Dept. </br>
+            a(href="http://www.purchase.design" target="_blank")
+              |urchase College Graphic Design Dept.
           h2 w/ 
             a(href="http://www.alexapostolides.com/" target="_blank") Alex Apostolides
             | , 
@@ -248,7 +248,8 @@ html(lang="en-US")
             a(href="http://www.purchase.design" target="_blank") purchase.design
       .note#rbma
         .inner
-          h1 5 — Red Bull Music Academy
+          h1 5 — 
+            a(href="http://rbma2014participants.com" target="_blank") Red Bull Music Academy
           h2 w/  
             a(href="http://othermeans.us" target="_blank") Other Means
           .text
@@ -268,7 +269,8 @@ html(lang="en-US")
             a(href="http://rbma2014participants.com" target="_blank") rbma2014participants.com
       .note#qr
         .inner
-          h1 7 — Are You Quicker Than A Quick Response?
+          h1 7 — 
+            a(href="http://coreytegeler.com/quick-response" target="_blank") Are You Quicker Than A Quick Response?
           .text
             p Browser-based game using a QR reading smartphone as a controller. Modeled on first-person shooting video games, the player must only aim the QR reader at the multicolored QRs to advance to the next level, while avoiding the advertisement codes in black that swarm the browser window. Good luck.
 

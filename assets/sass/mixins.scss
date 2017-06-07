@@ -1,5 +1,5 @@
 @mixin style($name, $uno, $dos, $tres) {
-	.#{$name} {
+	body.#{$name} {
 		background: $uno;
 		color: $dos;
 		svg {

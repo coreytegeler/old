@@ -4,10 +4,11 @@
   "description": "a website to brag about stuff",
   "main": "jquery.js",
   "scripts": {
-    "watch-sass": "sass --watch assets/sass/style.scss:assets/css/style.css",
-    "watch-coffee": "watchify assets/coffee/script.coffee -o assets/js/script.js -dv",
-    "watch-pug": "pug --watch ./*.pug --out ./",
-    "watch": "npm run watch-sass & npm run watch-pug",
+    "sass": "sass --watch assets/sass/style.scss:assets/css/prestyle.css",
+    "prefix" : "postcss -w -u autoprefixer assets/css/prestyle.css -o assets/css/style.css",
+    "coffee": "coffee -o assets/js/ -cw assets/coffee/",
+    "pug": "pug --watch ./*.pug --out ./",
+    "watch": "npm run sass & npm run prefix & npm run pug & npm run coffee",
     "go": "npm run watch & node_server"
   },
   "repository": {
@@ -19,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/coreytegeler/coreytegeler.github.io/issues"
   },
-  "homepage": "https://github.com/coreytegeler/coreytegeler.github.io#readme"
+  "homepage": "https://github.com/coreytegeler/coreytegeler.github.io#readme",
+  "dependencies": {
+    "coffee-script": "1.10.0",
+    "node-sass": "3.8.0",
+    "autoprefixer": "^6.5.1",
+    "cssnano": "^3.8.0"
+  }
 }

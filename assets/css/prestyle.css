@@ -1,44 +1,18 @@
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
-@-webkit-keyframes fan {
-  0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg); }
-  100% {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg); } }
 @keyframes fan {
   0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg); }
+    transform: rotateZ(0deg); }
   100% {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg); } }
-@-webkit-keyframes wiggle {
-  0% {
-    -webkit-transform: rotate(0deg) translateZ(0);
-            transform: rotate(0deg) translateZ(0); }
-  25% {
-    -webkit-transform: rotate(3deg) translateZ(0);
-            transform: rotate(3deg) translateZ(0); }
-  50% {
-    -webkit-transform: rotate(0deg) translateZ(0);
-            transform: rotate(0deg) translateZ(0); }
-  75% {
-    -webkit-transform: rotate(-3deg) translateZ(0);
-            transform: rotate(-3deg) translateZ(0); } }
+    transform: rotateZ(360deg); } }
 @keyframes wiggle {
   0% {
-    -webkit-transform: rotate(0deg) translateZ(0);
-            transform: rotate(0deg) translateZ(0); }
+    transform: rotate(0deg) translateZ(0); }
   25% {
-    -webkit-transform: rotate(3deg) translateZ(0);
-            transform: rotate(3deg) translateZ(0); }
+    transform: rotate(3deg) translateZ(0); }
   50% {
-    -webkit-transform: rotate(0deg) translateZ(0);
-            transform: rotate(0deg) translateZ(0); }
+    transform: rotate(0deg) translateZ(0); }
   75% {
-    -webkit-transform: rotate(-3deg) translateZ(0);
-            transform: rotate(-3deg) translateZ(0); } }
+    transform: rotate(-3deg) translateZ(0); } }
 html {
   height: 100%;
   width: 100%;
@@ -61,10 +35,7 @@ body {
   line-height: 1em; }
 
 html * {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
+  user-select: none; }
 
 .wrapper {
   width: 100%;
@@ -75,7 +46,6 @@ html * {
   margin: 0 auto;
   position: relative;
   opacity: 0;
-  -webkit-transition: opacity 200ms 200ms ease-in-out;
   transition: opacity 200ms 200ms ease-in-out; }
   .wrapper.loaded {
     opacity: 1; }
@@ -85,9 +55,7 @@ html * {
     display: table; }
     .wrapper main i, .wrapper main a, .wrapper main em {
       display: inline-table;
-      -webkit-hyphens: manual;
-          -ms-hyphens: manual;
-              hyphens: manual;
+      hyphens: manual;
       word-break: break-word; }
     .wrapper main .inner {
       display: table-cell;
@@ -104,10 +72,8 @@ html * {
         line-height: 0.95em; }
       .wrapper main .inner i {
         font-style: normal;
-        -webkit-transform-style: preserve-3d;
-                transform-style: preserve-3d;
-        -webkit-perspective: 1000;
-                perspective: 1000; }
+        transform-style: preserve-3d;
+        perspective: 1000; }
       .wrapper main .inner em {
         font-style: normal; }
 
@@ -148,13 +114,11 @@ sup {
         cursor: pointer; }
 
 .symbol[data-action="peace"] {
-  -webkit-transform: scale(1.8);
-          transform: scale(1.8);
+  transform: scale(1.8);
   margin-right: 20px; }
 
 .symbol[data-action="love"] {
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
+  transform: scale(1.4);
   margin-left: 10px; }
 
 .symbol:hover, .action.big {
@@ -207,7 +171,6 @@ sup {
       position: relative;
       background: #ff5000;
       color: #fff;
-      -webkit-transition: background 150ms ease-in-out;
       transition: background 150ms ease-in-out; }
       .notes .note#iscp a {
         color: #fff;
@@ -330,8 +293,7 @@ sup {
           height: inherit; }
         .notes .note#rbma .click:hover, .notes .note#rbma .click .hover, .notes .note#rbma .click:hover img {
           cursor: pointer !important;
-          -webkit-animation: wiggle 300ms infinite;
-                  animation: wiggle 300ms infinite; }
+          animation: wiggle 300ms infinite; }
         .notes .note#rbma .click.logo span {
           background-image: url("../images/underline.png");
           background-size: 12px 8px;
@@ -345,10 +307,8 @@ sup {
             visibility: hidden; }
           .notes .note#rbma .click.japan iframe {
             position: absolute;
-            -webkit-transform: scale(0.28);
-                    transform: scale(0.28);
-            -webkit-transform-origin: top left;
-                    transform-origin: top left;
+            transform: scale(0.28);
+            transform-origin: top left;
             top: -35%;
             left: 0;
             pointer-events: none; }
@@ -563,24 +523,19 @@ body.long-sleeve {
     text-shadow: 2px 2px 3px; }
 
 .farsighted main {
-  -webkit-filter: blur(8px);
-          filter: blur(8px); }
+  filter: blur(8px); }
 
 .mini main p {
-  -webkit-transform: scale(0.2) !important;
-          transform: scale(0.2) !important; }
+  transform: scale(0.2) !important; }
 
 .jumbo main p {
-  -webkit-transform: scale(2) !important;
-          transform: scale(2) !important; }
+  transform: scale(2) !important; }
 
 .italic main i:not(.symbol) {
-  -webkit-transform: rotateY(12deg) rotateX(12deg) rotateZ(12deg) !important;
-          transform: rotateY(12deg) rotateX(12deg) rotateZ(12deg) !important; }
+  transform: rotateY(12deg) rotateX(12deg) rotateZ(12deg) !important; }
 
 .from main-the-other-side i:not(.action) {
-  -webkit-transform: rotateX(180deg) rotateY(180deg) !important;
-          transform: rotateX(180deg) rotateY(180deg) !important; }
+  transform: rotateX(180deg) rotateY(180deg) !important; }
 
 .redacted main a {
   background: black !important;
@@ -588,11 +543,9 @@ body.long-sleeve {
   border: none !important; }
 
 .fan main i:not(.symbol) {
-  -webkit-animation: fan 200ms infinite linear;
-          animation: fan 200ms infinite linear; }
+  animation: fan 200ms infinite linear; }
 
 main:not(.fan) i:not(.symbol) {
-  -webkit-transform: rotateZ(0);
-          transform: rotateZ(0); }
+  transform: rotateZ(0); }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=prestyle.css.map */
