@@ -274,10 +274,6 @@ sup {
       .notes .note#compost-pile a {
         color: #fbfffb;
         border-color: #fbfffb; }
-      .notes .note#compost-pile h3, .notes .note#compost-pile h3 a {
-        text-decoration: line-through; }
-        .notes .note#compost-pile h3:hover, .notes .note#compost-pile h3 a:hover {
-          cursor: pointer !important; }
     .notes .note#ceremony {
       background: white;
       color: black; }
