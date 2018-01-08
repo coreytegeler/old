@@ -57,6 +57,8 @@ body {
   font-family: 'Lora', serif;
   font-size: 45px;
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   line-height: 1em; }
 
@@ -181,7 +183,14 @@ sup {
       position: relative; }
       .notes .note#rz a {
         color: #d02630;
-        border-color: #d02630; }
+        text-shadow: 0 1px 0 #f8e5e3, 0 2px 0 #f8e5e3, 0 -1px 0 #f8e5e3, 0 -2px 0 #f8e5e3, -1px 1px 0 #f8e5e3, -1px 2px 0 #f8e5e3, 1px 1px 0 #f8e5e3, 1px 2px 0 #f8e5e3, -1px 0 0 #f8e5e3, 0 -3px 0 #f8e5e3;
+        background: -webkit-linear-gradient(#f8e5e3, #f8e5e3), -webkit-linear-gradient(#f8e5e3, #f8e5e3), -webkit-linear-gradient(#d02630, #d02630);
+        background: linear-gradient(#f8e5e3, #f8e5e3), linear-gradient(#f8e5e3, #f8e5e3), linear-gradient(#d02630, #d02630);
+        background-position: 0 87%,100% 87%,0 92%;
+        background-repeat: no-repeat,no-repeat,repeat-x;
+        background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+        text-decoration: none;
+        border: none; }
       .notes .note#rz .pattern {
         width: 100%;
         height: 45px;
@@ -202,7 +211,14 @@ sup {
       color: #fff; }
       .notes .note#mts a {
         color: #fff;
-        border-color: #fff; }
+        text-shadow: 0 1px 0 #000, 0 2px 0 #000, 0 -1px 0 #000, 0 -2px 0 #000, -1px 1px 0 #000, -1px 2px 0 #000, 1px 1px 0 #000, 1px 2px 0 #000, -1px 0 0 #000, 0 -3px 0 #000;
+        background: -webkit-linear-gradient(#000, #000), -webkit-linear-gradient(#000, #000), -webkit-linear-gradient(#fff, #fff);
+        background: linear-gradient(#000, #000), linear-gradient(#000, #000), linear-gradient(#fff, #fff);
+        background-position: 0 87%,100% 87%,0 92%;
+        background-repeat: no-repeat,no-repeat,repeat-x;
+        background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+        text-decoration: none;
+        border: none; }
     .notes .note#iscp {
       position: relative;
       background: #ff5000;
@@ -211,7 +227,14 @@ sup {
       transition: background 150ms ease-in-out; }
       .notes .note#iscp a {
         color: #fff;
-        border-color: #fff; }
+        text-shadow: 0 1px 0 #ff5000, 0 2px 0 #ff5000, 0 -1px 0 #ff5000, 0 -2px 0 #ff5000, -1px 1px 0 #ff5000, -1px 2px 0 #ff5000, 1px 1px 0 #ff5000, 1px 2px 0 #ff5000, -1px 0 0 #ff5000, 0 -3px 0 #ff5000;
+        background: -webkit-linear-gradient(#ff5000, #ff5000), -webkit-linear-gradient(#ff5000, #ff5000), -webkit-linear-gradient(#fff, #fff);
+        background: linear-gradient(#ff5000, #ff5000), linear-gradient(#ff5000, #ff5000), linear-gradient(#fff, #fff);
+        background-position: 0 87%,100% 87%,0 92%;
+        background-repeat: no-repeat,no-repeat,repeat-x;
+        background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+        text-decoration: none;
+        border: none; }
       .notes .note#iscp .inner {
         width: calc(100% - 7em); }
       .notes .note#iscp .sandwich {
@@ -273,19 +296,40 @@ sup {
         display: none; }
       .notes .note#compost-pile a {
         color: #fbfffb;
-        border-color: #fbfffb; }
+        text-shadow: 0 1px 0 #73db71, 0 2px 0 #73db71, 0 -1px 0 #73db71, 0 -2px 0 #73db71, -1px 1px 0 #73db71, -1px 2px 0 #73db71, 1px 1px 0 #73db71, 1px 2px 0 #73db71, -1px 0 0 #73db71, 0 -3px 0 #73db71;
+        background: -webkit-linear-gradient(#73db71, #73db71), -webkit-linear-gradient(#73db71, #73db71), -webkit-linear-gradient(#fbfffb, #fbfffb);
+        background: linear-gradient(#73db71, #73db71), linear-gradient(#73db71, #73db71), linear-gradient(#fbfffb, #fbfffb);
+        background-position: 0 87%,100% 87%,0 92%;
+        background-repeat: no-repeat,no-repeat,repeat-x;
+        background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+        text-decoration: none;
+        border: none; }
     .notes .note#ceremony {
       background: white;
       color: black; }
       .notes .note#ceremony a {
-        color: red;
-        border-color: red; }
+        color: black;
+        text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
+        background: -webkit-linear-gradient(white, white), -webkit-linear-gradient(white, white), -webkit-linear-gradient(red, red);
+        background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(red, red);
+        background-position: 0 87%,100% 87%,0 92%;
+        background-repeat: no-repeat,no-repeat,repeat-x;
+        background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+        text-decoration: none;
+        border: none; }
     .notes .note#pcgd {
       background: #333399;
       color: #FFFF33; }
       .notes .note#pcgd a {
         color: #FFFF33;
-        border-color: #FFFF33; }
+        text-shadow: 0 1px 0 #333399, 0 2px 0 #333399, 0 -1px 0 #333399, 0 -2px 0 #333399, -1px 1px 0 #333399, -1px 2px 0 #333399, 1px 1px 0 #333399, 1px 2px 0 #333399, -1px 0 0 #333399, 0 -3px 0 #333399;
+        background: -webkit-linear-gradient(#333399, #333399), -webkit-linear-gradient(#333399, #333399), -webkit-linear-gradient(#FFFF33, #FFFF33);
+        background: linear-gradient(#333399, #333399), linear-gradient(#333399, #333399), linear-gradient(#FFFF33, #FFFF33);
+        background-position: 0 87%,100% 87%,0 92%;
+        background-repeat: no-repeat,no-repeat,repeat-x;
+        background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+        text-decoration: none;
+        border: none; }
       .notes .note#pcgd .svg {
         width: 1em;
         height: 1em;
@@ -317,7 +361,14 @@ sup {
         background-image: url(../images/confetti.gif); }
       .notes .note#rbma a {
         color: #FEF035;
-        border-color: #FEF035; }
+        text-shadow: 0 1px 0 black, 0 2px 0 black, 0 -1px 0 black, 0 -2px 0 black, -1px 1px 0 black, -1px 2px 0 black, 1px 1px 0 black, 1px 2px 0 black, -1px 0 0 black, 0 -3px 0 black;
+        background: -webkit-linear-gradient(black, black), -webkit-linear-gradient(black, black), -webkit-linear-gradient(#FEF035, #FEF035);
+        background: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(#FEF035, #FEF035);
+        background-position: 0 87%,100% 87%,0 92%;
+        background-repeat: no-repeat,no-repeat,repeat-x;
+        background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+        text-decoration: none;
+        border: none; }
       .notes .note#rbma .click {
         height: 1.4em;
         padding-right: 0.5em; }
@@ -353,15 +404,27 @@ sup {
       color: black; }
       .notes .note#qr a {
         color: black;
-        border-color: black; }
+        text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
+        background: -webkit-linear-gradient(white, white), -webkit-linear-gradient(white, white), -webkit-linear-gradient(black, black);
+        background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(black, black);
+        background-position: 0 87%,100% 87%,0 92%;
+        background-repeat: no-repeat,no-repeat,repeat-x;
+        background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+        text-decoration: none;
+        border: none; }
   .notes h1, .notes h2, .notes h3, .notes h4 {
     margin: 0;
     display: inline;
     font-weight: normal; }
     .notes h1 a, .notes h2 a, .notes h3 a, .notes h4 a {
       color: inherit !important;
-      font-style: italic;
-      border: none; }
+      font-style: italic; }
+  .notes h2 a, .notes h4 a {
+    color: inherit !important;
+    font-style: italic;
+    border: none !important;
+    background: none !important;
+    text-shadow: none !important; }
   .notes h1 {
     font-size: 1em;
     line-height: 1.1em;
@@ -410,14 +473,28 @@ body.wooden-airplane-lamp {
     fill: blue; }
   body.wooden-airplane-lamp a, body.wooden-airplane-lamp a:visited {
     color: red;
-    border-color: red; }
+    text-shadow: 0 1px 0 yellow, 0 2px 0 yellow, 0 -1px 0 yellow, 0 -2px 0 yellow, -1px 1px 0 yellow, -1px 2px 0 yellow, 1px 1px 0 yellow, 1px 2px 0 yellow, -1px 0 0 yellow, 0 -3px 0 yellow;
+    background: -webkit-linear-gradient(yellow, yellow), -webkit-linear-gradient(yellow, yellow), -webkit-linear-gradient(blue, blue);
+    background: linear-gradient(yellow, yellow), linear-gradient(yellow, yellow), linear-gradient(blue, blue);
+    background-position: 0 87%,100% 87%,0 92%;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+    text-decoration: none;
+    border: none; }
   body.wooden-airplane-lamp #info {
     background: blue;
     color: yellow;
     border-color: yellow; }
     body.wooden-airplane-lamp #info a, body.wooden-airplane-lamp #info a:visited {
       color: yellow;
-      border-color: yellow; }
+      text-shadow: 0 1px 0 blue, 0 2px 0 blue, 0 -1px 0 blue, 0 -2px 0 blue, -1px 1px 0 blue, -1px 2px 0 blue, 1px 1px 0 blue, 1px 2px 0 blue, -1px 0 0 blue, 0 -3px 0 blue;
+      background: -webkit-linear-gradient(blue, blue), -webkit-linear-gradient(blue, blue), -webkit-linear-gradient(yellow, yellow);
+      background: linear-gradient(blue, blue), linear-gradient(blue, blue), linear-gradient(yellow, yellow);
+      background-position: 0 87%,100% 87%,0 92%;
+      background-repeat: no-repeat,no-repeat,repeat-x;
+      background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+      text-decoration: none;
+      border: none; }
 
 body.blue {
   background: blue;
@@ -426,14 +503,28 @@ body.blue {
     fill: white; }
   body.blue a, body.blue a:visited {
     color: yellow;
-    border-color: yellow; }
+    text-shadow: 0 1px 0 blue, 0 2px 0 blue, 0 -1px 0 blue, 0 -2px 0 blue, -1px 1px 0 blue, -1px 2px 0 blue, 1px 1px 0 blue, 1px 2px 0 blue, -1px 0 0 blue, 0 -3px 0 blue;
+    background: -webkit-linear-gradient(blue, blue), -webkit-linear-gradient(blue, blue), -webkit-linear-gradient(white, white);
+    background: linear-gradient(blue, blue), linear-gradient(blue, blue), linear-gradient(white, white);
+    background-position: 0 87%,100% 87%,0 92%;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+    text-decoration: none;
+    border: none; }
   body.blue #info {
     background: white;
     color: blue;
     border-color: blue; }
     body.blue #info a, body.blue #info a:visited {
       color: blue;
-      border-color: blue; }
+      text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
+      background: -webkit-linear-gradient(white, white), -webkit-linear-gradient(white, white), -webkit-linear-gradient(blue, blue);
+      background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(blue, blue);
+      background-position: 0 87%,100% 87%,0 92%;
+      background-repeat: no-repeat,no-repeat,repeat-x;
+      background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+      text-decoration: none;
+      border: none; }
 
 body.default {
   background: white;
@@ -442,14 +533,28 @@ body.default {
     fill: black; }
   body.default a, body.default a:visited {
     color: blue;
-    border-color: blue; }
+    text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
+    background: -webkit-linear-gradient(white, white), -webkit-linear-gradient(white, white), -webkit-linear-gradient(black, black);
+    background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(black, black);
+    background-position: 0 87%,100% 87%,0 92%;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+    text-decoration: none;
+    border: none; }
   body.default #info {
     background: black;
     color: white;
     border-color: white; }
     body.default #info a, body.default #info a:visited {
       color: white;
-      border-color: white; }
+      text-shadow: 0 1px 0 black, 0 2px 0 black, 0 -1px 0 black, 0 -2px 0 black, -1px 1px 0 black, -1px 2px 0 black, 1px 1px 0 black, 1px 2px 0 black, -1px 0 0 black, 0 -3px 0 black;
+      background: -webkit-linear-gradient(black, black), -webkit-linear-gradient(black, black), -webkit-linear-gradient(white, white);
+      background: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(white, white);
+      background-position: 0 87%,100% 87%,0 92%;
+      background-repeat: no-repeat,no-repeat,repeat-x;
+      background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+      text-decoration: none;
+      border: none; }
 
 body.nighty {
   background: black;
@@ -458,14 +563,28 @@ body.nighty {
     fill: white; }
   body.nighty a, body.nighty a:visited {
     color: white;
-    border-color: white; }
+    text-shadow: 0 1px 0 black, 0 2px 0 black, 0 -1px 0 black, 0 -2px 0 black, -1px 1px 0 black, -1px 2px 0 black, 1px 1px 0 black, 1px 2px 0 black, -1px 0 0 black, 0 -3px 0 black;
+    background: -webkit-linear-gradient(black, black), -webkit-linear-gradient(black, black), -webkit-linear-gradient(white, white);
+    background: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(white, white);
+    background-position: 0 87%,100% 87%,0 92%;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+    text-decoration: none;
+    border: none; }
   body.nighty #info {
     background: white;
     color: black;
     border-color: black; }
     body.nighty #info a, body.nighty #info a:visited {
       color: black;
-      border-color: black; }
+      text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
+      background: -webkit-linear-gradient(white, white), -webkit-linear-gradient(white, white), -webkit-linear-gradient(black, black);
+      background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(black, black);
+      background-position: 0 87%,100% 87%,0 92%;
+      background-repeat: no-repeat,no-repeat,repeat-x;
+      background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+      text-decoration: none;
+      border: none; }
 
 body.spring {
   background: SpringGreen;
@@ -474,14 +593,28 @@ body.spring {
     fill: black; }
   body.spring a, body.spring a:visited {
     color: black;
-    border-color: black; }
+    text-shadow: 0 1px 0 SpringGreen, 0 2px 0 SpringGreen, 0 -1px 0 SpringGreen, 0 -2px 0 SpringGreen, -1px 1px 0 SpringGreen, -1px 2px 0 SpringGreen, 1px 1px 0 SpringGreen, 1px 2px 0 SpringGreen, -1px 0 0 SpringGreen, 0 -3px 0 SpringGreen;
+    background: -webkit-linear-gradient(SpringGreen, SpringGreen), -webkit-linear-gradient(SpringGreen, SpringGreen), -webkit-linear-gradient(black, black);
+    background: linear-gradient(SpringGreen, SpringGreen), linear-gradient(SpringGreen, SpringGreen), linear-gradient(black, black);
+    background-position: 0 87%,100% 87%,0 92%;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+    text-decoration: none;
+    border: none; }
   body.spring #info {
     background: black;
     color: SpringGreen;
     border-color: SpringGreen; }
     body.spring #info a, body.spring #info a:visited {
       color: SpringGreen;
-      border-color: SpringGreen; }
+      text-shadow: 0 1px 0 black, 0 2px 0 black, 0 -1px 0 black, 0 -2px 0 black, -1px 1px 0 black, -1px 2px 0 black, 1px 1px 0 black, 1px 2px 0 black, -1px 0 0 black, 0 -3px 0 black;
+      background: -webkit-linear-gradient(black, black), -webkit-linear-gradient(black, black), -webkit-linear-gradient(SpringGreen, SpringGreen);
+      background: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(SpringGreen, SpringGreen);
+      background-position: 0 87%,100% 87%,0 92%;
+      background-repeat: no-repeat,no-repeat,repeat-x;
+      background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+      text-decoration: none;
+      border: none; }
 
 body.old-glory {
   background: RoyalBlue;
@@ -490,14 +623,28 @@ body.old-glory {
     fill: white; }
   body.old-glory a, body.old-glory a:visited {
     color: Tomato;
-    border-color: Tomato; }
+    text-shadow: 0 1px 0 RoyalBlue, 0 2px 0 RoyalBlue, 0 -1px 0 RoyalBlue, 0 -2px 0 RoyalBlue, -1px 1px 0 RoyalBlue, -1px 2px 0 RoyalBlue, 1px 1px 0 RoyalBlue, 1px 2px 0 RoyalBlue, -1px 0 0 RoyalBlue, 0 -3px 0 RoyalBlue;
+    background: -webkit-linear-gradient(RoyalBlue, RoyalBlue), -webkit-linear-gradient(RoyalBlue, RoyalBlue), -webkit-linear-gradient(white, white);
+    background: linear-gradient(RoyalBlue, RoyalBlue), linear-gradient(RoyalBlue, RoyalBlue), linear-gradient(white, white);
+    background-position: 0 87%,100% 87%,0 92%;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+    text-decoration: none;
+    border: none; }
   body.old-glory #info {
     background: white;
     color: RoyalBlue;
     border-color: RoyalBlue; }
     body.old-glory #info a, body.old-glory #info a:visited {
       color: RoyalBlue;
-      border-color: RoyalBlue; }
+      text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
+      background: -webkit-linear-gradient(white, white), -webkit-linear-gradient(white, white), -webkit-linear-gradient(RoyalBlue, RoyalBlue);
+      background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(RoyalBlue, RoyalBlue);
+      background-position: 0 87%,100% 87%,0 92%;
+      background-repeat: no-repeat,no-repeat,repeat-x;
+      background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+      text-decoration: none;
+      border: none; }
 
 body.ronald {
   background: red;
@@ -506,14 +653,28 @@ body.ronald {
     fill: white; }
   body.ronald a, body.ronald a:visited {
     color: Gold;
-    border-color: Gold; }
+    text-shadow: 0 1px 0 red, 0 2px 0 red, 0 -1px 0 red, 0 -2px 0 red, -1px 1px 0 red, -1px 2px 0 red, 1px 1px 0 red, 1px 2px 0 red, -1px 0 0 red, 0 -3px 0 red;
+    background: -webkit-linear-gradient(red, red), -webkit-linear-gradient(red, red), -webkit-linear-gradient(white, white);
+    background: linear-gradient(red, red), linear-gradient(red, red), linear-gradient(white, white);
+    background-position: 0 87%,100% 87%,0 92%;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+    text-decoration: none;
+    border: none; }
   body.ronald #info {
     background: white;
     color: red;
     border-color: red; }
     body.ronald #info a, body.ronald #info a:visited {
       color: red;
-      border-color: red; }
+      text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
+      background: -webkit-linear-gradient(white, white), -webkit-linear-gradient(white, white), -webkit-linear-gradient(red, red);
+      background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(red, red);
+      background-position: 0 87%,100% 87%,0 92%;
+      background-repeat: no-repeat,no-repeat,repeat-x;
+      background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+      text-decoration: none;
+      border: none; }
 
 body.cactus {
   background: #fdbbcc;
@@ -522,14 +683,28 @@ body.cactus {
     fill: #f81c00; }
   body.cactus a, body.cactus a:visited {
     color: #f81c00;
-    border-color: #f81c00; }
+    text-shadow: 0 1px 0 #fdbbcc, 0 2px 0 #fdbbcc, 0 -1px 0 #fdbbcc, 0 -2px 0 #fdbbcc, -1px 1px 0 #fdbbcc, -1px 2px 0 #fdbbcc, 1px 1px 0 #fdbbcc, 1px 2px 0 #fdbbcc, -1px 0 0 #fdbbcc, 0 -3px 0 #fdbbcc;
+    background: -webkit-linear-gradient(#fdbbcc, #fdbbcc), -webkit-linear-gradient(#fdbbcc, #fdbbcc), -webkit-linear-gradient(#f81c00, #f81c00);
+    background: linear-gradient(#fdbbcc, #fdbbcc), linear-gradient(#fdbbcc, #fdbbcc), linear-gradient(#f81c00, #f81c00);
+    background-position: 0 87%,100% 87%,0 92%;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+    text-decoration: none;
+    border: none; }
   body.cactus #info {
     background: #f81c00;
     color: #fdbbcc;
     border-color: #fdbbcc; }
     body.cactus #info a, body.cactus #info a:visited {
       color: #fdbbcc;
-      border-color: #fdbbcc; }
+      text-shadow: 0 1px 0 #f81c00, 0 2px 0 #f81c00, 0 -1px 0 #f81c00, 0 -2px 0 #f81c00, -1px 1px 0 #f81c00, -1px 2px 0 #f81c00, 1px 1px 0 #f81c00, 1px 2px 0 #f81c00, -1px 0 0 #f81c00, 0 -3px 0 #f81c00;
+      background: -webkit-linear-gradient(#f81c00, #f81c00), -webkit-linear-gradient(#f81c00, #f81c00), -webkit-linear-gradient(#fdbbcc, #fdbbcc);
+      background: linear-gradient(#f81c00, #f81c00), linear-gradient(#f81c00, #f81c00), linear-gradient(#fdbbcc, #fdbbcc);
+      background-position: 0 87%,100% 87%,0 92%;
+      background-repeat: no-repeat,no-repeat,repeat-x;
+      background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+      text-decoration: none;
+      border: none; }
 
 body.long-sleeve {
   background: #f9e312;
@@ -538,14 +713,28 @@ body.long-sleeve {
     fill: #00447c; }
   body.long-sleeve a, body.long-sleeve a:visited {
     color: #00447c;
-    border-color: #00447c; }
+    text-shadow: 0 1px 0 #f9e312, 0 2px 0 #f9e312, 0 -1px 0 #f9e312, 0 -2px 0 #f9e312, -1px 1px 0 #f9e312, -1px 2px 0 #f9e312, 1px 1px 0 #f9e312, 1px 2px 0 #f9e312, -1px 0 0 #f9e312, 0 -3px 0 #f9e312;
+    background: -webkit-linear-gradient(#f9e312, #f9e312), -webkit-linear-gradient(#f9e312, #f9e312), -webkit-linear-gradient(#00447c, #00447c);
+    background: linear-gradient(#f9e312, #f9e312), linear-gradient(#f9e312, #f9e312), linear-gradient(#00447c, #00447c);
+    background-position: 0 87%,100% 87%,0 92%;
+    background-repeat: no-repeat,no-repeat,repeat-x;
+    background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+    text-decoration: none;
+    border: none; }
   body.long-sleeve #info {
     background: #00447c;
     color: #f9e312;
     border-color: #f9e312; }
     body.long-sleeve #info a, body.long-sleeve #info a:visited {
       color: #f9e312;
-      border-color: #f9e312; }
+      text-shadow: 0 1px 0 #00447c, 0 2px 0 #00447c, 0 -1px 0 #00447c, 0 -2px 0 #00447c, -1px 1px 0 #00447c, -1px 2px 0 #00447c, 1px 1px 0 #00447c, 1px 2px 0 #00447c, -1px 0 0 #00447c, 0 -3px 0 #00447c;
+      background: -webkit-linear-gradient(#00447c, #00447c), -webkit-linear-gradient(#00447c, #00447c), -webkit-linear-gradient(#f9e312, #f9e312);
+      background: linear-gradient(#00447c, #00447c), linear-gradient(#00447c, #00447c), linear-gradient(#f9e312, #f9e312);
+      background-position: 0 87%,100% 87%,0 92%;
+      background-repeat: no-repeat,no-repeat,repeat-x;
+      background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+      text-decoration: none;
+      border: none; }
 
 .ad-blocker main a {
   color: transparent;

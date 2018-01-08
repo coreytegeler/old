@@ -18,7 +18,9 @@ body {
     size: 45px;
     weight: 400;
   }
-  text-rendering:optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 	line-height: 1em;
 }
 html * {
@@ -152,7 +154,7 @@ sup {
 			position: relative;
 			a {
 				color: #d02630;
-				border-color: #d02630;
+				@include underline(#d02630, #f8e5e3, 2px);
 			}
 			.pattern {
 				width: 100%;
@@ -178,7 +180,7 @@ sup {
 			color: #fff;
 			a {
 				color: #fff;
-				border-color: #fff;
+				@include underline(#fff, #000, 2px);
 			}
 		}
 		&#iscp {
@@ -186,21 +188,9 @@ sup {
 			background: #ff5000;
 			color: #fff;
 			transition: background 150ms ease-in-out;
-			// &.archive {
-			// 	background: #13172F;
-			// 	.past {
-			// 		color: #ff5000;
-			// 	}
-			// }
-			// .past {
-			// 	color: #13172F;
-			// 	-webkit-transition: color 150ms ease-in-out;
-			// 	-moz-transition: color 150ms ease-in-out;
-			// 	transition: color 150ms ease-in-out;
-			// }
 			a {
 				color: #fff;
-				border-color: #fff;
+				@include underline(#fff, #ff5000, 2px);
 			}
 			.inner {
 				width: calc(100% - 7em);
@@ -273,7 +263,7 @@ sup {
 			}
 			a {
 				color: #fbfffb;
-				border-color: #fbfffb;
+				@include underline(#fbfffb, #73db71, 2px);
 			}
 			background-size: cover;
 			background-position: center;
@@ -284,8 +274,8 @@ sup {
 			background: white;
 			color: black;
 			a {
-				color: red;
-				border-color: red;
+				color: black;
+				@include underline(red, white, 2px);
 			}
 		}
 		&#pcgd {
@@ -293,7 +283,7 @@ sup {
 			color: #FFFF33;
 			a {
 				color: #FFFF33;
-				border-color: #FFFF33;
+				@include underline(#FFFF33, #333399, 2px);
 			}
 			.svg {
 				width: 1em;
@@ -333,7 +323,7 @@ sup {
 			}
 			a {
 				color: #FEF035;
-				border-color: #FEF035;
+				@include underline(#FEF035, black, 2px);
 			}
 			.click {
 				height: 1.4em;
@@ -379,7 +369,7 @@ sup {
 			color: black;
 			a {
 				color: black;
-				border-color: black;
+				@include underline(black, white, 2px);
 			}
 		}
 	}
@@ -390,7 +380,15 @@ sup {
 		a {
 			color: inherit !important;
 			font-style: italic;
-			border: none;
+		}
+	}
+	h2, h4 {
+		a {
+			color: inherit !important;
+			font-style: italic;
+			border: none !important;
+			background: none !important;
+			text-shadow: none !important;
 		}
 	}
 	h1 {
