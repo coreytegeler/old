@@ -14,17 +14,17 @@ body {
 	border-bottom: black;
 	color:black;
 	font: {
-    family: 'Lora', serif;
-    size: 45px;
-    weight: 400;
-  }
+		family: 'Lora', serif;
+		size: 45px;
+		weight: 400;
+	}
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
 	line-height: 1em;
 }
 html * {
-  user-select: none;
+	user-select: none;
 }
 .wrapper {
 	width: 100%;
@@ -46,8 +46,8 @@ html * {
 		i, a, em {
 			display: inline-table;
 			hyphens: manual;
-	    word-break: break-word;
-	  }
+			word-break: break-word;
+		}
 		.inner {
 			display: table-cell;
 			vertical-align: middle;
@@ -57,7 +57,7 @@ html * {
 			padding-bottom: 1.4em;
 			p {
 				margin: 0;
-			  padding: 30px;  
+				padding: .5em;  
 			}
 			a {
 				cursor: alias;
@@ -130,7 +130,7 @@ sup {
 	cursor: pointer;
 }
 
-.notes {
+#notes {
 	width: 100%;
 	.note {
 		width: 100%;
@@ -141,9 +141,16 @@ sup {
 			display: table;
 			margin: auto;
 		}
-		&#info {
-			width: calc(100% - 1em);
-			border: .5em solid;
+		&#currently {
+			padding-bottom: 1em;
+			.inner {
+		    width: calc(100% - 3.5em);
+		    max-width: calc(100% - 3.5em);
+		    padding: 1em;
+		    margin: auto;
+		    border: .25em solid;
+		    display: block;
+			}
 			.text {
 				padding: 0;
 			}
@@ -167,7 +174,7 @@ sup {
 					top: 1px;
 				}
 				&.bottom {
-			   	bottom: 1px; 
+					bottom: 1px; 
 				}
 			}
 		}
@@ -195,58 +202,58 @@ sup {
 			.inner {
 				width: calc(100% - 7em);
 			}
-  		.sandwich {
-  			border-top: .2em solid white;
-  			border-bottom: .2em solid white;
-  			padding: 1em 0;
-  			margin: .6em 0;
-  		}
-  		.side {
-  			position: absolute;
-  			top: 0;
-  			width: 3em;
-  			height: 100%;
-  			background: #ff5000;
-  			.inner {
-  				width: 2.6em;
-  				height: 100%;
-  				margin: 0;
-  				.top {
-  					width: 2.4em;
-  					height: 2.6em;
-  					position: absolute;
-  					top: 0;
-  					border-bottom: .2em solid white;
-  				}
-  				.bottom {
-  					width: 2.4em;
-  					height: 2.6em;
-  					position: absolute;
-  					bottom: 0;
-  					border-top: .2em solid white;
-  				}
-  			}
-  			&.left {
-  				left: 0;
-  				.inner {
-  					margin-right: .2em;
-	  				border-right: .2em solid white;
-	  				.top, .bottom {
-	  					left: 0;
-	  				}
-	  			}
-  			}
-  			&.right {
-  				right: 0;
-  				.inner {
-  					margin-left: .2em;
-	  				border-left: .2em solid white;
-	  				.top, .bottom {
-	  					right: 0;
-	  				}
-	  			}
-  			}
-  		}
+			.sandwich {
+				border-top: .2em solid white;
+				border-bottom: .2em solid white;
+				padding: 1em 0;
+				margin: .6em 0;
+			}
+			.side {
+				position: absolute;
+				top: 0;
+				width: 3em;
+				height: 100%;
+				background: #ff5000;
+				.inner {
+					width: 2.6em;
+					height: 100%;
+					margin: 0;
+					.top {
+						width: 2.4em;
+						height: 2.6em;
+						position: absolute;
+						top: 0;
+						border-bottom: .2em solid white;
+					}
+					.bottom {
+						width: 2.4em;
+						height: 2.6em;
+						position: absolute;
+						bottom: 0;
+						border-top: .2em solid white;
+					}
+				}
+				&.left {
+					left: 0;
+					.inner {
+						margin-right: .2em;
+						border-right: .2em solid white;
+						.top, .bottom {
+							left: 0;
+						}
+					}
+				}
+				&.right {
+					right: 0;
+					.inner {
+						margin-left: .2em;
+						border-left: .2em solid white;
+						.top, .bottom {
+							right: 0;
+						}
+					}
+				}
+			}
 		}
 		&#compost-pile {
 			background: #73db71;
@@ -270,7 +277,7 @@ sup {
 			background-repeat: no-repeat;
 			background-image: url(../images/compost.svg); 
 		}
-		&#ceremony {
+		&#af-fixing-ceremony {
 			background: white;
 			color: black;
 			a {
@@ -327,11 +334,11 @@ sup {
 			}
 			.click {
 				height: 1.4em;
-  			padding-right: 0.5em;
-  			img {
-  				margin-bottom: -0.25em;
+				padding-right: 0.5em;
+				img {
+					margin-bottom: -0.25em;
 					height: inherit;
-  			}
+				}
 				&:hover, .hover, &:hover img {
 					cursor: pointer !important;
 					animation: wiggle 300ms infinite;
@@ -402,11 +409,14 @@ sup {
 	h2 {
 		font-size: 0.55em;
 		line-height: 1.5em;
-    display: block;
+		display: block;
 	}
 	h3 {
 		font-size: 0.55em;
 		line-height: 1em;
+		a {
+			@include underline(black, white, 1px);
+		}
 	}
 	h4 {
 		display: table;
@@ -420,8 +430,8 @@ sup {
 	.text {
 		padding: 2em 0;
 		font-size: 0.7em;
-  	line-height: 1.5em;
-  	text-align: justify;
+		line-height: 1.5em;
+		text-align: justify;
 		a {
 			border-bottom-width: 0.1em;
 		}
@@ -476,7 +486,7 @@ sup {
 	}
 }
 .farsighted main {
-  filter: blur(8px);
+	filter: blur(8px);
 }
 .mini main {
 	p {

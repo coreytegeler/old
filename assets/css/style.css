@@ -100,7 +100,7 @@ html * {
       padding-bottom: 1.4em; }
       .wrapper main .inner p {
         margin: 0;
-        padding: 30px; }
+        padding: .5em; }
       .wrapper main .inner a {
         cursor: alias;
         line-height: 0.95em; }
@@ -162,26 +162,32 @@ sup {
 .symbol:hover, .action.big {
   cursor: pointer; }
 
-.notes {
+#notes {
   width: 100%; }
-  .notes .note {
+  #notes .note {
     width: 100%;
     padding: 2em 0; }
-    .notes .note .inner {
+    #notes .note .inner {
       width: 80%;
       max-width: 980px;
       display: table;
       margin: auto; }
-    .notes .note#info {
-      width: calc(100% - 1em);
-      border: .5em solid; }
-      .notes .note#info .text {
+    #notes .note#currently {
+      padding-bottom: 1em; }
+      #notes .note#currently .inner {
+        width: calc(100% - 3.5em);
+        max-width: calc(100% - 3.5em);
+        padding: 1em;
+        margin: auto;
+        border: .25em solid;
+        display: block; }
+      #notes .note#currently .text {
         padding: 0; }
-    .notes .note#rz {
+    #notes .note#rz {
       background: #f8e5e3;
       color: #d02630;
       position: relative; }
-      .notes .note#rz a {
+      #notes .note#rz a {
         color: #d02630;
         text-shadow: 0 1px 0 #f8e5e3, 0 2px 0 #f8e5e3, 0 -1px 0 #f8e5e3, 0 -2px 0 #f8e5e3, -1px 1px 0 #f8e5e3, -1px 2px 0 #f8e5e3, 1px 1px 0 #f8e5e3, 1px 2px 0 #f8e5e3, -1px 0 0 #f8e5e3, 0 -3px 0 #f8e5e3;
         background: -webkit-linear-gradient(#f8e5e3, #f8e5e3), -webkit-linear-gradient(#f8e5e3, #f8e5e3), -webkit-linear-gradient(#d02630, #d02630);
@@ -191,25 +197,25 @@ sup {
         background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
         text-decoration: none;
         border: none; }
-      .notes .note#rz .pattern {
+      #notes .note#rz .pattern {
         width: 100%;
         height: 45px;
         background-size: 30px 15px;
         background-image: url(../images/zim.svg);
         position: absolute;
         left: 0; }
-        .notes .note#rz .pattern.top {
+        #notes .note#rz .pattern.top {
           top: 1px; }
-        .notes .note#rz .pattern.bottom {
+        #notes .note#rz .pattern.bottom {
           bottom: 1px; }
-    .notes .note#mts {
+    #notes .note#mts {
       background-image: url(../images/map.jpg);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-color: #000;
       color: #fff; }
-      .notes .note#mts a {
+      #notes .note#mts a {
         color: #fff;
         text-shadow: 0 1px 0 #000, 0 2px 0 #000, 0 -1px 0 #000, 0 -2px 0 #000, -1px 1px 0 #000, -1px 2px 0 #000, 1px 1px 0 #000, 1px 2px 0 #000, -1px 0 0 #000, 0 -3px 0 #000;
         background: -webkit-linear-gradient(#000, #000), -webkit-linear-gradient(#000, #000), -webkit-linear-gradient(#fff, #fff);
@@ -219,13 +225,13 @@ sup {
         background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
         text-decoration: none;
         border: none; }
-    .notes .note#iscp {
+    #notes .note#iscp {
       position: relative;
       background: #ff5000;
       color: #fff;
       -webkit-transition: background 150ms ease-in-out;
       transition: background 150ms ease-in-out; }
-      .notes .note#iscp a {
+      #notes .note#iscp a {
         color: #fff;
         text-shadow: 0 1px 0 #ff5000, 0 2px 0 #ff5000, 0 -1px 0 #ff5000, 0 -2px 0 #ff5000, -1px 1px 0 #ff5000, -1px 2px 0 #ff5000, 1px 1px 0 #ff5000, 1px 2px 0 #ff5000, -1px 0 0 #ff5000, 0 -3px 0 #ff5000;
         background: -webkit-linear-gradient(#ff5000, #ff5000), -webkit-linear-gradient(#ff5000, #ff5000), -webkit-linear-gradient(#fff, #fff);
@@ -235,50 +241,50 @@ sup {
         background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
         text-decoration: none;
         border: none; }
-      .notes .note#iscp .inner {
+      #notes .note#iscp .inner {
         width: calc(100% - 7em); }
-      .notes .note#iscp .sandwich {
+      #notes .note#iscp .sandwich {
         border-top: .2em solid white;
         border-bottom: .2em solid white;
         padding: 1em 0;
         margin: .6em 0; }
-      .notes .note#iscp .side {
+      #notes .note#iscp .side {
         position: absolute;
         top: 0;
         width: 3em;
         height: 100%;
         background: #ff5000; }
-        .notes .note#iscp .side .inner {
+        #notes .note#iscp .side .inner {
           width: 2.6em;
           height: 100%;
           margin: 0; }
-          .notes .note#iscp .side .inner .top {
+          #notes .note#iscp .side .inner .top {
             width: 2.4em;
             height: 2.6em;
             position: absolute;
             top: 0;
             border-bottom: .2em solid white; }
-          .notes .note#iscp .side .inner .bottom {
+          #notes .note#iscp .side .inner .bottom {
             width: 2.4em;
             height: 2.6em;
             position: absolute;
             bottom: 0;
             border-top: .2em solid white; }
-        .notes .note#iscp .side.left {
+        #notes .note#iscp .side.left {
           left: 0; }
-          .notes .note#iscp .side.left .inner {
+          #notes .note#iscp .side.left .inner {
             margin-right: .2em;
             border-right: .2em solid white; }
-            .notes .note#iscp .side.left .inner .top, .notes .note#iscp .side.left .inner .bottom {
+            #notes .note#iscp .side.left .inner .top, #notes .note#iscp .side.left .inner .bottom {
               left: 0; }
-        .notes .note#iscp .side.right {
+        #notes .note#iscp .side.right {
           right: 0; }
-          .notes .note#iscp .side.right .inner {
+          #notes .note#iscp .side.right .inner {
             margin-left: .2em;
             border-left: .2em solid white; }
-            .notes .note#iscp .side.right .inner .top, .notes .note#iscp .side.right .inner .bottom {
+            #notes .note#iscp .side.right .inner .top, #notes .note#iscp .side.right .inner .bottom {
               right: 0; }
-    .notes .note#compost-pile {
+    #notes .note#compost-pile {
       background: #73db71;
       color: #fbfffb;
       position: relative;
@@ -287,14 +293,14 @@ sup {
       background-position: center;
       background-repeat: no-repeat;
       background-image: url(../images/compost.svg); }
-      .notes .note#compost-pile canvas {
+      #notes .note#compost-pile canvas {
         pointer-events: none;
         position: absolute;
         top: 0;
         left: 0;
         z-index: 10;
         display: none; }
-      .notes .note#compost-pile a {
+      #notes .note#compost-pile a {
         color: #fbfffb;
         text-shadow: 0 1px 0 #73db71, 0 2px 0 #73db71, 0 -1px 0 #73db71, 0 -2px 0 #73db71, -1px 1px 0 #73db71, -1px 2px 0 #73db71, 1px 1px 0 #73db71, 1px 2px 0 #73db71, -1px 0 0 #73db71, 0 -3px 0 #73db71;
         background: -webkit-linear-gradient(#73db71, #73db71), -webkit-linear-gradient(#73db71, #73db71), -webkit-linear-gradient(#fbfffb, #fbfffb);
@@ -304,10 +310,10 @@ sup {
         background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
         text-decoration: none;
         border: none; }
-    .notes .note#ceremony {
+    #notes .note#af-fixing-ceremony {
       background: white;
       color: black; }
-      .notes .note#ceremony a {
+      #notes .note#af-fixing-ceremony a {
         color: black;
         text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
         background: -webkit-linear-gradient(white, white), -webkit-linear-gradient(white, white), -webkit-linear-gradient(red, red);
@@ -317,10 +323,10 @@ sup {
         background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
         text-decoration: none;
         border: none; }
-    .notes .note#pcgd {
+    #notes .note#pcgd {
       background: #333399;
       color: #FFFF33; }
-      .notes .note#pcgd a {
+      #notes .note#pcgd a {
         color: #FFFF33;
         text-shadow: 0 1px 0 #333399, 0 2px 0 #333399, 0 -1px 0 #333399, 0 -2px 0 #333399, -1px 1px 0 #333399, -1px 2px 0 #333399, 1px 1px 0 #333399, 1px 2px 0 #333399, -1px 0 0 #333399, 0 -3px 0 #333399;
         background: -webkit-linear-gradient(#333399, #333399), -webkit-linear-gradient(#333399, #333399), -webkit-linear-gradient(#FFFF33, #FFFF33);
@@ -330,15 +336,15 @@ sup {
         background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
         text-decoration: none;
         border: none; }
-      .notes .note#pcgd .svg {
+      #notes .note#pcgd .svg {
         width: 1em;
         height: 1em;
         position: relative;
         display: inline-block;
         cursor: pointer !important; }
-        .notes .note#pcgd .svg:hover {
+        #notes .note#pcgd .svg:hover {
           cursor: pointer !important; }
-        .notes .note#pcgd .svg svg {
+        #notes .note#pcgd .svg svg {
           width: 1em;
           position: absolute;
           bottom: -2px;
@@ -347,19 +353,19 @@ sup {
           line-height: 1.2em;
           vertical-align: baseline;
           fill: #FFFF33 !important; }
-          .notes .note#pcgd .svg svg * {
+          #notes .note#pcgd .svg svg * {
             fill: #FFFF33 !important; }
-          .notes .note#pcgd .svg svg:first-of-type {
+          #notes .note#pcgd .svg svg:first-of-type {
             display: inline-block; }
-    .notes .note#rbma {
+    #notes .note#rbma {
       background: #000000;
       color: #FEF035; }
-      .notes .note#rbma.confetti {
+      #notes .note#rbma.confetti {
         background-size: auto;
         background-repeat: repeat;
         background-position: center;
         background-image: url(../images/confetti.gif); }
-      .notes .note#rbma a {
+      #notes .note#rbma a {
         color: #FEF035;
         text-shadow: 0 1px 0 black, 0 2px 0 black, 0 -1px 0 black, 0 -2px 0 black, -1px 1px 0 black, -1px 2px 0 black, 1px 1px 0 black, 1px 2px 0 black, -1px 0 0 black, 0 -3px 0 black;
         background: -webkit-linear-gradient(black, black), -webkit-linear-gradient(black, black), -webkit-linear-gradient(#FEF035, #FEF035);
@@ -369,28 +375,28 @@ sup {
         background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
         text-decoration: none;
         border: none; }
-      .notes .note#rbma .click {
+      #notes .note#rbma .click {
         height: 1.4em;
         padding-right: 0.5em; }
-        .notes .note#rbma .click img {
+        #notes .note#rbma .click img {
           margin-bottom: -0.25em;
           height: inherit; }
-        .notes .note#rbma .click:hover, .notes .note#rbma .click .hover, .notes .note#rbma .click:hover img {
+        #notes .note#rbma .click:hover, #notes .note#rbma .click .hover, #notes .note#rbma .click:hover img {
           cursor: pointer !important;
           -webkit-animation: wiggle 300ms infinite;
                   animation: wiggle 300ms infinite; }
-        .notes .note#rbma .click.logo span {
+        #notes .note#rbma .click.logo span {
           background-image: url("../images/underline.png");
           background-size: 12px 8px;
           background-position: 0px bottom;
           background-repeat: repeat-x;
           text-shadow: -2px 2px 1px black, 2px -2px 1px black, -2px -2px 1px black, 2px 2px 1px black; }
-        .notes .note#rbma .click.japan {
+        #notes .note#rbma .click.japan {
           position: relative; }
-          .notes .note#rbma .click.japan.toggled img {
+          #notes .note#rbma .click.japan.toggled img {
             display: inline-block !important;
             visibility: hidden; }
-          .notes .note#rbma .click.japan iframe {
+          #notes .note#rbma .click.japan iframe {
             position: absolute;
             -webkit-transform: scale(0.28);
                     transform: scale(0.28);
@@ -399,10 +405,10 @@ sup {
             top: -35%;
             left: 0;
             pointer-events: none; }
-    .notes .note#qr {
+    #notes .note#qr {
       background: white;
       color: black; }
-      .notes .note#qr a {
+      #notes .note#qr a {
         color: black;
         text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
         background: -webkit-linear-gradient(white, white), -webkit-linear-gradient(white, white), -webkit-linear-gradient(black, black);
@@ -412,49 +418,58 @@ sup {
         background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
         text-decoration: none;
         border: none; }
-  .notes h1, .notes h2, .notes h3, .notes h4 {
+  #notes h1, #notes h2, #notes h3, #notes h4 {
     margin: 0;
     display: inline;
     font-weight: normal; }
-    .notes h1 a, .notes h2 a, .notes h3 a, .notes h4 a {
+    #notes h1 a, #notes h2 a, #notes h3 a, #notes h4 a {
       color: inherit !important;
       font-style: italic; }
-  .notes h2 a, .notes h4 a {
+  #notes h2 a, #notes h4 a {
     color: inherit !important;
     font-style: italic;
     border: none !important;
     background: none !important;
     text-shadow: none !important; }
-  .notes h1 {
+  #notes h1 {
     font-size: 1em;
     line-height: 1.1em;
     padding-right: 10px; }
-    .notes h1 a {
+    #notes h1 a {
       font-style: normal; }
-  .notes h2 {
+  #notes h2 {
     font-size: 0.55em;
     line-height: 1.5em;
     display: block; }
-  .notes h3 {
+  #notes h3 {
     font-size: 0.55em;
     line-height: 1em; }
-  .notes h4 {
+    #notes h3 a {
+      text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
+      background: -webkit-linear-gradient(white, white), -webkit-linear-gradient(white, white), -webkit-linear-gradient(black, black);
+      background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(black, black);
+      background-position: 0 87%,100% 87%,0 92%;
+      background-repeat: no-repeat,no-repeat,repeat-x;
+      background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
+      text-decoration: none;
+      border: none; }
+  #notes h4 {
     display: table;
     font-size: 0.4em;
     line-height: 1.3em;
     margin-top: .5em; }
-  .notes .out:hover {
+  #notes .out:hover {
     cursor: alias !important; }
-  .notes .text {
+  #notes .text {
     padding: 2em 0;
     font-size: 0.7em;
     line-height: 1.5em;
     text-align: justify; }
-    .notes .text a {
+    #notes .text a {
       border-bottom-width: 0.1em; }
-    .notes .text p {
+    #notes .text p {
       margin: 0 0 1em 0; }
-      .notes .text p:last-child {
+      #notes .text p:last-child {
         margin: 0; }
 
 .toggle *:first-child {
