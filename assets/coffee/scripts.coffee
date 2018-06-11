@@ -2,7 +2,7 @@ $ ->
 	$body = $('body')
 	$main = $('main')
 	palettes = ['wooden-airplane-lamp','nighty','blue','spring','old-glory','ronald','cactus','long-sleeve','default']
-	styles = ['wiggle','fan','shadow','ad-blocker','italic','from-the-other-side','redacted','farsighted','mini','jumbo']
+	styles = ['wiggle','fan','shadow','italic','from-the-other-side','redacted','farsighted','mini','jumbo']
 
 	init = () ->
 		shuffle(palettes)
@@ -99,7 +99,7 @@ $ ->
 		, 90
 
 	onYouTubeIframeAPIReady = () ->
-		player = new (YT.Player)('anthem',
+		window.player = new (YT.Player)('anthem',
 			height: '230'
 			width: '200'
 			videoId: 'teeOavr7yLg')
@@ -184,6 +184,19 @@ $ ->
 
 	random = (min, max) ->
 		return Math.floor(Math.random() * (max - min)) + min
+
+	$('.max.text .shadow').hover ->
+		$(this).parents('.text').toggleClass('tease')
+
+	$('.max.text .shadow').on 'click', () ->
+		shadow = $(this)
+		text = shadow.parents('.text')[0]
+		$(text).transition
+			maxHeight: text.scrollHeight+'px'
+		, () ->
+			shadow.remove()
+			$(text).css
+				maxHeight: 'auto'
 
 	$('.action').click ->
 		action = $(this).attr('data-action')

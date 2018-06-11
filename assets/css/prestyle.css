@@ -130,7 +130,8 @@ sup {
   width: 100%; }
   #notes .note {
     width: 100%;
-    padding: 2em 0; }
+    padding: 2em 0;
+    position: relative; }
     #notes .note .inner {
       width: 80%;
       max-width: 980px;
@@ -147,10 +148,63 @@ sup {
         display: block; }
       #notes .note#currently .text {
         padding: 0; }
+    #notes .note#ginling {
+      color: #f2f0df;
+      background-color: #0dae0b; }
+      #notes .note#ginling a {
+        color: #f2f0df;
+        text-shadow: 0 1px 0 #0dae0b, 0 2px 0 #0dae0b, 0 -1px 0 #0dae0b, 0 -2px 0 #0dae0b, -1px 1px 0 #0dae0b, -1px 2px 0 #0dae0b, 1px 1px 0 #0dae0b, 1px 2px 0 #0dae0b, -1px 0 0 #0dae0b, 0 -3px 0 #0dae0b;
+        background: linear-gradient(#0dae0b, #0dae0b), linear-gradient(#0dae0b, #0dae0b), linear-gradient(#f2f0df, #f2f0df);
+        background-position: 0 87%,100% 87%,0 92%;
+        background-repeat: no-repeat,no-repeat,repeat-x;
+        background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+        text-decoration: none;
+        border: none; }
+        #notes .note#ginling a:hover {
+          color: #f2f0df !important; }
+      #notes .note#ginling .inner .text .shadow {
+        box-shadow: #0dae0b inset 0 -4em 2em -2em; }
+      #notes .note#ginling .inner .text.tease .shadow {
+        box-shadow: #0dae0b inset 0 -3em 2em -2em; }
+    #notes .note#bpl {
+      color: white;
+      background-color: #8199ff; }
+      #notes .note#bpl a {
+        color: white;
+        text-shadow: 0 1px 0 #8199ff, 0 2px 0 #8199ff, 0 -1px 0 #8199ff, 0 -2px 0 #8199ff, -1px 1px 0 #8199ff, -1px 2px 0 #8199ff, 1px 1px 0 #8199ff, 1px 2px 0 #8199ff, -1px 0 0 #8199ff, 0 -3px 0 #8199ff;
+        background: linear-gradient(#8199ff, #8199ff), linear-gradient(#8199ff, #8199ff), linear-gradient(white, white);
+        background-position: 0 87%,100% 87%,0 92%;
+        background-repeat: no-repeat,no-repeat,repeat-x;
+        background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+        text-decoration: none;
+        border: none; }
+        #notes .note#bpl a:hover {
+          color: white !important; }
+      #notes .note#bpl .inner .text .shadow {
+        box-shadow: #8199ff inset 0 -4em 2em -2em; }
+      #notes .note#bpl .inner .text.tease .shadow {
+        box-shadow: #8199ff inset 0 -3em 2em -2em; }
+    #notes .note#revealer {
+      color: #346378;
+      background-color: #f1f5f7; }
+      #notes .note#revealer a {
+        color: #346378;
+        text-shadow: 0 1px 0 #f1f5f7, 0 2px 0 #f1f5f7, 0 -1px 0 #f1f5f7, 0 -2px 0 #f1f5f7, -1px 1px 0 #f1f5f7, -1px 2px 0 #f1f5f7, 1px 1px 0 #f1f5f7, 1px 2px 0 #f1f5f7, -1px 0 0 #f1f5f7, 0 -3px 0 #f1f5f7;
+        background: linear-gradient(#f1f5f7, #f1f5f7), linear-gradient(#f1f5f7, #f1f5f7), linear-gradient(#fed00b, #fed00b);
+        background-position: 0 87%,100% 87%,0 92%;
+        background-repeat: no-repeat,no-repeat,repeat-x;
+        background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+        text-decoration: none;
+        border: none; }
+        #notes .note#revealer a:hover {
+          color: #346378 !important; }
+      #notes .note#revealer .inner .text .shadow {
+        box-shadow: #f1f5f7 inset 0 -4em 2em -2em; }
+      #notes .note#revealer .inner .text.tease .shadow {
+        box-shadow: #f1f5f7 inset 0 -3em 2em -2em; }
     #notes .note#rz {
-      background: #f8e5e3;
       color: #d02630;
-      position: relative; }
+      background-color: #f8e5e3; }
       #notes .note#rz a {
         color: #d02630;
         text-shadow: 0 1px 0 #f8e5e3, 0 2px 0 #f8e5e3, 0 -1px 0 #f8e5e3, 0 -2px 0 #f8e5e3, -1px 1px 0 #f8e5e3, -1px 2px 0 #f8e5e3, 1px 1px 0 #f8e5e3, 1px 2px 0 #f8e5e3, -1px 0 0 #f8e5e3, 0 -3px 0 #f8e5e3;
@@ -160,6 +214,12 @@ sup {
         background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
         text-decoration: none;
         border: none; }
+        #notes .note#rz a:hover {
+          color: #d02630 !important; }
+      #notes .note#rz .inner .text .shadow {
+        box-shadow: #f8e5e3 inset 0 -4em 2em -2em; }
+      #notes .note#rz .inner .text.tease .shadow {
+        box-shadow: #f8e5e3 inset 0 -3em 2em -2em; }
       #notes .note#rz .pattern {
         width: 100%;
         height: 45px;
@@ -176,17 +236,23 @@ sup {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      background-color: #000;
-      color: #fff; }
+      color: #fafcfc;
+      background-color: black; }
       #notes .note#mts a {
-        color: #fff;
-        text-shadow: 0 1px 0 #000, 0 2px 0 #000, 0 -1px 0 #000, 0 -2px 0 #000, -1px 1px 0 #000, -1px 2px 0 #000, 1px 1px 0 #000, 1px 2px 0 #000, -1px 0 0 #000, 0 -3px 0 #000;
-        background: linear-gradient(#000, #000), linear-gradient(#000, #000), linear-gradient(#fff, #fff);
+        color: #fafcfc;
+        text-shadow: 0 1px 0 black, 0 2px 0 black, 0 -1px 0 black, 0 -2px 0 black, -1px 1px 0 black, -1px 2px 0 black, 1px 1px 0 black, 1px 2px 0 black, -1px 0 0 black, 0 -3px 0 black;
+        background: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(#fafcfc, #fafcfc);
         background-position: 0 87%,100% 87%,0 92%;
         background-repeat: no-repeat,no-repeat,repeat-x;
         background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
         text-decoration: none;
         border: none; }
+        #notes .note#mts a:hover {
+          color: #f4f6fa !important; }
+      #notes .note#mts .inner .text .shadow {
+        box-shadow: black inset 0 -4em 2em -2em; }
+      #notes .note#mts .inner .text.tease .shadow {
+        box-shadow: black inset 0 -3em 2em -2em; }
     #notes .note#iscp {
       position: relative;
       background: #ff5000;
@@ -386,7 +452,8 @@ sup {
   #notes h1 {
     font-size: 1em;
     line-height: 1.1em;
-    padding-right: 10px; }
+    display: table;
+    padding: 0 0 10px 0; }
     #notes h1 a {
       font-style: normal; }
   #notes h2 {
@@ -412,10 +479,33 @@ sup {
   #notes .out:hover {
     cursor: alias !important; }
   #notes .text {
-    padding: 2em 0;
+    margin: 2em 0;
     font-size: 0.7em;
     line-height: 1.5em;
-    text-align: justify; }
+    text-align: justify;
+    position: relative; }
+    #notes .text.max {
+      height: auto;
+      max-height: 16em;
+      overflow: hidden;
+      transition: max-height 200ms ease; }
+      #notes .text.max.tease {
+        max-height: 17em; }
+        #notes .text.max.tease .shadow {
+          height: 4em; }
+      #notes .text.max.show {
+        max-height: auto;
+        height: 100%; }
+    #notes .text .shadow {
+      width: 100%;
+      height: 3em;
+      left: 0;
+      bottom: 0;
+      position: absolute;
+      z-index: 100;
+      transition: box-shadow 200ms ease; }
+      #notes .text .shadow:hover {
+        cursor: pointer; }
     #notes .text a {
       border-bottom-width: 0.1em; }
     #notes .text p {
@@ -684,12 +774,6 @@ body.long-sleeve {
       text-decoration: none;
       border: none; }
 
-.ad-blocker main a {
-  color: transparent;
-  text-decoration: none; }
-  .ad-blocker main a:hover, .ad-blocker main a.action {
-    color: inherit; }
-
 .shadow main {
   text-shadow: 3px 3px 3px; }
   .shadow main a:hover {
@@ -710,10 +794,11 @@ body.long-sleeve {
 .from main-the-other-side i:not(.action) {
   transform: rotateX(180deg) rotateY(180deg) !important; }
 
-.redacted main a {
+.redacted main a, .redacted main em, .redacted main i {
   background: black !important;
   color: transparent !important;
-  border: none !important; }
+  border: none !important;
+  text-shadow: none !important; }
 
 .fan main i:not(.symbol) {
   animation: fan 200ms infinite linear; }

@@ -5,7 +5,7 @@
     $body = $('body');
     $main = $('main');
     palettes = ['wooden-airplane-lamp', 'nighty', 'blue', 'spring', 'old-glory', 'ronald', 'cactus', 'long-sleeve', 'default'];
-    styles = ['wiggle', 'fan', 'shadow', 'ad-blocker', 'italic', 'from-the-other-side', 'redacted', 'farsighted', 'mini', 'jumbo'];
+    styles = ['wiggle', 'fan', 'shadow', 'italic', 'from-the-other-side', 'redacted', 'farsighted', 'mini', 'jumbo'];
     init = function() {
       shuffle(palettes);
       shuffle(styles);
@@ -105,8 +105,7 @@
       }, 90);
     };
     onYouTubeIframeAPIReady = function() {
-      var player;
-      player = new YT.Player('anthem', {
+      window.player = new YT.Player('anthem', {
         height: '230',
         width: '200',
         videoId: 'teeOavr7yLg'
@@ -193,6 +192,22 @@
     random = function(min, max) {
       return Math.floor(Math.random() * (max - min)) + min;
     };
+    $('.max.text .shadow').hover(function() {
+      return $(this).parents('.text').toggleClass('tease');
+    });
+    $('.max.text .shadow').on('click', function() {
+      var shadow, text;
+      shadow = $(this);
+      text = shadow.parents('.text')[0];
+      return $(text).transition({
+        maxHeight: text.scrollHeight + 'px'
+      }, function() {
+        shadow.remove();
+        return $(text).css({
+          maxHeight: 'auto'
+        });
+      });
+    });
     $('.action').click(function() {
       var action;
       action = $(this).attr('data-action');

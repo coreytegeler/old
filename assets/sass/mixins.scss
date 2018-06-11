@@ -7,7 +7,7 @@
 		}
 		a, a:visited {
 			color: $tres;
-			@include underline(#{$dos}, #{$uno}, 2px);
+			@include underline($dos, $uno, $dos, 2px);
 		}
 		#info {
 			background: $dos;
@@ -15,22 +15,43 @@
 			border-color: $uno;
 			a, a:visited {
 				color: $uno;
-				@include underline(#{$uno}, #{$dos}, 2px);
+				@include underline($uno, $dos, $uno, 2px);
 			}
 		}
 	}
 }
 
-@mixin underline($color, $bg, $width) {
+
+@mixin underline($color, $bg, $underline, $width) {
 	$space: 1px;
 	$half: #{$space/2};
 	$double: #{$space*2};
 	$triple: #{$space*3};
 	text-shadow: 0 $space 0 $bg, 0 $double 0 $bg, 0  -#{$space} 0 $bg, 0 -#{$double} 0 $bg, -#{$space} $space 0 $bg, -#{$space} $double 0 $bg, $space $space 0 $bg, $space $double 0 $bg, -#{$space} 0 0 $bg, 0 -#{$triple} 0 $bg;
-	background: linear-gradient($bg,$bg),linear-gradient($bg,$bg),linear-gradient($color,$color);
+	background: linear-gradient($bg,$bg),linear-gradient($bg,$bg),linear-gradient($underline,$underline);
 	background-position: 0 87%,100% 87%,0 92%;
 	background-repeat: no-repeat,no-repeat,repeat-x;
 	background-size: .05em $width,.05em $width,$width $width;
 	text-decoration: none;
 	border: none;
+}
+
+@mixin note($uno, $dos, $tres, $quatro) {
+	color: $uno;
+	background-color: $dos;
+	a {
+		color: $uno;
+		@include underline($uno, $dos, $tres, 2px);
+		&:hover {
+			color: $quatro !important;
+		}
+	}
+	.inner .text {
+		.shadow {
+			box-shadow: $dos inset 0 -4em 2em -2em;
+		}
+		&.tease .shadow {
+			box-shadow: $dos inset 0 -3em 2em -2em;	
+		}
+	}
 }
