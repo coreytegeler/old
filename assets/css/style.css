@@ -241,6 +241,16 @@ sup {
         box-shadow: #f1f5f7 inset 0 -4em 2em -2em; }
       #notes .note#revealer .inner .text.tease .shadow {
         box-shadow: #f1f5f7 inset 0 -3em 2em -2em; }
+      #notes .note#revealer .halo {
+        width: 5em;
+        height: 5em;
+        left: calc(50% - 2.5em);
+        top: calc(50% - 2.5em);
+        position: absolute;
+        border-radius: 50%;
+        box-shadow: 0 0 0.5em 0.25em #fed00b;
+        z-index: 0;
+        background: #fed00b; }
     #notes .note#rz {
       color: #d02630;
       background-color: #f8e5e3; }
@@ -559,7 +569,7 @@ sup {
       -webkit-transition: box-shadow 200ms ease;
       transition: box-shadow 200ms ease; }
       #notes .text .shadow:hover {
-        cursor: pointer; }
+        cursor: s-resize; }
     #notes .text a {
       border-bottom-width: 0.1em; }
     #notes .text p {

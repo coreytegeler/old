@@ -164,6 +164,17 @@ sup {
 		}
 		&#revealer {
 			@include note(#346378, #f1f5f7, #fed00b, #346378);
+			.halo {
+				width: 5em;
+				height: 5em;
+				left: calc(50% - 2.5em);
+				top: calc(50% - 2.5em);
+				position: absolute;
+				border-radius: 50%;
+				box-shadow: 0 0 0.5em 0.25em #fed00b;
+				z-index: 0;
+				background: #fed00b;
+			}
 		}
 		&#rz {
 			@include note(#d02630, #f8e5e3, #d02630, #d02630);
@@ -458,7 +469,7 @@ sup {
     	z-index: 100;
     	transition: box-shadow 200ms ease;
     	&:hover {
-    		cursor: pointer;
+    		cursor: s-resize;
     	}
     }
 		a {
