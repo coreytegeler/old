@@ -79,6 +79,7 @@ a {
 	text-decoration: none;
 	border-bottom: 3px solid;
 	padding-bottom: 0.1em;
+	transition: color 200ms ease-in-out;
 	&:hover {
 		cursor: alias !important;
 	}
@@ -118,11 +119,11 @@ sup {
 		}
 	}
 }
-.symbol[data-action="peace"] {
+.symbol[data-action='peace'] {
 	transform: scale(1.8);
 	margin-right: 20px;
 }
-.symbol[data-action="love"] {
+.symbol[data-action='love'] {
 	transform: scale(1.4);
 	margin-left: 10px;
 } 
@@ -156,8 +157,22 @@ sup {
 				padding: 0;
 			}
 		}
+		&#ygdp {
+			@include note(#153554, #a8d7ee, #bee0ed, #f2f2ee);
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url(../images/ygdp.svg); 
+		}
 		&#ginling {
 			@include note(#f2f0df, #0dae0b, #f2f0df, #f2f0df);
+			background-image: url(../images/ginling.png);
+			background-size: 50% auto;
+			background-position: 0 top;
+			background-repeat: no-repeat;
+			h1 a {
+				text-shadow: none;
+			}
 		}
 		&#bpl {
 			@include note(white, #8199ff, white, white);
@@ -355,7 +370,7 @@ sup {
 				}
 				&.logo {
 					span {
-						background-image: url("../images/underline.png");
+						background-image: url(../images/underline.png);
 						background-size: 12px 8px;
 						background-position: 0px bottom;
 						background-repeat: repeat-x;
