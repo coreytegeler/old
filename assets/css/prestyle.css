@@ -159,7 +159,7 @@ sup {
       #notes .note#ygdp a {
         color: #153554;
         text-shadow: 0 1px 0 #a8d7ee, 0 2px 0 #a8d7ee, 0 -1px 0 #a8d7ee, 0 -2px 0 #a8d7ee, -1px 1px 0 #a8d7ee, -1px 2px 0 #a8d7ee, 1px 1px 0 #a8d7ee, 1px 2px 0 #a8d7ee, -1px 0 0 #a8d7ee, 0 -3px 0 #a8d7ee;
-        background: linear-gradient(#a8d7ee, #a8d7ee), linear-gradient(#a8d7ee, #a8d7ee), linear-gradient(#bee0ed, #bee0ed);
+        background: linear-gradient(#a8d7ee, #a8d7ee), linear-gradient(#a8d7ee, #a8d7ee), linear-gradient(#e1e8ea, #e1e8ea);
         background-position: 0 87%,100% 87%,0 92%;
         background-repeat: no-repeat,no-repeat,repeat-x;
         background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
