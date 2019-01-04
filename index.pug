@@ -1,19 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
--var time = Date.now()
 html(lang="en-US")
   head(profile="http://www.w3.org/2005/10/profile")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(http-equiv="content-type" content="text/html; charset=utf-8")
     meta(name="description" content="✌︎")
     meta(name="author" content="Corey Tegeler")
-    title='Corey Tegeler\'s Website'
+    title coreytegeler.com
     link(type="image/png" rel="icon" href="assets/images/icons/default.png")
-    link(type="text/css" rel="stylesheet" href="assets/css/style.css?version="+time)
+    link(type="text/css" rel="stylesheet" href="assets/css/style.css?version=2.1")
     script(type="text/javascript" src="assets/js/jquery.js")
     script(type="text/javascript" src="assets/js/jquery.transit.min.js")
     script(type="text/javascript" src="assets/js/jquery.fittext.js")
     script(type="text/javascript" src="assets/js/paper.js")
-    script(type="text/javascript" src="assets/js/scripts.js?version="+time)
+    script(type="text/javascript" src="assets/js/scripts.js?version=2.1")
   body
     .wrapper
       main
@@ -21,22 +20,18 @@ html(lang="en-US")
           p
             i I&nbsp;
             i make&nbsp;
-            i and&nbsp;
-            i do&nbsp;
             i things&nbsp;
             i on&nbsp;
             i the&nbsp;
             i Internet&nbsp;
-            i and&nbsp;
             i in&nbsp;
-            //- em
             i New&nbsp;
-            i York
-            i .&nbsp;
-            i I'm&nbsp;
-            i inter&shy;est&shy;ed&nbsp;
-            i in&nbsp;
-            i collab&shy;ora&shy;ting&nbsp;
+            i York&nbsp;
+            //- i .&nbsp;
+            //- i I'm&nbsp;
+            //- i inter&shy;est&shy;ed&nbsp;
+            //- i in&nbsp;
+            //- i collab&shy;ora&shy;tion&nbsp;
             i with&nbsp;
             i people&nbsp;
             i and&nbsp;
@@ -52,13 +47,15 @@ html(lang="en-US")
             em
               i just&shy;ice
               i ,&nbsp;
-            i alt&shy;erna&shy;tive&nbsp;
-            em
-              i inst&shy;itut&shy;ions
-              i ,&nbsp;
-            i digital&nbsp;
+            i public&nbsp;
             em 
-              i human&shy;ities
+              i scholar&shy;ship
+              i ,&nbsp;
+            em 
+              i educa&shy;tion
+              i ,&nbsp;
+            em 
+              i story&shy;telling
               i ,&nbsp;
             i archives&nbsp;
             i and&nbsp;
@@ -89,6 +86,7 @@ html(lang="en-US")
 
     #notes
       //- include notes/currently.pug
+      include notes/nakba.pug
       include notes/ygdp.pug
       include notes/ginling.pug
       include notes/bpl.pug

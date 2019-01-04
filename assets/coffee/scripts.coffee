@@ -12,7 +12,7 @@ $ ->
 		font()
 		iscp()
 		purchase()
-		rbma()
+		# rbma()
 		qr()
 		resize()
 		setTimeout (->
@@ -98,33 +98,33 @@ $ ->
 				i++
 		, 90
 
-	onYouTubeIframeAPIReady = () ->
-		window.player = new (YT.Player)('anthem',
-			height: '230'
-			width: '200'
-			videoId: 'teeOavr7yLg')
-		return
+	# onYouTubeIframeAPIReady = () ->
+	# 	window.player = new (YT.Player)('anthem',
+	# 		height: '230'
+	# 		width: '200'
+	# 		videoId: 'teeOavr7yLg')
+	# 	return
 
-	rbma = () ->
-		tag = document.createElement('script')
-		tag.src = 'https://www.youtube.com/iframe_api'
-		firstScriptTag = document.getElementsByTagName('script')[0]
-		firstScriptTag.parentNode.insertBefore tag, firstScriptTag
-		$('#rbma .click').on 'click', ->
-			data = $(this).attr('data-data')
-			switch data
-				when 'confetti'
-					$('#rbma').toggleClass data
-				when 'logo'
-					$(this).toggleClass 'toggled'
-				when 'japan'
-					$(this).toggleClass 'toggled'
-					if $(this).hasClass('toggled')
-						player.playVideo()
-					else
-						player.stopVideo()
-			return
-		return
+	# rbma = () ->
+	# 	tag = document.createElement('script')
+	# 	tag.src = 'https://www.youtube.com/iframe_api'
+	# 	firstScriptTag = document.getElementsByTagName('script')[0]
+	# 	firstScriptTag.parentNode.insertBefore tag, firstScriptTag
+	# 	$('#rbma .click').on 'click', ->
+	# 		data = $(this).attr('data-data')
+	# 		switch data
+	# 			when 'confetti'
+	# 				$('#rbma').toggleClass data
+	# 			when 'logo'
+	# 				$(this).toggleClass 'toggled'
+	# 			when 'japan'
+	# 				$(this).toggleClass 'toggled'
+	# 				if $(this).hasClass('toggled')
+	# 					player.playVideo()
+	# 				else
+	# 					player.stopVideo()
+	# 		return
+	# 	return
 
 	iscp = () ->
 		$('#iscp .past').hover ->
@@ -193,10 +193,11 @@ $ ->
 		text = shadow.parents('.text')[0]
 		$(text).transition
 			maxHeight: text.scrollHeight+'px'
-		, () ->
+		, 200, () ->
 			shadow.remove()
 			$(text).css
-				maxHeight: 'auto'
+				maxHeight: 'unset'
+			console.log $(text).css('maxHeight')
 
 	$('.action').click ->
 		action = $(this).attr('data-action')
