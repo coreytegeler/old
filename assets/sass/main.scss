@@ -31,7 +31,7 @@ a {
 	text-decoration: none;
 	border-bottom: 3px solid;
 	padding-bottom: 0.1em;
-	transition: color 200ms ease-in-out;
+	transition: color 200ms ease-in-out, opacity 200ms ease-in-out;
 	&:hover {
 		cursor: alias !important;
 	}
@@ -171,13 +171,12 @@ main {
 				padding: 0;
 			}
 		}
-
-		$corner-size: 10em;
-		$corner-width: 20px;
-		$corner-len: 80px;
-		$corner-gap: 20px;
 		&#four-corners {
-			@include note(#212529, #f4f7fe, #afd5ff, #212529);
+			$corner-size: 100px;
+			$corner-width: 20px;
+			$corner-len: 80px;
+			$corner-gap: 10px;
+			@include note(#212529, #f4f7fe, #afd5ff, #80bdff);
 			position: relative;
 			.corner {
 				width: $corner-size;
@@ -190,7 +189,7 @@ main {
 					content: '';
 					position: absolute;
 					z-index: 4;
-					background-color: #afd5ff;
+					background-color: #80bdff;
 				}
 				&.authorship {
 					bottom: $corner-width;
@@ -273,7 +272,7 @@ main {
 			background-image: url(../images/ygdp.svg); 
 		}
 		&#ginling {
-			@include note(#f2f0df, #0dae0b, #f2f0df, #f2f0df);
+			@include note(#f2f0df, #0dae0b, #f2f0df, rgba(#f2f0df,.75));
 			background-image: url(../images/ginling.png);
 			background-size: 50% auto;
 			background-position: 0 top;
@@ -283,10 +282,10 @@ main {
 			}
 		}
 		&#bpl {
-			@include note(white, #8199ff, white, white);
+			@include note(white, #8199ff, white, rgba(white,.75));
 		}
 		&#revealer {
-			@include note(#346378, #f1f5f7, #fed00b, #346378);
+			@include note(#346378, #f1f5f7, #fed00b, rgba(#346378,.75));
 			.halo {
 				width: 5em;
 				height: 5em;
@@ -300,7 +299,7 @@ main {
 			}
 		}
 		&#rz {
-			@include note(#d02630, #f8e5e3, #d02630, #d02630);
+			@include note(#d02630, #f8e5e3, #d02630, rgba(#d02630,.75));
 			.pattern {
 				width: 100%;
 				height: 45px;
@@ -321,17 +320,18 @@ main {
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
-			@include note(#fafcfc, black, #fafcfc, #f4f6fa);
+			@include note(#fafcfc, black, #fafcfc, rgba(#f4f6fa,.75));
 		}
 		&#iscp {
 			position: relative;
-			background: #ff5000;
-			color: #fff;
+			// background: #ff5000;
+			// color: #fff;
 			transition: background 150ms ease-in-out;
-			a {
-				color: #fff;
-				@include underline(#fff, #ff5000, #fff, 2px);
-			}
+			// a {
+			// 	color: #fff;
+			// 	@include underline(#fff, #ff5000, #fff, 2px);
+			// }
+			@include note(white, #ff5000, white, rgba(white,.75));
 			.inner {
 				width: calc(100% - 7em);
 			}
@@ -389,42 +389,19 @@ main {
 			}
 		}
 		&#compost-pile {
-			background: #73db71;
-			color: #fbfffb;
 			position: relative;
 			overflow: hidden;
-			canvas {
-				pointer-events: none;
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: 10;
-				display: none;
-			}
-			a {
-				color: #fbfffb;
-				@include underline(#fbfffb, #73db71, #fbfffb, 2px);
-			}
+			@include note(#fbfffb, #73db71, #fbfffb, rgba(#fbfffb,.75));
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
 			background-image: url(../images/compost.svg); 
 		}
 		&#af-fixing-ceremony {
-			background: white;
-			color: black;
-			a {
-				color: black;
-				@include underline(red, white, red, 2px);
-			}
+			@include note(black, white, red, red);
 		}
 		&#pcgd {
-			background: #333399;
-			color: #FFFF33;
-			a {
-				color: #FFFF33;
-				@include underline(#FFFF33, #333399, #FFFF33, 2px);
-			}
+			@include note(#FFFF33, #333399, #FFFF33, rgba(#FFFF33,.75));
 			.svg {
 				width: 1em;
 				height: 1em;

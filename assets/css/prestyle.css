@@ -44,7 +44,7 @@ a {
   text-decoration: none;
   border-bottom: 3px solid;
   padding-bottom: 0.1em;
-  transition: color 200ms ease-in-out; }
+  transition: color 200ms ease-in-out, opacity 200ms ease-in-out; }
   a:hover {
     cursor: alias !important; }
 
@@ -177,14 +177,14 @@ main {
         text-decoration: none;
         border: none; }
         #notes .note#four-corners a:hover {
-          color: #212529 !important; }
+          color: #80bdff !important; }
       #notes .note#four-corners .inner .text .shadow {
         box-shadow: #f4f7fe inset 0 -4em 2em -2em; }
       #notes .note#four-corners .inner .text.tease .shadow {
         box-shadow: #f4f7fe inset 0 -3em 2em -2em; }
       #notes .note#four-corners .corner {
-        width: 10em;
-        height: 10em;
+        width: 100px;
+        height: 100px;
         position: absolute;
         z-index: 4;
         filter: drop-shadow(0 0 1px rgba(33, 37, 41, 0.25));
@@ -193,59 +193,59 @@ main {
           content: '';
           position: absolute;
           z-index: 4;
-          background-color: #afd5ff; }
+          background-color: #80bdff; }
         #notes .note#four-corners .corner.authorship {
           bottom: 20px;
           right: 20px; }
           #notes .note#four-corners .corner.authorship::before {
             width: 20px;
             height: 80px;
-            right: 20px;
-            bottom: 20px; }
+            right: 10px;
+            bottom: 10px; }
           #notes .note#four-corners .corner.authorship::after {
             width: 80px;
             height: 20px;
-            right: 20px;
-            bottom: 20px; }
+            right: 10px;
+            bottom: 10px; }
         #notes .note#four-corners .corner.backstory {
           bottom: 20px;
           left: 20px; }
           #notes .note#four-corners .corner.backstory::before {
             width: 20px;
             height: 80px;
-            left: 20px;
-            bottom: 20px; }
+            left: 10px;
+            bottom: 10px; }
           #notes .note#four-corners .corner.backstory::after {
             width: 80px;
             height: 20px;
-            left: 20px;
-            bottom: 20px; }
+            left: 10px;
+            bottom: 10px; }
         #notes .note#four-corners .corner.imagery {
           top: 20px;
           left: 20px; }
           #notes .note#four-corners .corner.imagery::before {
             width: 20px;
             height: 80px;
-            left: 20px;
-            top: 20px; }
+            left: 10px;
+            top: 10px; }
           #notes .note#four-corners .corner.imagery::after {
             width: 80px;
             height: 20px;
-            left: 20px;
-            top: 20px; }
+            left: 10px;
+            top: 10px; }
         #notes .note#four-corners .corner.links {
           top: 20px;
           right: 20px; }
           #notes .note#four-corners .corner.links::before {
             width: 20px;
             height: 80px;
-            right: 20px;
-            top: 20px; }
+            right: 10px;
+            top: 10px; }
           #notes .note#four-corners .corner.links::after {
             width: 80px;
             height: 20px;
-            right: 20px;
-            top: 20px; }
+            right: 10px;
+            top: 10px; }
     #notes .note#nakba {
       color: white;
       background-color: black; }
@@ -303,7 +303,7 @@ main {
         text-decoration: none;
         border: none; }
         #notes .note#ginling a:hover {
-          color: #f2f0df !important; }
+          color: rgba(242, 240, 223, 0.75) !important; }
       #notes .note#ginling .inner .text .shadow {
         box-shadow: #0dae0b inset 0 -4em 2em -2em; }
       #notes .note#ginling .inner .text.tease .shadow {
@@ -323,7 +323,7 @@ main {
         text-decoration: none;
         border: none; }
         #notes .note#bpl a:hover {
-          color: white !important; }
+          color: rgba(255, 255, 255, 0.75) !important; }
       #notes .note#bpl .inner .text .shadow {
         box-shadow: #8199ff inset 0 -4em 2em -2em; }
       #notes .note#bpl .inner .text.tease .shadow {
@@ -341,7 +341,7 @@ main {
         text-decoration: none;
         border: none; }
         #notes .note#revealer a:hover {
-          color: #346378 !important; }
+          color: rgba(52, 99, 120, 0.75) !important; }
       #notes .note#revealer .inner .text .shadow {
         box-shadow: #f1f5f7 inset 0 -4em 2em -2em; }
       #notes .note#revealer .inner .text.tease .shadow {
@@ -369,7 +369,7 @@ main {
         text-decoration: none;
         border: none; }
         #notes .note#rz a:hover {
-          color: #d02630 !important; }
+          color: rgba(208, 38, 48, 0.75) !important; }
       #notes .note#rz .inner .text .shadow {
         box-shadow: #f8e5e3 inset 0 -4em 2em -2em; }
       #notes .note#rz .inner .text.tease .shadow {
@@ -402,25 +402,31 @@ main {
         text-decoration: none;
         border: none; }
         #notes .note#mts a:hover {
-          color: #f4f6fa !important; }
+          color: rgba(244, 246, 250, 0.75) !important; }
       #notes .note#mts .inner .text .shadow {
         box-shadow: black inset 0 -4em 2em -2em; }
       #notes .note#mts .inner .text.tease .shadow {
         box-shadow: black inset 0 -3em 2em -2em; }
     #notes .note#iscp {
       position: relative;
-      background: #ff5000;
-      color: #fff;
-      transition: background 150ms ease-in-out; }
+      transition: background 150ms ease-in-out;
+      color: white;
+      background-color: #ff5000; }
       #notes .note#iscp a {
-        color: #fff;
+        color: white;
         text-shadow: 0 1px 0 #ff5000, 0 2px 0 #ff5000, 0 -1px 0 #ff5000, 0 -2px 0 #ff5000, -1px 1px 0 #ff5000, -1px 2px 0 #ff5000, 1px 1px 0 #ff5000, 1px 2px 0 #ff5000, -1px 0 0 #ff5000, 0 -3px 0 #ff5000;
-        background: linear-gradient(#ff5000, #ff5000), linear-gradient(#ff5000, #ff5000), linear-gradient(#fff, #fff);
+        background: linear-gradient(#ff5000, #ff5000), linear-gradient(#ff5000, #ff5000), linear-gradient(white, white);
         background-position: 0 87%,100% 87%,0 92%;
         background-repeat: no-repeat,no-repeat,repeat-x;
         background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
         text-decoration: none;
         border: none; }
+        #notes .note#iscp a:hover {
+          color: rgba(255, 255, 255, 0.75) !important; }
+      #notes .note#iscp .inner .text .shadow {
+        box-shadow: #ff5000 inset 0 -4em 2em -2em; }
+      #notes .note#iscp .inner .text.tease .shadow {
+        box-shadow: #ff5000 inset 0 -3em 2em -2em; }
       #notes .note#iscp .inner {
         width: calc(100% - 7em); }
       #notes .note#iscp .sandwich {
@@ -465,21 +471,14 @@ main {
             #notes .note#iscp .side.right .inner .top, #notes .note#iscp .side.right .inner .bottom {
               right: 0; }
     #notes .note#compost-pile {
-      background: #73db71;
-      color: #fbfffb;
       position: relative;
       overflow: hidden;
+      color: #fbfffb;
+      background-color: #73db71;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       background-image: url(../images/compost.svg); }
-      #notes .note#compost-pile canvas {
-        pointer-events: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 10;
-        display: none; }
       #notes .note#compost-pile a {
         color: #fbfffb;
         text-shadow: 0 1px 0 #73db71, 0 2px 0 #73db71, 0 -1px 0 #73db71, 0 -2px 0 #73db71, -1px 1px 0 #73db71, -1px 2px 0 #73db71, 1px 1px 0 #73db71, 1px 2px 0 #73db71, -1px 0 0 #73db71, 0 -3px 0 #73db71;
@@ -489,9 +488,15 @@ main {
         background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
         text-decoration: none;
         border: none; }
+        #notes .note#compost-pile a:hover {
+          color: rgba(251, 255, 251, 0.75) !important; }
+      #notes .note#compost-pile .inner .text .shadow {
+        box-shadow: #73db71 inset 0 -4em 2em -2em; }
+      #notes .note#compost-pile .inner .text.tease .shadow {
+        box-shadow: #73db71 inset 0 -3em 2em -2em; }
     #notes .note#af-fixing-ceremony {
-      background: white;
-      color: black; }
+      color: black;
+      background-color: white; }
       #notes .note#af-fixing-ceremony a {
         color: black;
         text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
@@ -501,9 +506,15 @@ main {
         background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
         text-decoration: none;
         border: none; }
+        #notes .note#af-fixing-ceremony a:hover {
+          color: red !important; }
+      #notes .note#af-fixing-ceremony .inner .text .shadow {
+        box-shadow: white inset 0 -4em 2em -2em; }
+      #notes .note#af-fixing-ceremony .inner .text.tease .shadow {
+        box-shadow: white inset 0 -3em 2em -2em; }
     #notes .note#pcgd {
-      background: #333399;
-      color: #FFFF33; }
+      color: #FFFF33;
+      background-color: #333399; }
       #notes .note#pcgd a {
         color: #FFFF33;
         text-shadow: 0 1px 0 #333399, 0 2px 0 #333399, 0 -1px 0 #333399, 0 -2px 0 #333399, -1px 1px 0 #333399, -1px 2px 0 #333399, 1px 1px 0 #333399, 1px 2px 0 #333399, -1px 0 0 #333399, 0 -3px 0 #333399;
@@ -513,6 +524,12 @@ main {
         background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
         text-decoration: none;
         border: none; }
+        #notes .note#pcgd a:hover {
+          color: rgba(255, 255, 51, 0.75) !important; }
+      #notes .note#pcgd .inner .text .shadow {
+        box-shadow: #333399 inset 0 -4em 2em -2em; }
+      #notes .note#pcgd .inner .text.tease .shadow {
+        box-shadow: #333399 inset 0 -3em 2em -2em; }
       #notes .note#pcgd .svg {
         width: 1em;
         height: 1em;
