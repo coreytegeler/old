@@ -159,7 +159,11 @@ main {
       height: 1em !important;
       width: auto;
       display: inline-table;
-      fill: currentColor; }
+      fill: currentColor;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: visible;
+              backface-visibility: visible; }
       .symbols .symbol svg:hover {
         cursor: pointer; }
 
@@ -198,6 +202,92 @@ main {
         display: block; }
       #notes .note#currently .text {
         padding: 0; }
+    #notes .note#four-corners {
+      color: #212529;
+      background-color: #f4f7fe;
+      position: relative; }
+      #notes .note#four-corners a {
+        color: #212529;
+        text-shadow: 0 1px 0 #f4f7fe, 0 2px 0 #f4f7fe, 0 -1px 0 #f4f7fe, 0 -2px 0 #f4f7fe, -1px 1px 0 #f4f7fe, -1px 2px 0 #f4f7fe, 1px 1px 0 #f4f7fe, 1px 2px 0 #f4f7fe, -1px 0 0 #f4f7fe, 0 -3px 0 #f4f7fe;
+        background: -webkit-linear-gradient(#f4f7fe, #f4f7fe), -webkit-linear-gradient(#f4f7fe, #f4f7fe), -webkit-linear-gradient(#afd5ff, #afd5ff);
+        background: linear-gradient(#f4f7fe, #f4f7fe), linear-gradient(#f4f7fe, #f4f7fe), linear-gradient(#afd5ff, #afd5ff);
+        background-position: 0 87%,100% 87%,0 92%;
+        background-repeat: no-repeat,no-repeat,repeat-x;
+        background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+        text-decoration: none;
+        border: none; }
+        #notes .note#four-corners a:hover {
+          color: #212529 !important; }
+      #notes .note#four-corners .inner .text .shadow {
+        box-shadow: #f4f7fe inset 0 -4em 2em -2em; }
+      #notes .note#four-corners .inner .text.tease .shadow {
+        box-shadow: #f4f7fe inset 0 -3em 2em -2em; }
+      #notes .note#four-corners .corner {
+        width: 10em;
+        height: 10em;
+        position: absolute;
+        z-index: 4;
+        -webkit-filter: drop-shadow(0 0 1px rgba(33, 37, 41, 0.25));
+                filter: drop-shadow(0 0 1px rgba(33, 37, 41, 0.25));
+        -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0); }
+        #notes .note#four-corners .corner::after, #notes .note#four-corners .corner::before {
+          content: '';
+          position: absolute;
+          z-index: 4;
+          background-color: #afd5ff; }
+        #notes .note#four-corners .corner.authorship {
+          bottom: 20px;
+          right: 20px; }
+          #notes .note#four-corners .corner.authorship::before {
+            width: 20px;
+            height: 80px;
+            right: 20px;
+            bottom: 20px; }
+          #notes .note#four-corners .corner.authorship::after {
+            width: 80px;
+            height: 20px;
+            right: 20px;
+            bottom: 20px; }
+        #notes .note#four-corners .corner.backstory {
+          bottom: 20px;
+          left: 20px; }
+          #notes .note#four-corners .corner.backstory::before {
+            width: 20px;
+            height: 80px;
+            left: 20px;
+            bottom: 20px; }
+          #notes .note#four-corners .corner.backstory::after {
+            width: 80px;
+            height: 20px;
+            left: 20px;
+            bottom: 20px; }
+        #notes .note#four-corners .corner.imagery {
+          top: 20px;
+          left: 20px; }
+          #notes .note#four-corners .corner.imagery::before {
+            width: 20px;
+            height: 80px;
+            left: 20px;
+            top: 20px; }
+          #notes .note#four-corners .corner.imagery::after {
+            width: 80px;
+            height: 20px;
+            left: 20px;
+            top: 20px; }
+        #notes .note#four-corners .corner.links {
+          top: 20px;
+          right: 20px; }
+          #notes .note#four-corners .corner.links::before {
+            width: 20px;
+            height: 80px;
+            right: 20px;
+            top: 20px; }
+          #notes .note#four-corners .corner.links::after {
+            width: 80px;
+            height: 20px;
+            right: 20px;
+            top: 20px; }
     #notes .note#nakba {
       color: white;
       background-color: black; }

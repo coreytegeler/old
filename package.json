@@ -9,7 +9,7 @@
     "coffee": "coffee -o assets/js/ -cw assets/coffee/",
     "pug": "pug --watch ./*.pug --out ./",
     "watch": "npm run sass & npm run prefix & npm run pug & npm run coffee",
-    "go": "npm run watch & node_server"
+    "start": "npm run watch & node_server"
   },
   "repository": {
     "type": "git",

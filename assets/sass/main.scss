@@ -125,6 +125,8 @@ main {
 			width: auto;
 			display: inline-table;
 			fill: currentColor;
+			transform: translate3d(0,0,0);
+			backface-visibility: visible;
 			&:hover {
 				cursor: pointer;
 			}
@@ -167,6 +169,93 @@ main {
 			}
 			.text {
 				padding: 0;
+			}
+		}
+
+		$corner-size: 10em;
+		$corner-width: 20px;
+		$corner-len: 80px;
+		$corner-gap: 20px;
+		&#four-corners {
+			@include note(#212529, #f4f7fe, #afd5ff, #212529);
+			position: relative;
+			.corner {
+				width: $corner-size;
+				height: $corner-size;
+				position: absolute;
+				z-index: 4;
+				filter: drop-shadow(0 0 1px rgba(#212529,.25));
+				transform: translate3d(0,0,0);
+				&::after, &::before {
+					content: '';
+					position: absolute;
+					z-index: 4;
+					background-color: #afd5ff;
+				}
+				&.authorship {
+					bottom: $corner-width;
+					right: $corner-width;
+					&::before {
+						width: $corner-width;
+						height: $corner-len;
+						right: $corner-gap;
+						bottom: $corner-gap;
+					}
+					&::after {
+						width: $corner-len;
+						height: $corner-width;
+						right: $corner-gap;
+						bottom: $corner-gap;
+					}
+				}
+				&.backstory {
+					bottom: $corner-width;
+					left: $corner-width;
+					&::before {
+						width: $corner-width;
+						height: $corner-len;
+						left: $corner-gap;
+						bottom: $corner-gap;
+					}
+					&::after {
+						width: $corner-len;
+						height: $corner-width;
+						left: $corner-gap;
+						bottom: $corner-gap;
+					}
+				}
+				&.imagery {
+					top: $corner-width;
+					left: $corner-width;
+					&::before {
+						width: $corner-width;
+						height: $corner-len;
+						left: $corner-gap;
+						top: $corner-gap;
+					}
+					&::after {
+						width: $corner-len;
+						height: $corner-width;
+						left: $corner-gap;
+						top: $corner-gap;
+					}
+				}
+				&.links {
+					top: $corner-width;
+					right: $corner-width;
+					&::before {
+						width: $corner-width;
+						height: $corner-len;
+						right: $corner-gap;
+						top: $corner-gap;
+					}
+					&::after {
+						width: $corner-len;
+						height: $corner-width;
+						right: $corner-gap;
+						top: $corner-gap;
+					}
+				}
 			}
 		}
 		&#nakba {
