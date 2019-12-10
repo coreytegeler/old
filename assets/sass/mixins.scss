@@ -54,4 +54,9 @@
 			box-shadow: $dos inset 0 -3em 2em -2em;	
 		}
 	}
+	::selection {
+		color: $dos;
+		background-color: $uno;
+		text-shadow: none !important;
+	}
 }

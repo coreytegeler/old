@@ -50,6 +50,7 @@
       $newIcon.attr('href', 'assets/images/icons/' + newPalette + '.png');
       $newIcon.insertAfter($oldIcon);
       $oldIcon.remove();
+      console.log('Palette ⇶ "' + newPalette + '"');
       $body.removeClass(palette).addClass(newPalette).attr('data-palette', newPalette);
     };
     addStyle = function(index) {
@@ -64,6 +65,7 @@
       } else {
         newStyle = 'wiggle';
       }
+      console.log('Style ⇶ "' + newStyle + '"');
       if (style === 'wiggle') {
         $('main i').each(function() {
           $(this).stop();
@@ -169,10 +171,9 @@
         maxHeight: text.scrollHeight + 'px'
       }, 200, function() {
         shadow.remove();
-        $(text).css({
+        return $(text).css({
           maxHeight: 'unset'
         });
-        return console.log($(text).css('maxHeight'));
       });
     });
     $('.action').click(function() {
@@ -185,6 +186,7 @@
           return addStyle();
       }
     });
+    $(window).resize(resize);
     theStyle = void 0;
     player = void 0;
     return init();

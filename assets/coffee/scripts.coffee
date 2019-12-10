@@ -45,7 +45,7 @@ $ ->
 		$newIcon.attr 'href', 'assets/images/icons/' + newPalette + '.png'
 		$newIcon.insertAfter $oldIcon
 		$oldIcon.remove()
-		# console.log 'Palette ⇶ "' + newPalette + '"'
+		console.log 'Palette ⇶ "' + newPalette + '"'
 		$body
 			.removeClass(palette)
 			.addClass(newPalette)
@@ -61,7 +61,7 @@ $ ->
 			newStyle = styles[index]
 		else
 			newStyle = 'wiggle'
-		# console.log 'Style ⇶ "' + newStyle + '"'
+		console.log 'Style ⇶ "' + newStyle + '"'
 		if style == 'wiggle'
 			$('main i').each ->
 				$(this).stop()
@@ -197,7 +197,7 @@ $ ->
 			shadow.remove()
 			$(text).css
 				maxHeight: 'unset'
-			console.log $(text).css('maxHeight')
+			# console.log $(text).css('maxHeight')
 
 	$('.action').click ->
 		action = $(this).attr('data-action')
@@ -206,6 +206,8 @@ $ ->
 				addPalette()
 			when 'love'
 				addStyle()
+
+	$(window).resize resize
 
 	theStyle = undefined
 	player = undefined
