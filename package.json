@@ -26,7 +26,7 @@
     "coffee-script": "1.10.0",
     "cssnano": "^4.1.10",
     "node-sass": "3.8.0",
-    "postcss": "^7.0.18",
+    "postcss": "^8.2.10",
     "pug": "^2.0.4",
     "sass": "^1.23.0"
   },
