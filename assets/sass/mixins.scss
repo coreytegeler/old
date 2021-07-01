@@ -1,62 +1,97 @@
-@mixin style($name, $uno, $dos, $tres) {
+@mixin xs-text {
+	font-size: 0.65rem;
+	line-height: 1.3em;
+}
+
+@mixin sm-text {
+	font-size: 0.8rem;
+	line-height: 1.55em;
+}
+
+@mixin md-text {
+	font-size: 20px;
+	line-height: 1.2em;
+}
+
+@mixin lg-text {
+	font-size: 1.5rem;
+	line-height: 1.3em;
+}
+
+@mixin xl-text {
+	font-size: 2.2rem;
+	line-height: 1.4em;
+}
+
+
+
+@mixin style($name, $a, $b, $c) {
 	body.#{$name} {
-		background: $uno;
-		color: $dos;
+		background: $a;
+		color: $b;
 		svg {
-			fill: $dos;
+			fill: $b;
 		}
 		a, a:visited {
-			color: $tres;
-			@include underline($dos, $uno, $dos, 2px);
+			color: $c;
+			@include underline($b, $a, $b, 2px);
 		}
 		#info {
-			background: $dos;
-			color: $uno;
-			border-color: $uno;
+			background: $b;
+			color: $a;
+			border-color: $a;
 			a, a:visited {
-				color: $uno;
-				@include underline($uno, $dos, $uno, 2px);
+				color: $a;
+				@include underline($a, $b, $a, 2px);
 			}
 		}
 	}
 }
 
 
-@mixin underline($color, $bg, $underline, $width) {
+@mixin underline($color, $bg, $line, $width) {
 	$space: 1px;
 	$half: #{$space/2};
 	$double: #{$space*2};
 	$triple: #{$space*3};
-	text-shadow: 0 $space 0 $bg, 0 $double 0 $bg, 0  -#{$space} 0 $bg, 0 -#{$double} 0 $bg, -#{$space} $space 0 $bg, -#{$space} $double 0 $bg, $space $space 0 $bg, $space $double 0 $bg, -#{$space} 0 0 $bg, 0 -#{$triple} 0 $bg;
-	background: linear-gradient($bg,$bg),linear-gradient($bg,$bg),linear-gradient($underline,$underline);
+	text-shadow:
+		0 $space 0 $bg, 0 $double 0 $bg,
+		0  -#{$space} 0 $bg, 0 -#{$double} 0 $bg,
+		-#{$space} $space 0 $bg, -#{$space} $double 0 $bg,
+		$space $space 0 $bg, $space $double 0 $bg,
+		-#{$space} 0 0 $bg, 0 -#{$triple} 0 $bg;
+	background:
+		linear-gradient($bg, $bg),
+		linear-gradient($bg, $bg),
+		linear-gradient($line, $line);
 	background-position: 0 87%,100% 87%,0 92%;
-	background-repeat: no-repeat,no-repeat,repeat-x;
-	background-size: .05em $width,.05em $width,$width $width;
+	background-repeat: no-repeat, no-repeat, repeat-x;
+	background-size: .05em $width, .05em $width, $width $width;
 	text-decoration: none;
 	border: none;
 }
 
-@mixin note($uno, $dos, $tres, $quatro) {
-	color: $uno;
-	background-color: $dos;
+@mixin project($a, $b, $c, $d) {
+	color: $a;
+	background-color: $b;
 	a {
-		color: $uno;
-		@include underline($uno, $dos, $tres, 2px);
+		color: $a;
+		@include underline($a, $b, $c, 2px);
 		&:hover {
-			color: $quatro !important;
+			color: $d !important;
 		}
 	}
 	.inner .text {
 		.shadow {
-			box-shadow: $dos inset 0 -4em 2em -2em;
+			box-shadow: $b inset 0 -4em 2em -2em;
 		}
 		&.tease .shadow {
-			box-shadow: $dos inset 0 -3em 2em -2em;	
+			box-shadow: $b inset 0 -3em 2em -2em;	
 		}
 	}
 	::selection {
-		color: $dos;
-		background-color: $uno;
+		color: $b;
+		background-color: $a;
 		text-shadow: none !important;
 	}
 }

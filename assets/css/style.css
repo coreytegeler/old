@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
 @keyframes fan {
   0% {
@@ -26,6 +27,8 @@ html {
   width: 100%;
   display: block;
   overflow: hidden;
+  font-size: 20px;
+  line-height: 1.2em;
 }
 
 body {
@@ -38,32 +41,31 @@ body {
   border-bottom: black;
   color: black;
   font-family: "Lora", serif;
-  font-size: 45px;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  line-height: 1em;
 }
 
 html * {
   user-select: none;
+  box-sizing: border-box;
 }
 
 a {
   color: inherit;
   text-decoration: none;
   border-bottom: 3px solid;
-  padding-bottom: 0.1em;
-  transition: color 200ms ease-in-out, opacity 200ms ease-in-out;
+  padding-bottom: 0.1rem;
 }
 a:hover {
   cursor: alias !important;
 }
 
 sup {
-  font-size: 0.5em;
-  margin-left: -0.4em;
+  font-size: 0.8rem;
+  line-height: 1.55em;
+  margin-left: -0.4rem;
 }
 sup:hover {
   cursor: s-resize !important;
@@ -76,39 +78,58 @@ sup a:hover {
   cursor: s-resize !important;
 }
 
-ul {
+h2, h3, h4, h5 {
   margin: 0;
-  font-size: 0.55em;
-  line-height: 1.25em;
-  text-align: left;
+  display: inline;
+  font-weight: normal;
+}
+h2 a, h3 a, h4 a, h5 a {
+  color: inherit !important;
+  font-style: italic;
 }
 
-li {
-  margin: 0 0 0.5em 0;
-}
-li:last-child {
-  margin: 0;
+h3 a, h5 a {
+  color: inherit !important;
+  font-style: italic;
+  border: none !important;
+  text-shadow: none !important;
 }
 
-.wrapper {
+h2 {
+  font-size: 2.2rem;
+  line-height: 1.4em;
+  display: table;
+  padding: 0 0 10px 0;
+}
+h2 a {
+  font-style: normal;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 1.2em;
+}
+
+small {
+  font-size: 0.8rem;
+  line-height: 1.55em;
+}
+
+.inner {
   width: 100%;
   max-width: 980px;
   height: auto;
-  min-height: 100%;
   display: table;
   margin: 0 auto;
+  padding: 1rem;
   position: relative;
-  opacity: 0;
-  transition: opacity 200ms 200ms ease-in-out;
-}
-.wrapper.loaded {
-  opacity: 1;
 }
 
 main {
-  min-height: calc(100vh - 100px);
   padding: 50px 0;
   display: table;
+  font-size: 2.2rem;
+  line-height: 1.4em;
 }
 main i, main a, main em {
   display: inline-table;
@@ -117,24 +138,26 @@ main i, main a, main em {
 }
 main .inner {
   display: table-cell;
-  vertical-align: middle;
+  padding-bottom: 1.4rem;
   position: relative;
-  font-size: 1em;
-  line-height: 1.4em;
-  padding-bottom: 1.4em;
+  vertical-align: middle;
 }
 main .inner p {
+  margin: 0 0 0.5em 0;
+}
+main .inner p:last-of-type {
   margin: 0;
-  padding: 0.5em;
 }
 main .inner a {
   cursor: alias;
-  line-height: 0.95em;
+  line-height: 0.95rem;
+  display: inline;
 }
 main .inner i {
   font-style: normal;
   transform-style: preserve-3d;
   perspective: 1000;
+  -webkit-perspective: 1000;
 }
 main .inner em {
   font-style: normal;
@@ -144,836 +167,184 @@ main .inner em {
   position: absolute;
   left: 30px;
   bottom: 0px;
+  display: none;
 }
-.symbols .symbol {
+
+.symbol {
   text-decoration: none !important;
   border-bottom: none !important;
-}
-.symbols .symbol:hover {
   cursor: pointer;
 }
-.symbols .symbol svg {
-  height: 1em !important;
-  width: auto;
+.symbol:hover {
+  cursor: pointer;
+}
+.symbol svg {
+  height: auto;
   display: inline-table;
   fill: currentColor;
   transform: translate3d(0, 0, 0);
   backface-visibility: visible;
 }
-.symbols .symbol svg:hover {
+.symbol svg:hover {
   cursor: pointer;
 }
-
 .symbol[data-action=peace] {
   transform: scale(1.8);
   margin-right: 20px;
 }
-
+.symbol[data-action=peace] svg {
+  width: 2rem;
+}
 .symbol[data-action=love] {
   transform: scale(1.4);
   margin-left: 10px;
 }
+.symbol[data-action=love] svg {
+  width: 1.1rem;
+}
 
-.symbol:hover, .action.big {
+.action.big {
   cursor: pointer;
 }
 
-#notes {
+.out:hover {
+  cursor: alias !important;
+}
+
+.credits {
+  font-size: 20px;
+  line-height: 1.2em;
+}
+.credits a {
+  position: relative;
+}
+.credits a:hover sub {
+  display: block;
+}
+.credits small {
+  margin-top: 1em;
+  display: block;
+}
+.credits sub {
+  width: 100%;
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 2em;
+  text-align: center;
+  text-shadow: unset;
+  background: unset;
+  font-size: 0.65rem;
+  line-height: 1.3em;
+}
+
+#projects {
   width: 100%;
 }
 
-.note {
+.project {
   width: 100%;
-  padding: 2em 0;
   position: relative;
+  font-size: 1.5rem;
+  line-height: 1.3em;
 }
-.note * {
+.project * {
   user-select: text;
 }
-.note .inner {
-  width: 80%;
-  max-width: 980px;
-  display: table;
-  margin: auto;
+.project a {
+  border-bottom-width: 0.1rem;
 }
-.note#currently {
-  padding-bottom: 1em;
+.project p {
+  margin: 0 0 1rem 0;
 }
-.note#currently .inner {
-  width: calc(100% - 3.5em);
-  max-width: calc(100% - 3.5em);
-  padding: 1em;
-  margin: auto;
-  border: 0.25em solid;
-  display: block;
-}
-.note#currently .text {
-  padding: 0;
-}
-.note#coi {
-  color: #fff;
-  background-color: #00a14c;
-}
-.note#coi a {
-  color: #fff;
-  text-shadow: 0 1px 0 #00a14c, 0 2px 0 #00a14c, 0 -1px 0 #00a14c, 0 -2px 0 #00a14c, -1px 1px 0 #00a14c, -1px 2px 0 #00a14c, 1px 1px 0 #00a14c, 1px 2px 0 #00a14c, -1px 0 0 #00a14c, 0 -3px 0 #00a14c;
-  background: linear-gradient(#00a14c, #00a14c), linear-gradient(#00a14c, #00a14c), linear-gradient(#fff, #fff);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
-  text-decoration: none;
-  border: none;
-}
-.note#coi a:hover {
-  color: #fff !important;
-}
-.note#coi .inner .text .shadow {
-  box-shadow: #00a14c inset 0 -4em 2em -2em;
-}
-.note#coi .inner .text.tease .shadow {
-  box-shadow: #00a14c inset 0 -3em 2em -2em;
-}
-.note#coi ::selection {
-  color: #00a14c;
-  background-color: #fff;
-  text-shadow: none !important;
-}
-.note#coi .bg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  background-image: url(../images/coi1.jpg);
-  background-position: center;
-  background-size: cover;
-  mix-blend-mode: multiply;
-}
-.note#coi .inner {
-  position: relative;
-  z-index: 2;
-}
-.note#coi a {
-  text-shadow: 0 1px 0 transparent, 0 2px 0 transparent, 0 -1px 0 transparent, 0 -2px 0 transparent, -1px 1px 0 transparent, -1px 2px 0 transparent, 1px 1px 0 transparent, 1px 2px 0 transparent, -1px 0 0 transparent, 0 -3px 0 transparent;
-  background: linear-gradient(transparent, transparent), linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
-  text-decoration: none;
-  border: none;
-}
-.note#coi ::selection {
-  color: #00a14c;
-  background-color: #000;
-}
-.note#four-corners {
-  color: #212529;
-  background-color: #f4f7fe;
-  position: relative;
-}
-.note#four-corners a {
-  color: #212529;
-  text-shadow: 0 1px 0 #f4f7fe, 0 2px 0 #f4f7fe, 0 -1px 0 #f4f7fe, 0 -2px 0 #f4f7fe, -1px 1px 0 #f4f7fe, -1px 2px 0 #f4f7fe, 1px 1px 0 #f4f7fe, 1px 2px 0 #f4f7fe, -1px 0 0 #f4f7fe, 0 -3px 0 #f4f7fe;
-  background: linear-gradient(#f4f7fe, #f4f7fe), linear-gradient(#f4f7fe, #f4f7fe), linear-gradient(#afd5ff, #afd5ff);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
-  text-decoration: none;
-  border: none;
-}
-.note#four-corners a:hover {
-  color: #80bdff !important;
-}
-.note#four-corners .inner .text .shadow {
-  box-shadow: #f4f7fe inset 0 -4em 2em -2em;
-}
-.note#four-corners .inner .text.tease .shadow {
-  box-shadow: #f4f7fe inset 0 -3em 2em -2em;
-}
-.note#four-corners ::selection {
-  color: #f4f7fe;
-  background-color: #212529;
-  text-shadow: none !important;
-}
-.note#four-corners .corner {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  z-index: 4;
-  filter: drop-shadow(0 0 1px rgba(33, 37, 41, 0.25));
-  transform: translate3d(0, 0, 0);
-}
-.note#four-corners .corner::after, .note#four-corners .corner::before {
-  content: "";
-  position: absolute;
-  z-index: 4;
-  background-color: #80bdff;
-}
-.note#four-corners .corner.authorship {
-  bottom: 20px;
-  right: 20px;
-}
-.note#four-corners .corner.authorship::before {
-  width: 20px;
-  height: 80px;
-  right: 10px;
-  bottom: 10px;
-}
-.note#four-corners .corner.authorship::after {
-  width: 80px;
-  height: 20px;
-  right: 10px;
-  bottom: 10px;
-}
-.note#four-corners .corner.backstory {
-  bottom: 20px;
-  left: 20px;
-}
-.note#four-corners .corner.backstory::before {
-  width: 20px;
-  height: 80px;
-  left: 10px;
-  bottom: 10px;
-}
-.note#four-corners .corner.backstory::after {
-  width: 80px;
-  height: 20px;
-  left: 10px;
-  bottom: 10px;
-}
-.note#four-corners .corner.imagery {
-  top: 20px;
-  left: 20px;
-}
-.note#four-corners .corner.imagery::before {
-  width: 20px;
-  height: 80px;
-  left: 10px;
-  top: 10px;
-}
-.note#four-corners .corner.imagery::after {
-  width: 80px;
-  height: 20px;
-  left: 10px;
-  top: 10px;
-}
-.note#four-corners .corner.links {
-  top: 20px;
-  right: 20px;
-}
-.note#four-corners .corner.links::before {
-  width: 20px;
-  height: 80px;
-  right: 10px;
-  top: 10px;
-}
-.note#four-corners .corner.links::after {
-  width: 80px;
-  height: 20px;
-  right: 10px;
-  top: 10px;
-}
-.note#nakba {
-  color: white;
-  background-color: black;
-}
-.note#nakba a {
-  color: white;
-  text-shadow: 0 1px 0 black, 0 2px 0 black, 0 -1px 0 black, 0 -2px 0 black, -1px 1px 0 black, -1px 2px 0 black, 1px 1px 0 black, 1px 2px 0 black, -1px 0 0 black, 0 -3px 0 black;
-  background: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(#ff0, #ff0);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
-  text-decoration: none;
-  border: none;
-}
-.note#nakba a:hover {
-  color: #ff0 !important;
-}
-.note#nakba .inner .text .shadow {
-  box-shadow: black inset 0 -4em 2em -2em;
-}
-.note#nakba .inner .text.tease .shadow {
-  box-shadow: black inset 0 -3em 2em -2em;
-}
-.note#nakba ::selection {
-  color: black;
-  background-color: white;
-  text-shadow: none !important;
-}
-.note#ygdp {
-  color: #153554;
-  background-color: #a8d7ee;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../images/ygdp.svg);
-}
-.note#ygdp a {
-  color: #153554;
-  text-shadow: 0 1px 0 #a8d7ee, 0 2px 0 #a8d7ee, 0 -1px 0 #a8d7ee, 0 -2px 0 #a8d7ee, -1px 1px 0 #a8d7ee, -1px 2px 0 #a8d7ee, 1px 1px 0 #a8d7ee, 1px 2px 0 #a8d7ee, -1px 0 0 #a8d7ee, 0 -3px 0 #a8d7ee;
-  background: linear-gradient(#a8d7ee, #a8d7ee), linear-gradient(#a8d7ee, #a8d7ee), linear-gradient(#e1e8ea, #e1e8ea);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
-  text-decoration: none;
-  border: none;
-}
-.note#ygdp a:hover {
-  color: #f2f2ee !important;
-}
-.note#ygdp .inner .text .shadow {
-  box-shadow: #a8d7ee inset 0 -4em 2em -2em;
-}
-.note#ygdp .inner .text.tease .shadow {
-  box-shadow: #a8d7ee inset 0 -3em 2em -2em;
-}
-.note#ygdp ::selection {
-  color: #a8d7ee;
-  background-color: #153554;
-  text-shadow: none !important;
-}
-.note#ginling {
-  color: #f2f0df;
-  background-color: #0dae0b;
-  background-image: url(../images/ginling.png);
-  background-size: 50% auto;
-  background-position: 0 top;
-  background-repeat: no-repeat;
-}
-.note#ginling a {
-  color: #f2f0df;
-  text-shadow: 0 1px 0 #0dae0b, 0 2px 0 #0dae0b, 0 -1px 0 #0dae0b, 0 -2px 0 #0dae0b, -1px 1px 0 #0dae0b, -1px 2px 0 #0dae0b, 1px 1px 0 #0dae0b, 1px 2px 0 #0dae0b, -1px 0 0 #0dae0b, 0 -3px 0 #0dae0b;
-  background: linear-gradient(#0dae0b, #0dae0b), linear-gradient(#0dae0b, #0dae0b), linear-gradient(#f2f0df, #f2f0df);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
-  text-decoration: none;
-  border: none;
-}
-.note#ginling a:hover {
-  color: rgba(242, 240, 223, 0.75) !important;
-}
-.note#ginling .inner .text .shadow {
-  box-shadow: #0dae0b inset 0 -4em 2em -2em;
-}
-.note#ginling .inner .text.tease .shadow {
-  box-shadow: #0dae0b inset 0 -3em 2em -2em;
-}
-.note#ginling ::selection {
-  color: #0dae0b;
-  background-color: #f2f0df;
-  text-shadow: none !important;
-}
-.note#ginling h1 a {
-  text-shadow: none;
-}
-.note#bpl {
-  color: white;
-  background-color: #8199ff;
-}
-.note#bpl a {
-  color: white;
-  text-shadow: 0 1px 0 #8199ff, 0 2px 0 #8199ff, 0 -1px 0 #8199ff, 0 -2px 0 #8199ff, -1px 1px 0 #8199ff, -1px 2px 0 #8199ff, 1px 1px 0 #8199ff, 1px 2px 0 #8199ff, -1px 0 0 #8199ff, 0 -3px 0 #8199ff;
-  background: linear-gradient(#8199ff, #8199ff), linear-gradient(#8199ff, #8199ff), linear-gradient(white, white);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
-  text-decoration: none;
-  border: none;
-}
-.note#bpl a:hover {
-  color: rgba(255, 255, 255, 0.75) !important;
-}
-.note#bpl .inner .text .shadow {
-  box-shadow: #8199ff inset 0 -4em 2em -2em;
-}
-.note#bpl .inner .text.tease .shadow {
-  box-shadow: #8199ff inset 0 -3em 2em -2em;
-}
-.note#bpl ::selection {
-  color: #8199ff;
-  background-color: white;
-  text-shadow: none !important;
-}
-.note#revealer {
-  color: #346378;
-  background-color: #f1f5f7;
-}
-.note#revealer a {
-  color: #346378;
-  text-shadow: 0 1px 0 #f1f5f7, 0 2px 0 #f1f5f7, 0 -1px 0 #f1f5f7, 0 -2px 0 #f1f5f7, -1px 1px 0 #f1f5f7, -1px 2px 0 #f1f5f7, 1px 1px 0 #f1f5f7, 1px 2px 0 #f1f5f7, -1px 0 0 #f1f5f7, 0 -3px 0 #f1f5f7;
-  background: linear-gradient(#f1f5f7, #f1f5f7), linear-gradient(#f1f5f7, #f1f5f7), linear-gradient(#fed00b, #fed00b);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
-  text-decoration: none;
-  border: none;
-}
-.note#revealer a:hover {
-  color: rgba(52, 99, 120, 0.75) !important;
-}
-.note#revealer .inner .text .shadow {
-  box-shadow: #f1f5f7 inset 0 -4em 2em -2em;
-}
-.note#revealer .inner .text.tease .shadow {
-  box-shadow: #f1f5f7 inset 0 -3em 2em -2em;
-}
-.note#revealer ::selection {
-  color: #f1f5f7;
-  background-color: #346378;
-  text-shadow: none !important;
-}
-.note#revealer .halo {
-  width: 5em;
-  height: 5em;
-  left: calc(50% - 2.5em);
-  top: calc(50% - 2.5em);
-  position: absolute;
-  border-radius: 50%;
-  box-shadow: 0 0 0.5em 0.25em #fed00b;
-  z-index: 0;
-  background: #fed00b;
-}
-.note#rz {
-  color: #d02630;
-  background-color: #f8e5e3;
-}
-.note#rz a {
-  color: #d02630;
-  text-shadow: 0 1px 0 #f8e5e3, 0 2px 0 #f8e5e3, 0 -1px 0 #f8e5e3, 0 -2px 0 #f8e5e3, -1px 1px 0 #f8e5e3, -1px 2px 0 #f8e5e3, 1px 1px 0 #f8e5e3, 1px 2px 0 #f8e5e3, -1px 0 0 #f8e5e3, 0 -3px 0 #f8e5e3;
-  background: linear-gradient(#f8e5e3, #f8e5e3), linear-gradient(#f8e5e3, #f8e5e3), linear-gradient(#d02630, #d02630);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
-  text-decoration: none;
-  border: none;
-}
-.note#rz a:hover {
-  color: rgba(208, 38, 48, 0.75) !important;
-}
-.note#rz .inner .text .shadow {
-  box-shadow: #f8e5e3 inset 0 -4em 2em -2em;
-}
-.note#rz .inner .text.tease .shadow {
-  box-shadow: #f8e5e3 inset 0 -3em 2em -2em;
-}
-.note#rz ::selection {
-  color: #f8e5e3;
-  background-color: #d02630;
-  text-shadow: none !important;
-}
-.note#rz .pattern {
-  width: 100%;
-  height: 45px;
-  background-size: 30px 15px;
-  background-image: url(../images/zim.svg);
-  position: absolute;
-  left: 0;
-}
-.note#rz .pattern.top {
-  top: 1px;
-}
-.note#rz .pattern.bottom {
-  bottom: 1px;
-}
-.note#mts {
-  background-image: url(../images/map.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #fafcfc;
-  background-color: black;
-}
-.note#mts a {
-  color: #fafcfc;
-  text-shadow: 0 1px 0 black, 0 2px 0 black, 0 -1px 0 black, 0 -2px 0 black, -1px 1px 0 black, -1px 2px 0 black, 1px 1px 0 black, 1px 2px 0 black, -1px 0 0 black, 0 -3px 0 black;
-  background: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(#fafcfc, #fafcfc);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
-  text-decoration: none;
-  border: none;
-}
-.note#mts a:hover {
-  color: rgba(244, 246, 250, 0.75) !important;
-}
-.note#mts .inner .text .shadow {
-  box-shadow: black inset 0 -4em 2em -2em;
-}
-.note#mts .inner .text.tease .shadow {
-  box-shadow: black inset 0 -3em 2em -2em;
-}
-.note#mts ::selection {
-  color: black;
-  background-color: #fafcfc;
-  text-shadow: none !important;
-}
-.note#iscp {
-  position: relative;
-  transition: background 150ms ease-in-out;
-  color: white;
-  background-color: #ff5000;
-}
-.note#iscp a {
-  color: white;
-  text-shadow: 0 1px 0 #ff5000, 0 2px 0 #ff5000, 0 -1px 0 #ff5000, 0 -2px 0 #ff5000, -1px 1px 0 #ff5000, -1px 2px 0 #ff5000, 1px 1px 0 #ff5000, 1px 2px 0 #ff5000, -1px 0 0 #ff5000, 0 -3px 0 #ff5000;
-  background: linear-gradient(#ff5000, #ff5000), linear-gradient(#ff5000, #ff5000), linear-gradient(white, white);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
-  text-decoration: none;
-  border: none;
-}
-.note#iscp a:hover {
-  color: rgba(255, 255, 255, 0.75) !important;
-}
-.note#iscp .inner .text .shadow {
-  box-shadow: #ff5000 inset 0 -4em 2em -2em;
-}
-.note#iscp .inner .text.tease .shadow {
-  box-shadow: #ff5000 inset 0 -3em 2em -2em;
-}
-.note#iscp ::selection {
-  color: #ff5000;
-  background-color: white;
-  text-shadow: none !important;
-}
-.note#iscp .inner {
-  width: calc(100% - 7em);
-}
-.note#iscp .sandwich {
-  border-top: 0.2em solid white;
-  border-bottom: 0.2em solid white;
-  padding: 1em 0;
-  margin: 0.6em 0;
-}
-.note#iscp .side {
-  position: absolute;
-  top: 0;
-  width: 3em;
-  height: 100%;
-  background: #ff5000;
-}
-.note#iscp .side .inner {
-  width: 2.6em;
-  height: 100%;
+.project p:last-child {
   margin: 0;
 }
-.note#iscp .side .inner .top {
-  width: 2.4em;
-  height: 2.6em;
-  position: absolute;
-  top: 0;
-  border-bottom: 0.2em solid white;
+.project .inner {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
-.note#iscp .side .inner .bottom {
-  width: 2.4em;
-  height: 2.6em;
+
+ul {
+  margin: 0;
+  text-align: left;
+}
+
+li {
+  margin: 0 0 1rem 0;
+  font-size: 20px;
+  line-height: 1.2em;
+}
+li:last-child {
+  margin: 0;
+}
+
+details {
+  margin: 1rem 0 0 0;
+  position: relative;
+}
+details[open] {
+  padding-bottom: 3rem;
+}
+
+summary {
+  cursor: pointer;
+  text-align: justify;
+  font-size: 20px;
+  line-height: 1.2em;
+  list-style: none;
+  user-select: none !important;
+}
+summary::before {
+  content: "▼";
+  margin-right: 0.5em;
+  font-size: 0.8em;
+}
+details[open] summary {
+  opacity: 0.5;
   position: absolute;
   bottom: 0;
-  border-top: 0.2em solid white;
 }
-.note#iscp .side.left {
-  left: 0;
+details[open] summary::marker, details[open] summary::-webkit-details-marker {
+  color: red;
 }
-.note#iscp .side.left .inner {
-  margin-right: 0.2em;
-  border-right: 0.2em solid white;
+details[open] summary::before {
+  content: "▲";
 }
-.note#iscp .side.left .inner .top, .note#iscp .side.left .inner .bottom {
-  left: 0;
-}
-.note#iscp .side.right {
-  right: 0;
-}
-.note#iscp .side.right .inner {
-  margin-left: 0.2em;
-  border-left: 0.2em solid white;
-}
-.note#iscp .side.right .inner .top, .note#iscp .side.right .inner .bottom {
-  right: 0;
-}
-.note#compost-pile {
-  position: relative;
-  overflow: hidden;
-  color: #fbfffb;
-  background-color: #73db71;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../images/compost.svg);
-}
-.note#compost-pile a {
-  color: #fbfffb;
-  text-shadow: 0 1px 0 #73db71, 0 2px 0 #73db71, 0 -1px 0 #73db71, 0 -2px 0 #73db71, -1px 1px 0 #73db71, -1px 2px 0 #73db71, 1px 1px 0 #73db71, 1px 2px 0 #73db71, -1px 0 0 #73db71, 0 -3px 0 #73db71;
-  background: linear-gradient(#73db71, #73db71), linear-gradient(#73db71, #73db71), linear-gradient(#fbfffb, #fbfffb);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
-  text-decoration: none;
-  border: none;
-}
-.note#compost-pile a:hover {
-  color: rgba(251, 255, 251, 0.75) !important;
-}
-.note#compost-pile .inner .text .shadow {
-  box-shadow: #73db71 inset 0 -4em 2em -2em;
-}
-.note#compost-pile .inner .text.tease .shadow {
-  box-shadow: #73db71 inset 0 -3em 2em -2em;
-}
-.note#compost-pile ::selection {
-  color: #73db71;
-  background-color: #fbfffb;
-  text-shadow: none !important;
-}
-.note#af-fixing-ceremony {
-  color: black;
-  background-color: white;
-}
-.note#af-fixing-ceremony a {
-  color: black;
-  text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
-  background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(red, red);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
-  text-decoration: none;
-  border: none;
-}
-.note#af-fixing-ceremony a:hover {
-  color: red !important;
-}
-.note#af-fixing-ceremony .inner .text .shadow {
-  box-shadow: white inset 0 -4em 2em -2em;
-}
-.note#af-fixing-ceremony .inner .text.tease .shadow {
-  box-shadow: white inset 0 -3em 2em -2em;
-}
-.note#af-fixing-ceremony ::selection {
-  color: white;
-  background-color: black;
-  text-shadow: none !important;
-}
-.note#pcgd {
-  color: #FFFF33;
-  background-color: #333399;
-}
-.note#pcgd a {
-  color: #FFFF33;
-  text-shadow: 0 1px 0 #333399, 0 2px 0 #333399, 0 -1px 0 #333399, 0 -2px 0 #333399, -1px 1px 0 #333399, -1px 2px 0 #333399, 1px 1px 0 #333399, 1px 2px 0 #333399, -1px 0 0 #333399, 0 -3px 0 #333399;
-  background: linear-gradient(#333399, #333399), linear-gradient(#333399, #333399), linear-gradient(#FFFF33, #FFFF33);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
-  text-decoration: none;
-  border: none;
-}
-.note#pcgd a:hover {
-  color: rgba(255, 255, 51, 0.75) !important;
-}
-.note#pcgd .inner .text .shadow {
-  box-shadow: #333399 inset 0 -4em 2em -2em;
-}
-.note#pcgd .inner .text.tease .shadow {
-  box-shadow: #333399 inset 0 -3em 2em -2em;
-}
-.note#pcgd ::selection {
-  color: #333399;
-  background-color: #FFFF33;
-  text-shadow: none !important;
-}
-.note#pcgd .svg {
-  width: 1em;
-  height: 1em;
-  position: relative;
-  display: inline-block;
-  cursor: pointer !important;
-}
-.note#pcgd .svg:hover {
-  cursor: pointer !important;
-}
-.note#pcgd .svg svg {
-  width: 1em;
-  position: absolute;
-  bottom: -2px;
-  right: 0;
+details:not([open]) summary span {
   display: none;
-  line-height: 1.2em;
-  vertical-align: baseline;
-  fill: #FFFF33 !important;
 }
-.note#pcgd .svg svg * {
-  fill: #FFFF33 !important;
-}
-.note#pcgd .svg svg:first-of-type {
-  display: inline-block;
-}
-.note#rbma {
-  background: #000000;
-  color: #FEF035;
-}
-.note#rbma.confetti {
-  background-size: auto;
-  background-repeat: repeat;
-  background-position: center;
-  background-image: url(../images/confetti.gif);
-}
-.note#rbma a {
-  color: #FEF035;
-  text-shadow: 0 1px 0 black, 0 2px 0 black, 0 -1px 0 black, 0 -2px 0 black, -1px 1px 0 black, -1px 2px 0 black, 1px 1px 0 black, 1px 2px 0 black, -1px 0 0 black, 0 -3px 0 black;
-  background: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(#FEF035, #FEF035);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
-  text-decoration: none;
-  border: none;
-}
-.note#rbma .click {
-  height: 1.4em;
-  padding-right: 0.5em;
-}
-.note#rbma .click img {
-  margin-bottom: -0.25em;
-  height: inherit;
-}
-.note#rbma .click:hover, .note#rbma .click .hover, .note#rbma .click:hover img {
-  cursor: pointer !important;
-  animation: wiggle 300ms infinite;
-}
-.note#rbma .click.logo span {
-  background-image: url(../images/underline.png);
-  background-size: 12px 8px;
-  background-position: 0px bottom;
-  background-repeat: repeat-x;
-  text-shadow: -2px 2px 1px black, 2px -2px 1px black, -2px -2px 1px black, 2px 2px 1px black;
-}
-.note#rbma .click.japan {
-  position: relative;
-}
-.note#rbma .click.japan.toggled img {
-  display: inline-block !important;
-  visibility: hidden;
-}
-.note#rbma .click.japan iframe {
-  position: absolute;
-  transform: scale(0.28);
-  transform-origin: top left;
-  top: -35%;
-  left: 0;
-  pointer-events: none;
-}
-.note#qr {
-  background: white;
-  color: black;
-}
-.note#qr a {
-  color: black;
-  text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
-  background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(black, black);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
-  text-decoration: none;
-  border: none;
-}
-.note h1, .note h2, .note h3, .note h4 {
-  margin: 0;
-  display: inline;
-  font-weight: normal;
-}
-.note h1 a, .note h2 a, .note h3 a, .note h4 a {
-  color: inherit !important;
-  font-style: italic;
-}
-.note h2 a, .note h4 a {
-  color: inherit !important;
-  font-style: italic;
-  border: none !important;
-  background: none !important;
-  text-shadow: none !important;
-}
-.note h1 {
-  font-size: 1em;
-  line-height: 1.1em;
-  display: table;
-  padding: 0 0 10px 0;
-}
-.note h1 a {
-  font-style: normal;
-}
-.note h2 {
-  font-size: 0.55em;
-  line-height: 1.5em;
-  display: block;
-}
-.note h3 {
-  font-size: 0.55em;
-  line-height: 1em;
-}
-.note h3 a {
-  text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
-  background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(black, black);
-  background-position: 0 87%, 100% 87%, 0 92%;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
-  text-decoration: none;
-  border: none;
-}
-.note h4 {
-  display: table;
-  font-size: 0.4em;
-  line-height: 1.3em;
-  margin-top: 0.5em;
-}
-.note .out:hover {
-  cursor: alias !important;
-}
-.note .text {
-  margin: 2em 0;
+
+.about {
+  margin: 2rem 0;
   text-align: justify;
   position: relative;
 }
-.note .text.max {
-  height: auto;
-  max-height: 16em;
-  overflow: hidden;
-  transition: max-height 200ms ease;
+
+.visit {
+  display: table;
+  font-size: 20px;
+  line-height: 1.2em;
 }
-.note .text.max.tease {
-  max-height: 17em;
+.visit:not([href]) {
+  opacity: 0.5;
+  pointer-events: none;
+  margin-right: 1em;
+  float: left;
 }
-.note .text.max.tease .shadow {
-  height: 4em;
-}
-.note .text.max.show {
-  max-height: auto;
-  height: 100%;
-}
-.note .text .shadow {
+
+.shadow {
   width: 100%;
-  height: 3em;
+  height: 3rem;
   left: 0;
   bottom: 0;
   position: absolute;
   z-index: 100;
   transition: box-shadow 200ms ease;
+  display: none;
 }
-.note .text .shadow:hover {
+.shadow:hover {
   cursor: s-resize;
-}
-.note .text a {
-  border-bottom-width: 0.1em;
-}
-.note .text p {
-  font-size: 0.7em;
-  line-height: 1.5em;
-  margin: 0 0 1em 0;
-}
-.note .text p:last-child {
-  margin: 0;
 }
 
 .toggle *:first-child {
@@ -989,14 +360,681 @@ main .inner em {
   display: inline-block;
 }
 
-body.wooden-airplane-lamp {
+#currently {
+  padding-bottom: 1rem;
+}
+#currently .inner {
+  width: calc(100% - 3.5rem);
+  max-width: calc(100% - 3.5rem);
+  padding: 1rem;
+  margin: auto;
+  border: 0.25rem solid;
+  display: block;
+}
+#currently .about {
+  padding: 0;
+}
+
+#coi {
+  color: #fff;
+  background-color: #3594f2;
+}
+#coi a {
+  color: #fff;
+  text-shadow: 0 1px 0 #3594f2, 0 2px 0 #3594f2, 0 -1px 0 #3594f2, 0 -2px 0 #3594f2, -1px 1px 0 #3594f2, -1px 2px 0 #3594f2, 1px 1px 0 #3594f2, 1px 2px 0 #3594f2, -1px 0 0 #3594f2, 0 -3px 0 #3594f2;
+  background: linear-gradient(#3594f2, #3594f2), linear-gradient(#3594f2, #3594f2), linear-gradient(#fff, #fff);
+  background-position: 0 87%, 100% 87%, 0 92%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+  text-decoration: none;
+  border: none;
+}
+#coi a:hover {
+  color: #fff !important;
+}
+#coi .inner .text .shadow {
+  box-shadow: #3594f2 inset 0 -4em 2em -2em;
+}
+#coi .inner .text.tease .shadow {
+  box-shadow: #3594f2 inset 0 -3em 2em -2em;
+}
+#coi ::selection {
+  color: #3594f2;
+  background-color: #fff;
+  text-shadow: none !important;
+}
+#coi .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-image: url(../images/coi1.jpg);
+  background-position: center;
+  background-size: cover;
+  mix-blend-mode: soft-light;
+}
+#coi .inner {
+  position: relative;
+  z-index: 2;
+}
+#coi a {
+  text-shadow: 0 1px 0 transparent, 0 2px 0 transparent, 0 -1px 0 transparent, 0 -2px 0 transparent, -1px 1px 0 transparent, -1px 2px 0 transparent, 1px 1px 0 transparent, 1px 2px 0 transparent, -1px 0 0 transparent, 0 -3px 0 transparent;
+  background: linear-gradient(transparent, transparent), linear-gradient(transparent, transparent), linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  background-position: 0 87%, 100% 87%, 0 92%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+  text-decoration: none;
+  border: none;
+}
+#coi ::selection {
+  color: #3594f2;
+  background-color: #fff;
+}
+
+#four-corners {
+  color: #212529;
+  background-color: #f4f7fe;
+  position: relative;
+}
+#four-corners a {
+  color: #212529;
+  text-shadow: 0 1px 0 #f4f7fe, 0 2px 0 #f4f7fe, 0 -1px 0 #f4f7fe, 0 -2px 0 #f4f7fe, -1px 1px 0 #f4f7fe, -1px 2px 0 #f4f7fe, 1px 1px 0 #f4f7fe, 1px 2px 0 #f4f7fe, -1px 0 0 #f4f7fe, 0 -3px 0 #f4f7fe;
+  background: linear-gradient(#f4f7fe, #f4f7fe), linear-gradient(#f4f7fe, #f4f7fe), linear-gradient(#afd5ff, #afd5ff);
+  background-position: 0 87%, 100% 87%, 0 92%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+  text-decoration: none;
+  border: none;
+}
+#four-corners a:hover {
+  color: #80bdff !important;
+}
+#four-corners .inner .text .shadow {
+  box-shadow: #f4f7fe inset 0 -4em 2em -2em;
+}
+#four-corners .inner .text.tease .shadow {
+  box-shadow: #f4f7fe inset 0 -3em 2em -2em;
+}
+#four-corners ::selection {
+  color: #f4f7fe;
+  background-color: #212529;
+  text-shadow: none !important;
+}
+#four-corners .corner {
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  z-index: 4;
+  transform: translate3d(0, 0, 0);
+}
+#four-corners .corner::after, #four-corners .corner::before {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  background-color: #80bdff;
+}
+#four-corners .corner.authorship {
+  bottom: 0.5em;
+  right: 0.5em;
+}
+#four-corners .corner.authorship::before {
+  width: 0.5em;
+  height: 1.5em;
+  right: 0;
+  bottom: 0;
+}
+#four-corners .corner.authorship::after {
+  width: 1.5em;
+  height: 0.5em;
+  right: 0;
+  bottom: 0;
+}
+#four-corners .corner.backstory {
+  bottom: 0.5em;
+  left: 0.5em;
+}
+#four-corners .corner.backstory::before {
+  width: 0.5em;
+  height: 1.5em;
+  left: 0;
+  bottom: 0;
+}
+#four-corners .corner.backstory::after {
+  width: 1.5em;
+  height: 0.5em;
+  left: 0;
+  bottom: 0;
+}
+#four-corners .corner.imagery {
+  top: 0.5em;
+  left: 0.5em;
+}
+#four-corners .corner.imagery::before {
+  width: 0.5em;
+  height: 1.5em;
+  left: 0;
+  top: 0;
+}
+#four-corners .corner.imagery::after {
+  width: 1.5em;
+  height: 0.5em;
+  left: 0;
+  top: 0;
+}
+#four-corners .corner.links {
+  top: 0.5em;
+  right: 0.5em;
+}
+#four-corners .corner.links::before {
+  width: 0.5em;
+  height: 1.5em;
+  right: 0;
+  top: 0;
+}
+#four-corners .corner.links::after {
+  width: 1.5em;
+  height: 0.5em;
+  right: 0;
+  top: 0;
+}
+
+#nakba {
+  color: white;
+  background-color: black;
+}
+#nakba a {
+  color: white;
+  text-shadow: 0 1px 0 black, 0 2px 0 black, 0 -1px 0 black, 0 -2px 0 black, -1px 1px 0 black, -1px 2px 0 black, 1px 1px 0 black, 1px 2px 0 black, -1px 0 0 black, 0 -3px 0 black;
+  background: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(#ff0, #ff0);
+  background-position: 0 87%, 100% 87%, 0 92%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+  text-decoration: none;
+  border: none;
+}
+#nakba a:hover {
+  color: #ff0 !important;
+}
+#nakba .inner .text .shadow {
+  box-shadow: black inset 0 -4em 2em -2em;
+}
+#nakba .inner .text.tease .shadow {
+  box-shadow: black inset 0 -3em 2em -2em;
+}
+#nakba ::selection {
+  color: black;
+  background-color: white;
+  text-shadow: none !important;
+}
+
+#ygdp {
+  color: #153554;
+  background-color: #a8d7ee;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/ygdp.svg);
+}
+#ygdp a {
+  color: #153554;
+  text-shadow: 0 1px 0 #a8d7ee, 0 2px 0 #a8d7ee, 0 -1px 0 #a8d7ee, 0 -2px 0 #a8d7ee, -1px 1px 0 #a8d7ee, -1px 2px 0 #a8d7ee, 1px 1px 0 #a8d7ee, 1px 2px 0 #a8d7ee, -1px 0 0 #a8d7ee, 0 -3px 0 #a8d7ee;
+  background: linear-gradient(#a8d7ee, #a8d7ee), linear-gradient(#a8d7ee, #a8d7ee), linear-gradient(#e1e8ea, #e1e8ea);
+  background-position: 0 87%, 100% 87%, 0 92%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+  text-decoration: none;
+  border: none;
+}
+#ygdp a:hover {
+  color: #f2f2ee !important;
+}
+#ygdp .inner .text .shadow {
+  box-shadow: #a8d7ee inset 0 -4em 2em -2em;
+}
+#ygdp .inner .text.tease .shadow {
+  box-shadow: #a8d7ee inset 0 -3em 2em -2em;
+}
+#ygdp ::selection {
+  color: #a8d7ee;
+  background-color: #153554;
+  text-shadow: none !important;
+}
+
+#ginling {
+  color: #f2f0df;
+  background-color: #0dae0b;
+  background-image: url(../images/ginling.png);
+  background-size: 50% auto;
+  background-position: 0 top;
+  background-repeat: no-repeat;
+}
+#ginling a {
+  color: #f2f0df;
+  text-shadow: 0 1px 0 #0dae0b, 0 2px 0 #0dae0b, 0 -1px 0 #0dae0b, 0 -2px 0 #0dae0b, -1px 1px 0 #0dae0b, -1px 2px 0 #0dae0b, 1px 1px 0 #0dae0b, 1px 2px 0 #0dae0b, -1px 0 0 #0dae0b, 0 -3px 0 #0dae0b;
+  background: linear-gradient(#0dae0b, #0dae0b), linear-gradient(#0dae0b, #0dae0b), linear-gradient(#f2f0df, #f2f0df);
+  background-position: 0 87%, 100% 87%, 0 92%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+  text-decoration: none;
+  border: none;
+}
+#ginling a:hover {
+  color: rgba(242, 240, 223, 0.75) !important;
+}
+#ginling .inner .text .shadow {
+  box-shadow: #0dae0b inset 0 -4em 2em -2em;
+}
+#ginling .inner .text.tease .shadow {
+  box-shadow: #0dae0b inset 0 -3em 2em -2em;
+}
+#ginling ::selection {
+  color: #0dae0b;
+  background-color: #f2f0df;
+  text-shadow: none !important;
+}
+#ginling h2 a {
+  text-shadow: none;
+}
+
+#bpl {
+  color: white;
+  background-color: #8199ff;
+}
+#bpl a {
+  color: white;
+  text-shadow: 0 1px 0 #8199ff, 0 2px 0 #8199ff, 0 -1px 0 #8199ff, 0 -2px 0 #8199ff, -1px 1px 0 #8199ff, -1px 2px 0 #8199ff, 1px 1px 0 #8199ff, 1px 2px 0 #8199ff, -1px 0 0 #8199ff, 0 -3px 0 #8199ff;
+  background: linear-gradient(#8199ff, #8199ff), linear-gradient(#8199ff, #8199ff), linear-gradient(white, white);
+  background-position: 0 87%, 100% 87%, 0 92%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+  text-decoration: none;
+  border: none;
+}
+#bpl a:hover {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+#bpl .inner .text .shadow {
+  box-shadow: #8199ff inset 0 -4em 2em -2em;
+}
+#bpl .inner .text.tease .shadow {
+  box-shadow: #8199ff inset 0 -3em 2em -2em;
+}
+#bpl ::selection {
+  color: #8199ff;
+  background-color: white;
+  text-shadow: none !important;
+}
+
+#revealer {
+  color: #346378;
+  background-color: #f1f5f7;
+}
+#revealer a {
+  color: #346378;
+  text-shadow: 0 1px 0 #f1f5f7, 0 2px 0 #f1f5f7, 0 -1px 0 #f1f5f7, 0 -2px 0 #f1f5f7, -1px 1px 0 #f1f5f7, -1px 2px 0 #f1f5f7, 1px 1px 0 #f1f5f7, 1px 2px 0 #f1f5f7, -1px 0 0 #f1f5f7, 0 -3px 0 #f1f5f7;
+  background: linear-gradient(#f1f5f7, #f1f5f7), linear-gradient(#f1f5f7, #f1f5f7), linear-gradient(#fed00b, #fed00b);
+  background-position: 0 87%, 100% 87%, 0 92%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+  text-decoration: none;
+  border: none;
+}
+#revealer a:hover {
+  color: rgba(52, 99, 120, 0.75) !important;
+}
+#revealer .inner .text .shadow {
+  box-shadow: #f1f5f7 inset 0 -4em 2em -2em;
+}
+#revealer .inner .text.tease .shadow {
+  box-shadow: #f1f5f7 inset 0 -3em 2em -2em;
+}
+#revealer ::selection {
+  color: #f1f5f7;
+  background-color: #346378;
+  text-shadow: none !important;
+}
+#revealer .halo {
+  width: 5rem;
+  height: 5rem;
+  left: calc(50% - 2.5rem);
+  top: calc(50% - 2.5rem);
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 0.5rem 0.25rem #fed00b;
+  z-index: 0;
+  background: #fed00b;
+}
+
+#rz {
+  color: #d02630;
+  background-color: #f8e5e3;
+}
+#rz a {
+  color: #d02630;
+  text-shadow: 0 1px 0 #f8e5e3, 0 2px 0 #f8e5e3, 0 -1px 0 #f8e5e3, 0 -2px 0 #f8e5e3, -1px 1px 0 #f8e5e3, -1px 2px 0 #f8e5e3, 1px 1px 0 #f8e5e3, 1px 2px 0 #f8e5e3, -1px 0 0 #f8e5e3, 0 -3px 0 #f8e5e3;
+  background: linear-gradient(#f8e5e3, #f8e5e3), linear-gradient(#f8e5e3, #f8e5e3), linear-gradient(#d02630, #d02630);
+  background-position: 0 87%, 100% 87%, 0 92%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+  text-decoration: none;
+  border: none;
+}
+#rz a:hover {
+  color: rgba(208, 38, 48, 0.75) !important;
+}
+#rz .inner .text .shadow {
+  box-shadow: #f8e5e3 inset 0 -4em 2em -2em;
+}
+#rz .inner .text.tease .shadow {
+  box-shadow: #f8e5e3 inset 0 -3em 2em -2em;
+}
+#rz ::selection {
+  color: #f8e5e3;
+  background-color: #d02630;
+  text-shadow: none !important;
+}
+#rz .pattern {
+  width: 100%;
+  height: 45px;
+  background-size: 30px 15px;
+  background-image: url(../images/zim.svg);
+  position: absolute;
+  left: 0;
+}
+#rz .pattern.top {
+  top: 1px;
+}
+#rz .pattern.bottom {
+  bottom: 1px;
+}
+
+#mts {
+  background-image: url(../images/map.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fafcfc;
+  background-color: black;
+}
+#mts a {
+  color: #fafcfc;
+  text-shadow: 0 1px 0 black, 0 2px 0 black, 0 -1px 0 black, 0 -2px 0 black, -1px 1px 0 black, -1px 2px 0 black, 1px 1px 0 black, 1px 2px 0 black, -1px 0 0 black, 0 -3px 0 black;
+  background: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(#fafcfc, #fafcfc);
+  background-position: 0 87%, 100% 87%, 0 92%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+  text-decoration: none;
+  border: none;
+}
+#mts a:hover {
+  color: rgba(244, 246, 250, 0.75) !important;
+}
+#mts .inner .text .shadow {
+  box-shadow: black inset 0 -4em 2em -2em;
+}
+#mts .inner .text.tease .shadow {
+  box-shadow: black inset 0 -3em 2em -2em;
+}
+#mts ::selection {
+  color: black;
+  background-color: #fafcfc;
+  text-shadow: none !important;
+}
+
+#iscp {
+  position: relative;
+  transition: background 150ms ease-in-out;
+  color: white;
+  background-color: #ff5000;
+}
+#iscp a {
+  color: white;
+  text-shadow: 0 1px 0 #ff5000, 0 2px 0 #ff5000, 0 -1px 0 #ff5000, 0 -2px 0 #ff5000, -1px 1px 0 #ff5000, -1px 2px 0 #ff5000, 1px 1px 0 #ff5000, 1px 2px 0 #ff5000, -1px 0 0 #ff5000, 0 -3px 0 #ff5000;
+  background: linear-gradient(#ff5000, #ff5000), linear-gradient(#ff5000, #ff5000), linear-gradient(white, white);
+  background-position: 0 87%, 100% 87%, 0 92%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+  text-decoration: none;
+  border: none;
+}
+#iscp a:hover {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+#iscp .inner .text .shadow {
+  box-shadow: #ff5000 inset 0 -4em 2em -2em;
+}
+#iscp .inner .text.tease .shadow {
+  box-shadow: #ff5000 inset 0 -3em 2em -2em;
+}
+#iscp ::selection {
+  color: #ff5000;
+  background-color: white;
+  text-shadow: none !important;
+}
+#iscp::before, #iscp::after,
+#iscp .outer::before, #iscp .outer::after {
+  content: "";
+  background: white;
+  position: absolute;
+}
+#iscp::before, #iscp::after {
+  width: 100%;
+  height: 6px;
+  left: 0;
+}
+#iscp::before {
+  top: 4rem;
+}
+#iscp::after {
+  bottom: 4rem;
+}
+#iscp .outer {
+  width: calc(100% - 8rem);
+  margin: auto;
+  padding: 4rem;
+}
+#iscp .outer::before, #iscp .outer::after {
+  width: 6px;
+  height: 100%;
+  top: 0;
+  border: solid #ff5000;
+  border-width: 0 6px;
+}
+#iscp .outer::before {
+  left: 4rem;
+}
+#iscp .outer::after {
+  right: 4rem;
+}
+#iscp .inner {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+#compost-pile {
+  position: relative;
+  overflow: hidden;
+  color: #fbfffb;
+  background-color: #73db71;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/compost.svg);
+}
+#compost-pile a {
+  color: #fbfffb;
+  text-shadow: 0 1px 0 #73db71, 0 2px 0 #73db71, 0 -1px 0 #73db71, 0 -2px 0 #73db71, -1px 1px 0 #73db71, -1px 2px 0 #73db71, 1px 1px 0 #73db71, 1px 2px 0 #73db71, -1px 0 0 #73db71, 0 -3px 0 #73db71;
+  background: linear-gradient(#73db71, #73db71), linear-gradient(#73db71, #73db71), linear-gradient(#fbfffb, #fbfffb);
+  background-position: 0 87%, 100% 87%, 0 92%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+  text-decoration: none;
+  border: none;
+}
+#compost-pile a:hover {
+  color: rgba(251, 255, 251, 0.75) !important;
+}
+#compost-pile .inner .text .shadow {
+  box-shadow: #73db71 inset 0 -4em 2em -2em;
+}
+#compost-pile .inner .text.tease .shadow {
+  box-shadow: #73db71 inset 0 -3em 2em -2em;
+}
+#compost-pile ::selection {
+  color: #73db71;
+  background-color: #fbfffb;
+  text-shadow: none !important;
+}
+
+#affixing-ceremony {
+  color: black;
+  background-color: white;
+}
+#affixing-ceremony a {
+  color: black;
+  text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
+  background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(red, red);
+  background-position: 0 87%, 100% 87%, 0 92%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+  text-decoration: none;
+  border: none;
+}
+#affixing-ceremony a:hover {
+  color: red !important;
+}
+#affixing-ceremony .inner .text .shadow {
+  box-shadow: white inset 0 -4em 2em -2em;
+}
+#affixing-ceremony .inner .text.tease .shadow {
+  box-shadow: white inset 0 -3em 2em -2em;
+}
+#affixing-ceremony ::selection {
+  color: white;
+  background-color: black;
+  text-shadow: none !important;
+}
+
+#pcgd {
+  color: #FFFF33;
+  background-color: #333399;
+}
+#pcgd a {
+  color: #FFFF33;
+  text-shadow: 0 1px 0 #333399, 0 2px 0 #333399, 0 -1px 0 #333399, 0 -2px 0 #333399, -1px 1px 0 #333399, -1px 2px 0 #333399, 1px 1px 0 #333399, 1px 2px 0 #333399, -1px 0 0 #333399, 0 -3px 0 #333399;
+  background: linear-gradient(#333399, #333399), linear-gradient(#333399, #333399), linear-gradient(#FFFF33, #FFFF33);
+  background-position: 0 87%, 100% 87%, 0 92%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+  text-decoration: none;
+  border: none;
+}
+#pcgd a:hover {
+  color: rgba(255, 255, 51, 0.75) !important;
+}
+#pcgd .inner .text .shadow {
+  box-shadow: #333399 inset 0 -4em 2em -2em;
+}
+#pcgd .inner .text.tease .shadow {
+  box-shadow: #333399 inset 0 -3em 2em -2em;
+}
+#pcgd ::selection {
+  color: #333399;
+  background-color: #FFFF33;
+  text-shadow: none !important;
+}
+#pcgd .svg {
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+  display: inline-block;
+  cursor: pointer !important;
+}
+#pcgd .svg:hover {
+  cursor: pointer !important;
+}
+#pcgd .svg svg {
+  width: 1rem;
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  display: none;
+  line-height: 1.2rem;
+  vertical-align: baseline;
+  fill: #FFFF33 !important;
+}
+#pcgd .svg svg * {
+  fill: #FFFF33 !important;
+}
+#pcgd .svg svg:first-of-type {
+  display: inline-block;
+}
+
+#rbma {
+  background: #000000;
+  color: #FEF035;
+}
+#rbma.confetti {
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: center;
+  background-image: url(../images/confetti.gif);
+}
+#rbma a {
+  color: #FEF035;
+  text-shadow: 0 1px 0 black, 0 2px 0 black, 0 -1px 0 black, 0 -2px 0 black, -1px 1px 0 black, -1px 2px 0 black, 1px 1px 0 black, 1px 2px 0 black, -1px 0 0 black, 0 -3px 0 black;
+  background: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(#FEF035, #FEF035);
+  background-position: 0 87%, 100% 87%, 0 92%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: 0.05em 2px, 0.05em 2px, 2px 2px;
+  text-decoration: none;
+  border: none;
+}
+#rbma .click {
+  height: 1.4rem;
+  padding-right: 0.5rem;
+}
+#rbma .click img {
+  margin-bottom: -0.25rem;
+  height: inherit;
+}
+#rbma .click:hover, #rbma .click .hover, #rbma .click:hover img {
+  cursor: pointer !important;
+  animation: wiggle 300ms infinite;
+}
+#rbma .click.logo span {
+  background-image: url(../images/underline.png);
+  background-size: 12px 8px;
+  background-position: 0px bottom;
+  background-repeat: repeat-x;
+  text-shadow: -2px 2px 1px black, 2px -2px 1px black, -2px -2px 1px black, 2px 2px 1px black;
+}
+#rbma .click.japan {
+  position: relative;
+}
+#rbma .click.japan.toggled img {
+  display: inline-block !important;
+  visibility: hidden;
+}
+#rbma .click.japan iframe {
+  position: absolute;
+  transform: scale(0.28);
+  transform-origin: top left;
+  top: -35%;
+  left: 0;
+  pointer-events: none;
+}
+
+main body.wooden-airplane-lamp {
   background: yellow;
   color: blue;
 }
-body.wooden-airplane-lamp svg {
+main body.wooden-airplane-lamp svg {
   fill: blue;
 }
-body.wooden-airplane-lamp a, body.wooden-airplane-lamp a:visited {
+main body.wooden-airplane-lamp a, main body.wooden-airplane-lamp a:visited {
   color: red;
   text-shadow: 0 1px 0 yellow, 0 2px 0 yellow, 0 -1px 0 yellow, 0 -2px 0 yellow, -1px 1px 0 yellow, -1px 2px 0 yellow, 1px 1px 0 yellow, 1px 2px 0 yellow, -1px 0 0 yellow, 0 -3px 0 yellow;
   background: linear-gradient(yellow, yellow), linear-gradient(yellow, yellow), linear-gradient(blue, blue);
@@ -1006,12 +1044,12 @@ body.wooden-airplane-lamp a, body.wooden-airplane-lamp a:visited {
   text-decoration: none;
   border: none;
 }
-body.wooden-airplane-lamp #info {
+main body.wooden-airplane-lamp #info {
   background: blue;
   color: yellow;
   border-color: yellow;
 }
-body.wooden-airplane-lamp #info a, body.wooden-airplane-lamp #info a:visited {
+main body.wooden-airplane-lamp #info a, main body.wooden-airplane-lamp #info a:visited {
   color: yellow;
   text-shadow: 0 1px 0 blue, 0 2px 0 blue, 0 -1px 0 blue, 0 -2px 0 blue, -1px 1px 0 blue, -1px 2px 0 blue, 1px 1px 0 blue, 1px 2px 0 blue, -1px 0 0 blue, 0 -3px 0 blue;
   background: linear-gradient(blue, blue), linear-gradient(blue, blue), linear-gradient(yellow, yellow);
@@ -1021,15 +1059,14 @@ body.wooden-airplane-lamp #info a, body.wooden-airplane-lamp #info a:visited {
   text-decoration: none;
   border: none;
 }
-
-body.blue {
+main body.blue {
   background: blue;
   color: white;
 }
-body.blue svg {
+main body.blue svg {
   fill: white;
 }
-body.blue a, body.blue a:visited {
+main body.blue a, main body.blue a:visited {
   color: yellow;
   text-shadow: 0 1px 0 blue, 0 2px 0 blue, 0 -1px 0 blue, 0 -2px 0 blue, -1px 1px 0 blue, -1px 2px 0 blue, 1px 1px 0 blue, 1px 2px 0 blue, -1px 0 0 blue, 0 -3px 0 blue;
   background: linear-gradient(blue, blue), linear-gradient(blue, blue), linear-gradient(white, white);
@@ -1039,12 +1076,12 @@ body.blue a, body.blue a:visited {
   text-decoration: none;
   border: none;
 }
-body.blue #info {
+main body.blue #info {
   background: white;
   color: blue;
   border-color: blue;
 }
-body.blue #info a, body.blue #info a:visited {
+main body.blue #info a, main body.blue #info a:visited {
   color: blue;
   text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
   background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(blue, blue);
@@ -1054,15 +1091,14 @@ body.blue #info a, body.blue #info a:visited {
   text-decoration: none;
   border: none;
 }
-
-body.default {
+main body.default {
   background: white;
   color: black;
 }
-body.default svg {
+main body.default svg {
   fill: black;
 }
-body.default a, body.default a:visited {
+main body.default a, main body.default a:visited {
   color: blue;
   text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
   background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(black, black);
@@ -1072,12 +1108,12 @@ body.default a, body.default a:visited {
   text-decoration: none;
   border: none;
 }
-body.default #info {
+main body.default #info {
   background: black;
   color: white;
   border-color: white;
 }
-body.default #info a, body.default #info a:visited {
+main body.default #info a, main body.default #info a:visited {
   color: white;
   text-shadow: 0 1px 0 black, 0 2px 0 black, 0 -1px 0 black, 0 -2px 0 black, -1px 1px 0 black, -1px 2px 0 black, 1px 1px 0 black, 1px 2px 0 black, -1px 0 0 black, 0 -3px 0 black;
   background: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(white, white);
@@ -1087,15 +1123,14 @@ body.default #info a, body.default #info a:visited {
   text-decoration: none;
   border: none;
 }
-
-body.nighty {
+main body.nighty {
   background: black;
   color: white;
 }
-body.nighty svg {
+main body.nighty svg {
   fill: white;
 }
-body.nighty a, body.nighty a:visited {
+main body.nighty a, main body.nighty a:visited {
   color: white;
   text-shadow: 0 1px 0 black, 0 2px 0 black, 0 -1px 0 black, 0 -2px 0 black, -1px 1px 0 black, -1px 2px 0 black, 1px 1px 0 black, 1px 2px 0 black, -1px 0 0 black, 0 -3px 0 black;
   background: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(white, white);
@@ -1105,12 +1140,12 @@ body.nighty a, body.nighty a:visited {
   text-decoration: none;
   border: none;
 }
-body.nighty #info {
+main body.nighty #info {
   background: white;
   color: black;
   border-color: black;
 }
-body.nighty #info a, body.nighty #info a:visited {
+main body.nighty #info a, main body.nighty #info a:visited {
   color: black;
   text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
   background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(black, black);
@@ -1120,15 +1155,14 @@ body.nighty #info a, body.nighty #info a:visited {
   text-decoration: none;
   border: none;
 }
-
-body.spring {
+main body.spring {
   background: SpringGreen;
   color: black;
 }
-body.spring svg {
+main body.spring svg {
   fill: black;
 }
-body.spring a, body.spring a:visited {
+main body.spring a, main body.spring a:visited {
   color: black;
   text-shadow: 0 1px 0 SpringGreen, 0 2px 0 SpringGreen, 0 -1px 0 SpringGreen, 0 -2px 0 SpringGreen, -1px 1px 0 SpringGreen, -1px 2px 0 SpringGreen, 1px 1px 0 SpringGreen, 1px 2px 0 SpringGreen, -1px 0 0 SpringGreen, 0 -3px 0 SpringGreen;
   background: linear-gradient(SpringGreen, SpringGreen), linear-gradient(SpringGreen, SpringGreen), linear-gradient(black, black);
@@ -1138,12 +1172,12 @@ body.spring a, body.spring a:visited {
   text-decoration: none;
   border: none;
 }
-body.spring #info {
+main body.spring #info {
   background: black;
   color: SpringGreen;
   border-color: SpringGreen;
 }
-body.spring #info a, body.spring #info a:visited {
+main body.spring #info a, main body.spring #info a:visited {
   color: SpringGreen;
   text-shadow: 0 1px 0 black, 0 2px 0 black, 0 -1px 0 black, 0 -2px 0 black, -1px 1px 0 black, -1px 2px 0 black, 1px 1px 0 black, 1px 2px 0 black, -1px 0 0 black, 0 -3px 0 black;
   background: linear-gradient(black, black), linear-gradient(black, black), linear-gradient(SpringGreen, SpringGreen);
@@ -1153,15 +1187,14 @@ body.spring #info a, body.spring #info a:visited {
   text-decoration: none;
   border: none;
 }
-
-body.old-glory {
+main body.old-glory {
   background: RoyalBlue;
   color: white;
 }
-body.old-glory svg {
+main body.old-glory svg {
   fill: white;
 }
-body.old-glory a, body.old-glory a:visited {
+main body.old-glory a, main body.old-glory a:visited {
   color: Tomato;
   text-shadow: 0 1px 0 RoyalBlue, 0 2px 0 RoyalBlue, 0 -1px 0 RoyalBlue, 0 -2px 0 RoyalBlue, -1px 1px 0 RoyalBlue, -1px 2px 0 RoyalBlue, 1px 1px 0 RoyalBlue, 1px 2px 0 RoyalBlue, -1px 0 0 RoyalBlue, 0 -3px 0 RoyalBlue;
   background: linear-gradient(RoyalBlue, RoyalBlue), linear-gradient(RoyalBlue, RoyalBlue), linear-gradient(white, white);
@@ -1171,12 +1204,12 @@ body.old-glory a, body.old-glory a:visited {
   text-decoration: none;
   border: none;
 }
-body.old-glory #info {
+main body.old-glory #info {
   background: white;
   color: RoyalBlue;
   border-color: RoyalBlue;
 }
-body.old-glory #info a, body.old-glory #info a:visited {
+main body.old-glory #info a, main body.old-glory #info a:visited {
   color: RoyalBlue;
   text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
   background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(RoyalBlue, RoyalBlue);
@@ -1186,15 +1219,14 @@ body.old-glory #info a, body.old-glory #info a:visited {
   text-decoration: none;
   border: none;
 }
-
-body.ronald {
+main body.ronald {
   background: red;
   color: white;
 }
-body.ronald svg {
+main body.ronald svg {
   fill: white;
 }
-body.ronald a, body.ronald a:visited {
+main body.ronald a, main body.ronald a:visited {
   color: Gold;
   text-shadow: 0 1px 0 red, 0 2px 0 red, 0 -1px 0 red, 0 -2px 0 red, -1px 1px 0 red, -1px 2px 0 red, 1px 1px 0 red, 1px 2px 0 red, -1px 0 0 red, 0 -3px 0 red;
   background: linear-gradient(red, red), linear-gradient(red, red), linear-gradient(white, white);
@@ -1204,12 +1236,12 @@ body.ronald a, body.ronald a:visited {
   text-decoration: none;
   border: none;
 }
-body.ronald #info {
+main body.ronald #info {
   background: white;
   color: red;
   border-color: red;
 }
-body.ronald #info a, body.ronald #info a:visited {
+main body.ronald #info a, main body.ronald #info a:visited {
   color: red;
   text-shadow: 0 1px 0 white, 0 2px 0 white, 0 -1px 0 white, 0 -2px 0 white, -1px 1px 0 white, -1px 2px 0 white, 1px 1px 0 white, 1px 2px 0 white, -1px 0 0 white, 0 -3px 0 white;
   background: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(red, red);
@@ -1219,15 +1251,14 @@ body.ronald #info a, body.ronald #info a:visited {
   text-decoration: none;
   border: none;
 }
-
-body.cactus {
+main body.cactus {
   background: #fdbbcc;
   color: #f81c00;
 }
-body.cactus svg {
+main body.cactus svg {
   fill: #f81c00;
 }
-body.cactus a, body.cactus a:visited {
+main body.cactus a, main body.cactus a:visited {
   color: #f81c00;
   text-shadow: 0 1px 0 #fdbbcc, 0 2px 0 #fdbbcc, 0 -1px 0 #fdbbcc, 0 -2px 0 #fdbbcc, -1px 1px 0 #fdbbcc, -1px 2px 0 #fdbbcc, 1px 1px 0 #fdbbcc, 1px 2px 0 #fdbbcc, -1px 0 0 #fdbbcc, 0 -3px 0 #fdbbcc;
   background: linear-gradient(#fdbbcc, #fdbbcc), linear-gradient(#fdbbcc, #fdbbcc), linear-gradient(#f81c00, #f81c00);
@@ -1237,12 +1268,12 @@ body.cactus a, body.cactus a:visited {
   text-decoration: none;
   border: none;
 }
-body.cactus #info {
+main body.cactus #info {
   background: #f81c00;
   color: #fdbbcc;
   border-color: #fdbbcc;
 }
-body.cactus #info a, body.cactus #info a:visited {
+main body.cactus #info a, main body.cactus #info a:visited {
   color: #fdbbcc;
   text-shadow: 0 1px 0 #f81c00, 0 2px 0 #f81c00, 0 -1px 0 #f81c00, 0 -2px 0 #f81c00, -1px 1px 0 #f81c00, -1px 2px 0 #f81c00, 1px 1px 0 #f81c00, 1px 2px 0 #f81c00, -1px 0 0 #f81c00, 0 -3px 0 #f81c00;
   background: linear-gradient(#f81c00, #f81c00), linear-gradient(#f81c00, #f81c00), linear-gradient(#fdbbcc, #fdbbcc);
@@ -1252,15 +1283,14 @@ body.cactus #info a, body.cactus #info a:visited {
   text-decoration: none;
   border: none;
 }
-
-body.long-sleeve {
+main body.long-sleeve {
   background: #f9e312;
   color: #00447c;
 }
-body.long-sleeve svg {
+main body.long-sleeve svg {
   fill: #00447c;
 }
-body.long-sleeve a, body.long-sleeve a:visited {
+main body.long-sleeve a, main body.long-sleeve a:visited {
   color: #00447c;
   text-shadow: 0 1px 0 #f9e312, 0 2px 0 #f9e312, 0 -1px 0 #f9e312, 0 -2px 0 #f9e312, -1px 1px 0 #f9e312, -1px 2px 0 #f9e312, 1px 1px 0 #f9e312, 1px 2px 0 #f9e312, -1px 0 0 #f9e312, 0 -3px 0 #f9e312;
   background: linear-gradient(#f9e312, #f9e312), linear-gradient(#f9e312, #f9e312), linear-gradient(#00447c, #00447c);
@@ -1270,12 +1300,12 @@ body.long-sleeve a, body.long-sleeve a:visited {
   text-decoration: none;
   border: none;
 }
-body.long-sleeve #info {
+main body.long-sleeve #info {
   background: #00447c;
   color: #f9e312;
   border-color: #f9e312;
 }
-body.long-sleeve #info a, body.long-sleeve #info a:visited {
+main body.long-sleeve #info a, main body.long-sleeve #info a:visited {
   color: #f9e312;
   text-shadow: 0 1px 0 #00447c, 0 2px 0 #00447c, 0 -1px 0 #00447c, 0 -2px 0 #00447c, -1px 1px 0 #00447c, -1px 2px 0 #00447c, 1px 1px 0 #00447c, 1px 2px 0 #00447c, -1px 0 0 #00447c, 0 -3px 0 #00447c;
   background: linear-gradient(#00447c, #00447c), linear-gradient(#00447c, #00447c), linear-gradient(#f9e312, #f9e312);
