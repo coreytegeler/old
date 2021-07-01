@@ -63,7 +63,6 @@ h3, h5 {
 		color: inherit !important;
 		font-style: italic;
 		border: none !important;
-		// background: none !important;
 		text-shadow: none !important;
 	}
 }
@@ -483,6 +482,9 @@ summary {
 		box-shadow: 0 0 0.5rem 0.25rem #fed00b;
 		z-index: 0;
 		background: #fed00b;
+		@include mobile {
+			left: calc(75% - 2.5rem);
+		}
 	}
 }
 #rz {
@@ -551,6 +553,28 @@ summary {
 	.inner {
 		padding-top: 2rem;
 		padding-bottom: 2rem;
+	}
+	@include mobile {
+		&::before {
+			top: 1rem;
+		}
+		&::after {
+			bottom: 1rem;	
+		}
+		.outer {
+			width: calc(100% - 2rem);
+			padding: 1rem;
+			&::before {
+				left: 1rem;
+			}
+			&::after {
+				right: 1rem;
+			}	
+		}
+		// .inner {
+		// 	padding-top: 1rem;
+		// 	padding-bottom: 1rem;
+		// }
 	}
 }
 #compost-pile {

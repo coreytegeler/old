@@ -23,6 +23,12 @@
 	line-height: 1.4em;
 }
 
+@mixin mobile {
+	@media screen and (max-width: 900px) {
+		@content;
+	}
+}
+
 
 
 @mixin style($name, $a, $b, $c) {

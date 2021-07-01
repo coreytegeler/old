@@ -706,6 +706,11 @@ details:not([open]) summary span {
   z-index: 0;
   background: #fed00b;
 }
+@media screen and (max-width: 900px) {
+  #revealer .halo {
+    left: calc(75% - 2.5rem);
+  }
+}
 
 #rz {
   color: #d02630;
@@ -851,6 +856,24 @@ details:not([open]) summary span {
 #iscp .inner {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+@media screen and (max-width: 900px) {
+  #iscp::before {
+    top: 1rem;
+  }
+  #iscp::after {
+    bottom: 1rem;
+  }
+  #iscp .outer {
+    width: calc(100% - 2rem);
+    padding: 1rem;
+  }
+  #iscp .outer::before {
+    left: 1rem;
+  }
+  #iscp .outer::after {
+    right: 1rem;
+  }
 }
 
 #compost-pile {
