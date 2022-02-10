@@ -23,7 +23,7 @@
   "devDependencies": {
     "autoprefixer": "^6.5.1",
     "cssnano": "^4.1.10",
-    "node-sass": "3.8.0",
+    "node-sass": "7.0.0",
     "postcss": "^7.0.18",
     "pug": "^2.0.4",
     "sass": "^1.23.0"
